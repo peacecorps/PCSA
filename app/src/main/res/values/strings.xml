@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">PCSA</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--******************************************
+    Strings related to reporting
+    ******************************************-->
+    <string name="reporting_process">Reporting Process</string>
+    <string name="reporting_process_sub">Learn all about reporting</string>
+    <string name="reporting_types">Reporting Types</string>
+    <string name="reporting_services">Reporting Services</string>
+    <string name="reporting_steps">Reporting Steps</string>
+    <string name="reporting_contact">Contact Staff to Report</string>
+    <string name="reporting_resources">More Reporting Resources</string>
+    <string name="reporting_confidentiality">Confidentiality</string>
+    <string name="reporting_faq">Learn More about the Reporting Types</string>
+    <string name="reporting_faq_title">FAQ</string>
+    <string name="title_activity_types">Types</string>
+    <string name="reporting_get_help">Get Help Now</string>
+    <string name="reporting_get_help_sub1">Post Staff</string>
+    <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
+·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
+·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
+·	Counseling from a licensed mental health professional\n\n
+·	Medical evacuation\n\n
+·	Accompaniment during medical evacuation\n\n
+·	Safety planning\n\n
+·	Explanation of your legal options\n \n
+·	Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
+·	Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
+    </string>
+    C<string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
+·	Consultation with my Country Director\n\n
+·	File a report with local law enforcement\n\n
+·	Request a site change\n\n
+·	Request a host family change\n\n
+·	File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
+·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
+·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
+</string>
+    <string name="title_activity_steps">Steps</string>
+    <string name="title_activity_faq">FAQ</string>
+    <string name="title_activity_testingg">Testingg</string>
+    <string name="title_activity_confidentiality">Confidentiality</string>
+    <string name="title_activity_resources">Resources</string>
+    <string name="title_activity_contact_post_staff">ContactPostStaff</string>
+    
+    <!-- Button texts and other texts for contact staff-->
+    <string name="contact_pcmo">Contact PCMO</string>
+    <string name="contact_ssm">Contact SSM</string>
+    <string name="contact_sarl">Contact SARL</string>
+    <string name="reporting_change_location">Change Location</string>
+    <string name="reporting_current_location">This is information for</string>
+
+    <!-- Locations that are available on dropdown of Contact Staff-->
+    <string-array name="locations_array">
+        <item>Uganda</item>
+        <item>Syria</item>
+        <item>Tunisia</item>
+    </string-array>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pcsabuddhi" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.pcsa.views.reporting.HomeScreen"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.Types"
+            android:label="@string/title_activity_types" >
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.Steps"
+            android:label="@string/title_activity_steps" >
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.FAQ"
+            android:label="@string/title_activity_faq" >
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.Confidentiality"
+            android:label="@string/title_activity_confidentiality" >
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.Resources"
+            android:label="@string/title_activity_resources" >
+        </activity>
+        <activity
+            android:name="com.pcsa.views.reporting.ContactPostStaff"
+            android:label="@string/title_activity_contact_post_staff" >
+        </activity>
+    </application>
+
+</manifest>
