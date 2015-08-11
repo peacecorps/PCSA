@@ -10,4 +10,9 @@
         <item name="android:textColor">@color/primary_text_default_material_dark</item>
     </style>
 
+    <style name="pcsaAlertDialogStyle">
+        <item name="android:background">@color/background_app</item>
+        <item name="android:textColorLink">@color/primary_text_default_material_dark</item>
+    </style>
+
 </resources>
