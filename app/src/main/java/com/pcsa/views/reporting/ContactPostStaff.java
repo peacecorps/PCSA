@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.pcsa.beans.reporting.LocationDetails;
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 import java.util.HashMap;
 import java.util.Map;
