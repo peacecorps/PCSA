@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.ScrollView;
 
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 /**
  * @author Buddhiprabha Erabadda

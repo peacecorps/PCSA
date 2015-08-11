@@ -1,4 +1,4 @@
-package com.pcsabuddhi;
+package com.pcsa;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

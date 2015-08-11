@@ -1,14 +1,13 @@
 package com.pcsa.views.reporting;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 /**
  * @author Buddhiprabha Erabadda
