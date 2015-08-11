@@ -34,19 +34,20 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     TextView currentLocation;
 
     LocationDetails selectedLocationDetails;
+
     private static final Map<String, LocationDetails> locationDetails;
     static {
         locationDetails = new HashMap<>();
-        //TODO: Add correct values here
-        locationDetails.put("Uganda", new LocationDetails("Uganda", "1111", "2222", "3333"));
-        locationDetails.put("Syria", new LocationDetails("Syria", "4444", "5555", "6666"));
-        locationDetails.put("Tunisia", new LocationDetails("Tunisia","7777", "8888", "9999"));
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_contact_post_staff);
+
+        locationDetails.put(getResources().getString(R.string.loc1_name), new LocationDetails(getResources().getString(R.string.loc1_name), getResources().getString(R.string.loc1_pcmo), getResources().getString(R.string.loc1_ssm), getResources().getString(R.string.loc1_sarl)));
+        locationDetails.put(getResources().getString(R.string.loc2_name), new LocationDetails(getResources().getString(R.string.loc2_name), getResources().getString(R.string.loc2_pcmo), getResources().getString(R.string.loc2_ssm), getResources().getString(R.string.loc2_sarl)));
+        locationDetails.put(getResources().getString(R.string.loc3_name), new LocationDetails(getResources().getString(R.string.loc3_name), getResources().getString(R.string.loc3_pcmo), getResources().getString(R.string.loc3_ssm), getResources().getString(R.string.loc3_sarl)));
 
         contactPcmo = (Button) findViewById(R.id.post_staff_pcmo);
         contactSsm = (Button) findViewById(R.id.post_staff_ssm);
@@ -60,21 +61,21 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactPcmo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getPcmo_contact());
+                createDialog(v, selectedLocationDetails.getPcmoContact());
             }
         });
 
         contactSsm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSsm_contact());
+                createDialog(v, selectedLocationDetails.getSsmContact());
             }
         });
 
         contactSarl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSarl_contact());
+                createDialog(v, selectedLocationDetails.getSarlContact());
             }
         });
 
