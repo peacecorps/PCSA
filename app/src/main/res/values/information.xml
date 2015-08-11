@@ -75,4 +75,26 @@
         people that have experienced a sexual assault. SARLs help Volunteers with issues not handled by the PCMO or SSM. For example,
         a SARL might accompany a Volunteer when traveling to an appointment with a local lawyer.
     </string>
+
+    <!-- Correct locations and corresponding details should be added here-->
+    <array name="locations">
+        <item>Uganda</item>
+        <item>Syria</item>
+        <item>Tunisia</item>
+    </array>
+
+    <string name="loc1_name">Uganda</string>
+    <string name="loc1_pcmo">1111</string>
+    <string name="loc1_ssm">2222</string>
+    <string name="loc1_sarl">3333</string>
+
+    <string name="loc2_name">Syria</string>
+    <string name="loc2_pcmo">4444</string>
+    <string name="loc2_ssm">5555</string>
+    <string name="loc2_sarl">6666</string>
+
+    <string name="loc3_name">Tunisia</string>
+    <string name="loc3_pcmo">7777</string>
+    <string name="loc3_ssm">8888</string>
+    <string name="loc3_sarl">9999</string>
 </resources>
