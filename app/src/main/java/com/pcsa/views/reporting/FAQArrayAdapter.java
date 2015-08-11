@@ -62,7 +62,6 @@ public class FAQArrayAdapter extends ArrayAdapter<String> {
             }
         });
 
-
         return faq;
     }
 }

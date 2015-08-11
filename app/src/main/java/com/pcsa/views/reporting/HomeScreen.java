@@ -71,6 +71,5 @@ public class HomeScreen extends Activity {
                 startActivity(types);
             }
         });
-
     }
 }

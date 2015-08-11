@@ -24,6 +24,7 @@ public class Types extends Activity {
     Button faq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_types);
 

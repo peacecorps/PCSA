@@ -25,6 +25,7 @@ public class Steps extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_steps);
 
@@ -41,6 +42,7 @@ public class Steps extends Activity {
         reporting_step4.setText(Html.fromHtml(getResources().getString(R.string.reporting_step4)));
         reporting_step5.setText(Html.fromHtml(getResources().getString(R.string.reporting_step5)));
         reporting_step6.setText(Html.fromHtml(getResources().getString(R.string.reporting_step6)));
+
     }
 
     @Override
