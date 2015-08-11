@@ -28,10 +28,10 @@ import java.util.Map;
  */
 public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener {
 
-    Button contact_pcmo;
-    Button contact_ssm;
-    Button contact_sarl;
-    TextView current_location;
+    Button contactPcmo;
+    Button contactSsm;
+    Button contactSarl;
+    TextView currentLocation;
 
     LocationDetails selectedLocationDetails;
     private static final Map<String, LocationDetails> locationDetails;
@@ -48,30 +48,30 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_contact_post_staff);
 
-        contact_pcmo = (Button) findViewById(R.id.post_staff_pcmo);
-        contact_ssm = (Button) findViewById(R.id.post_staff_ssm);
-        contact_sarl = (Button) findViewById(R.id.post_staff_sarl);
-        current_location = (TextView) findViewById(R.id.post_staff_current_location);
+        contactPcmo = (Button) findViewById(R.id.post_staff_pcmo);
+        contactSsm = (Button) findViewById(R.id.post_staff_ssm);
+        contactSarl = (Button) findViewById(R.id.post_staff_sarl);
+        currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
 
-        contact_pcmo.setText(R.string.contact_pcmo);
-        contact_ssm.setText(R.string.contact_ssm);
-        contact_sarl.setText(R.string.contact_sarl);
+        contactPcmo.setText(R.string.contact_pcmo);
+        contactSsm.setText(R.string.contact_ssm);
+        contactSarl.setText(R.string.contact_sarl);
 
-        contact_pcmo.setOnClickListener(new View.OnClickListener() {
+        contactPcmo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createDialog(v, selectedLocationDetails.getPcmo_contact());
             }
         });
 
-        contact_ssm.setOnClickListener(new View.OnClickListener() {
+        contactSsm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createDialog(v, selectedLocationDetails.getSsm_contact());
             }
         });
 
-        contact_sarl.setOnClickListener(new View.OnClickListener() {
+        contactSarl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createDialog(v, selectedLocationDetails.getSarl_contact());
@@ -127,7 +127,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String selectedItem = (String) parent.getItemAtPosition(position);
-        current_location.setText(getResources().getString(R.string.reporting_current_location) + " " + selectedItem);
+        currentLocation.setText(getResources().getString(R.string.reporting_current_location) + " " + selectedItem);
 
         // selectedLocationDetails holds all details about the location selected by the user
         selectedLocationDetails = locationDetails.get(selectedItem);
