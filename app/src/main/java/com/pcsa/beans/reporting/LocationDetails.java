@@ -6,16 +6,16 @@ package com.pcsa.beans.reporting;
  * Holds contact information for a particular location
  */
 public class LocationDetails {
-    private String locationName;
-    private int pcmo_contact;
-    private int ssm_contact;
-    private int sarl_contact;
+    private String locationName;    // name of the current location of the volunteer
+    private String pcmoContact;     //contact number of Peace Corps Medical Officer
+    private String ssmContact;      //contact number of Safety and Security Manager
+    private String sarlContact;     //contact number of Sexual Assault Response Liason
 
-    public LocationDetails(String locationName, int pcmo_contact, int ssm_contact, int sarl_contact){
+    public LocationDetails(String locationName, String pcmo_contact, String ssm_contact, String sarl_contact){
         this.locationName = locationName;
-        this.pcmo_contact = pcmo_contact;
-        this.ssm_contact = ssm_contact;
-        this.sarl_contact = sarl_contact;
+        this.pcmoContact = pcmo_contact;
+        this.ssmContact = ssm_contact;
+        this.sarlContact = sarl_contact;
     }
 
     public String getLocationName() {
@@ -26,27 +26,27 @@ public class LocationDetails {
         this.locationName = locationName;
     }
 
-    public int getPcmo_contact() {
-        return pcmo_contact;
+    public String getPcmoContact() {
+        return pcmoContact;
     }
 
-    public void setPcmo_contact(int pcmo_contact) {
-        this.pcmo_contact = pcmo_contact;
+    public void setPcmoContact(String pcmoContact) {
+        this.pcmoContact = pcmoContact;
     }
 
-    public int getSsm_contact() {
-        return ssm_contact;
+    public String getSsmContact() {
+        return ssmContact;
     }
 
-    public void setSsm_contact(int ssm_contact) {
-        this.ssm_contact = ssm_contact;
+    public void setSsmContact(String ssmContact) {
+        this.ssmContact = ssmContact;
     }
 
-    public int getSarl_contact() {
-        return sarl_contact;
+    public String getSarlContact() {
+        return sarlContact;
     }
 
-    public void setSarl_contact(int sarl_contact) {
-        this.sarl_contact = sarl_contact;
+    public void setSarlContact(String sarlContact) {
+        this.sarlContact = sarlContact;
     }
 }

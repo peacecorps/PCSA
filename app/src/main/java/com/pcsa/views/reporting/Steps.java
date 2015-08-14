@@ -1,14 +1,13 @@
 package com.pcsa.views.reporting;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 /**
  * @author Buddhiprabha Erabadda
@@ -26,6 +25,7 @@ public class Steps extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_steps);
 
@@ -42,6 +42,7 @@ public class Steps extends Activity {
         reporting_step4.setText(Html.fromHtml(getResources().getString(R.string.reporting_step4)));
         reporting_step5.setText(Html.fromHtml(getResources().getString(R.string.reporting_step5)));
         reporting_step6.setText(Html.fromHtml(getResources().getString(R.string.reporting_step6)));
+
     }
 
     @Override

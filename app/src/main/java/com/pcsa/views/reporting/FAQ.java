@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.ScrollView;
 
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 /**
  * @author Buddhiprabha Erabadda
@@ -16,6 +16,7 @@ public class FAQ extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         String[] values = new String[] {
                 getResources().getString(R.string.reporting_faq1),getResources().getString(R.string.reporting_faq2),
@@ -35,5 +36,6 @@ public class FAQ extends ListActivity {
 
         FAQArrayAdapter faqArrayAdapter = new FAQArrayAdapter(this, titles, values);
         setListAdapter(faqArrayAdapter);
+
     }
 }

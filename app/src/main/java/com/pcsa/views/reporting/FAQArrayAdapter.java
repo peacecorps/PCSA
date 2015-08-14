@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.pcsabuddhi.R;
+import com.pcsa.R;
 
 
 /**
@@ -61,7 +61,6 @@ public class FAQArrayAdapter extends ArrayAdapter<String> {
                 }
             }
         });
-
 
         return faq;
     }
