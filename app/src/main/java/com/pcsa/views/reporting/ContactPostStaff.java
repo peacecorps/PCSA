@@ -95,8 +95,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     private void createDialog(View v, final String numberToContact){
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                contactStaff(which, numberToContact);
+            public void onClick(DialogInterface dialog, int optionSelected) {
+                contactStaff(optionSelected, numberToContact);
             }
         };
 
