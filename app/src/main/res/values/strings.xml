@@ -20,6 +20,9 @@
     <string name="title_activity_types">Types</string>
     <string name="reporting_get_help">Get Help Now</string>
     <string name="reporting_get_help_sub1">Post Staff</string>
+    <string name="reporting_get_help_sub2">Other Staff and Support Options</string>
+    <string name="reporting_get_help_foot1">Contact Other Staff &gt;&gt;</string>
+    <string name="reporting_get_help_foot2">&lt;&lt; Contact Post Staff</string>
     <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
 ·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
 ·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
@@ -54,10 +57,17 @@
     <string name="reporting_change_location">Change Location</string>
     <string name="reporting_current_location">This is information for</string>
 
+    <string name="contact_pcsaves">PC SAVES Anonymous Helpline</string>
+    <string name="contact_ova">Office of Victim Advocacy</string>
+    <string name="contact_oig">Office of Inspector General</string>
+    <string name="contact_ocrd">Office of Civil Rights and Diversity</string>
+    
     <!-- Locations that are available on dropdown of Contact Staff-->
     <string-array name="locations_array">
         <item>Uganda</item>
         <item>Syria</item>
         <item>Tunisia</item>
     </string-array>
+    <string name="title_activity_contact_other_staff">ContactOtherStaff</string>
+    <string name="title_activity_other_staff_content">OtherStaffContent</string>
 </resources>

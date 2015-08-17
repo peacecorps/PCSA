@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/reporting_contact_other_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
@@ -43,59 +43,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/reporting_get_help_sub1"
+            android:text="@string/reporting_get_help_sub2"
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/sub_title_font" />
 
         <include
-            android:id="@+id/post_staff_pcmo"
+            android:id="@+id/pcsaves"
             layout="@layout/button"/>
         <include
-            android:id="@+id/post_staff_ssm"
+            android:id="@+id/ova"
             layout="@layout/button"/>
         <include
-            android:id="@+id/post_staff_sarl"
+            android:id="@+id/oig"
+            layout="@layout/button"/>
+        <include
+            android:id="@+id/ocrd"
             layout="@layout/button"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/reporting_change_location"
-                android:layout_margin="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/primary_text_default_material_dark"/>
-
-            <Spinner
-                android:id="@+id/reporting_locationlist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
-                android:layout_marginTop="20dp"/>
-        </LinearLayout>
-
         <TextView
-            android:id="@+id/post_staff_current_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reporting_current_location"
-            android:layout_margin="20dp"
-            android:textSize="16sp"
-            android:textColor="@color/primary_text_default_material_dark"/>
-
-        <TextView
-            android:id="@+id/link_to_other_staff"
+            android:id="@+id/link_to_post_staff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/primary_text_default_material_dark"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="@string/reporting_get_help_foot1"/>
+            android:layout_marginTop="20dp"
+            android:text="@string/reporting_get_help_foot2"/>
 
     </LinearLayout>
 </ScrollView>

@@ -2,46 +2,54 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pcsa" >
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.pcsa.views.reporting.HomeScreen"
+            android:name=".views.reporting.HomeScreen"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.Types"
+            android:name=".views.reporting.Types"
             android:label="@string/title_activity_types" >
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.Steps"
+            android:name=".views.reporting.Steps"
             android:label="@string/title_activity_steps" >
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.FAQ"
+            android:name=".views.reporting.FAQ"
             android:label="@string/title_activity_faq" >
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.Confidentiality"
+            android:name=".views.reporting.Confidentiality"
             android:label="@string/title_activity_confidentiality" >
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.Resources"
+            android:name=".views.reporting.Resources"
             android:label="@string/title_activity_resources" >
         </activity>
         <activity
-            android:name="com.pcsa.views.reporting.ContactPostStaff"
+            android:name=".views.reporting.ContactPostStaff"
             android:label="@string/title_activity_contact_post_staff" >
+        </activity>
+        <activity
+            android:name=".views.reporting.ContactOtherStaff"
+            android:label="@string/title_activity_contact_other_staff" >
+        </activity>
+        <activity
+            android:name=".views.reporting.OtherStaffContent"
+            android:label="@string/title_activity_other_staff_content" >
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>
