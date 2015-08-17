@@ -12,14 +12,15 @@ import com.pcsa.R;
 /**
  * @author Buddhiprabha Erabadda
  * Allows user to select the Other Staff member to contact
+ * Buttons in the screen correspond to various office members
  */
 public class ContactOtherStaff extends Activity {
 
     TextView contactPostStaff;
-    Button contactPcSaves;
-    Button contactOva;
-    Button contactOig;
-    Button contactOcrd;
+    Button contactPcSaves;  //Button to access PC Saves Anonymous HelpLine
+    Button contactOva;      //Button to access Office of Victim Advocacy
+    Button contactOig;      //Button to access Office of Inspector General
+    Button contactOcrd;     //Button to access Office of Civil Rights and diversity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
