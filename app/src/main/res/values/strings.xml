@@ -60,4 +60,21 @@
         <item>Syria</item>
         <item>Tunisia</item>
     </string-array>
+    <string name="get_help">Get Help now</string>
+    <string name="circle">Circle of Trust</string>
+    <string name="reporting">Reporting Process</string>
+    <string name="safety">Safety Resources</string>
+    <string name="helping_others">Helping Others</string>
+    <string name="title_activity_circle_of_trust">CircleOfTrust</string>
+    <string name="str_cnt_mnu_edit">Edit</string>
+    <string name="str_cnt_mnu_share">Share</string>
+    <string name="str_cnt_mnu_delete">Delete</string>
+    <string name="title_activity_trustees">Trustees</string>
+    <string name="title_activity_get_help_now">GetHelpNow</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_circle_intro">CircleIntro</string>
+    <string name="title_activity_saftey_resources">SafteyResources</string>
+
 </resources>

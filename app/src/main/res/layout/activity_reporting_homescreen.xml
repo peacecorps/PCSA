@@ -53,8 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:background="@drawable/bg_btn_rounded_rectangle"
         android:text="@string/reporting_steps"
+        android:background="@drawable/bg_btn_rounded_rectangle"
         android:textColor="@color/primary_text_default_material_dark"
         android:textStyle="bold" />
 

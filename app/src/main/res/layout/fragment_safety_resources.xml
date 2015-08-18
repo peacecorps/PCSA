@@ -1,0 +1,66 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/background_app"
+    android:orientation="vertical"
+    tools:context="com.peacecorps.pcsa.SafteyResourcesFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:textColor="#fff"
+                android:text="Helping"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:text="Friends and community members"
+                />
+
+            <Button
+                android:id="@+id/PCMOButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="20dp"
+                android:background="@drawable/bg_btn_rounded_rectangle"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textStyle="bold"
+                android:text="learn about the effect of Sexual Assualt"
+                android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/SSMButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="20dp"
+                android:background="@drawable/bg_btn_rounded_rectangle"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textStyle="bold"
+                android:text="Bystander intervention tactics"
+                android:layout_marginTop="70dp"/>
+            <Button
+                android:id="@+id/SARLButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="20dp"
+                android:background="@drawable/bg_btn_rounded_rectangle"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textStyle="bold"
+                android:text="Predator tactics"
+                android:layout_marginTop="70dp"/>
+
+        </LinearLayout>
+</ScrollView>
