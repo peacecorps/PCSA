@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.pcsa.beans.reporting.LocationDetails;
 import com.pcsa.R;
+import com.pcsa.beans.reporting.LocationDetails;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +32,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     Button contactSsm;
     Button contactSarl;
     TextView currentLocation;
+    TextView contactOtherStaff;
 
     LocationDetails selectedLocationDetails;
 
@@ -53,6 +54,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactSsm = (Button) findViewById(R.id.post_staff_ssm);
         contactSarl = (Button) findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
+        contactOtherStaff = (TextView) findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
         contactSsm.setText(R.string.contact_ssm);
@@ -85,6 +87,15 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
                 R.array.locations_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationList.setAdapter(adapter);
+
+        contactOtherStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent otherStaff = new Intent(ContactPostStaff.this, ContactOtherStaff.class);
+                startActivity(otherStaff);
+                finish();
+            }
+        });
     }
 
     /**
