@@ -21,7 +21,7 @@
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/title_font"
             android:textStyle="bold"
-                        android:text="A confidential Safety resource for Peace Corps Volunteers"
+            android:text="@string/home_title"
             />
 
         <Button
