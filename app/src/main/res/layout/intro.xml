@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="#ffffff"
         android:paddingRight="32dp"
-        android:textSize="28sp"
+        android:textSize="@dimen/text_large"
         android:text="Just a few Steps on how to use"/>
 
     <LinearLayout
@@ -43,7 +43,7 @@
         android:textColor="#ffffff"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:textSize="28sp"
+        android:textSize="@dimen/text_large"
         android:text="Circle Of Trust"
         android:fontFamily="sans-serif-thin"
         />
