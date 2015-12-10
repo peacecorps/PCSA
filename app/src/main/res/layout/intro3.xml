@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="#ffffff"
         android:paddingRight="32dp"
-        android:textSize="28sp"
+        android:textSize="@dimen/text_large"
         android:text="Circle Of Trust"/>
 
     <LinearLayout
@@ -44,7 +44,7 @@
         android:textColor="#ffffff"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_normal"
         android:fontFamily="sans-serif-thin"
         android:text="Select the message you want to send from here!"/>
     <TextView

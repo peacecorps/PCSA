@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="#ffffff"
         android:paddingRight="32dp"
-        android:textSize="28sp"
+        android:textSize="@dimen/text_large"
         android:text="The message will be sent to 6 Comrades for immediate intervention"/>
 
     <LinearLayout
@@ -45,7 +45,7 @@
         android:textColor="#ffffff"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:textSize="28sp"
+        android:textSize="@dimen/text_large"
         android:textStyle="bold"
         android:fontFamily="sans-serif-thin"
         android:onClick="getStarted"

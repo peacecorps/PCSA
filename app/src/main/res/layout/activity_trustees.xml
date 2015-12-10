@@ -15,7 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_normal"
             android:textColor="#fffaf3f1"
             android:text="Add the Comrade Numbers here"
             />
@@ -122,7 +122,7 @@
             android:textColor="#fff"
             android:background="@drawable/btn_rounded_rectangle"
             android:text="OK"
-            android:textSize="20dp"
+            android:textSize="@dimen/text_normal"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"/>
 
