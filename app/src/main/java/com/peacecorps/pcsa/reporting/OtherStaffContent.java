@@ -21,6 +21,9 @@ import com.peacecorps.pcsa.R;
  */
 public class OtherStaffContent extends Activity {
 
+    public static final String CONTACT_NUMBER = "contactNumber";
+    public static final String CONTACT_NAME = "contactName";
+    public static final String CONTACT_DESC = "contatDesc";
     TextView contactName;
     TextView contactDescription;
     Button contactNow;
@@ -36,10 +39,10 @@ public class OtherStaffContent extends Activity {
         contactNow = (Button) findViewById(R.id.contact_now);
 
         Bundle details = getIntent().getExtras();
-        contactNumber = details.getString("contactNumber");
+        contactNumber = details.getString(CONTACT_NUMBER);
 
-        contactName.setText(details.getString("contactName"));
-        contactDescription.setText(details.getString("contatDesc"));
+        contactName.setText(details.getString(CONTACT_NAME));
+        contactDescription.setText(details.getString(CONTACT_DESC));
         contactNow.setText("Contact Now");
 
         contactNow.setOnClickListener(new View.OnClickListener() {

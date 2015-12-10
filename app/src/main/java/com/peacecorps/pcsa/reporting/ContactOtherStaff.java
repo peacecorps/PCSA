@@ -63,30 +63,30 @@ public class ContactOtherStaff extends Activity {
             switch (v.getId()){
                 case R.id.pcsaves:
                     Intent pcSavesContactDetails = new Intent(ContactOtherStaff.this, OtherStaffContent.class);
-                    pcSavesContactDetails.putExtra("contactName", getResources().getString(R.string.contact_pcsaves));
-                    pcSavesContactDetails.putExtra("contatDesc", getResources().getString(R.string.reporting_desc_pcsaves));
-                    pcSavesContactDetails.putExtra("contactNumber", getResources().getString(R.string.reporting_contact_pcsaves));
+                    pcSavesContactDetails.putExtra(OtherStaffContent.CONTACT_NAME, getResources().getString(R.string.contact_pcsaves));
+                    pcSavesContactDetails.putExtra(OtherStaffContent.CONTACT_DESC, getResources().getString(R.string.reporting_desc_pcsaves));
+                    pcSavesContactDetails.putExtra(OtherStaffContent.CONTACT_NUMBER, getResources().getString(R.string.reporting_contact_pcsaves));
                     startActivity(pcSavesContactDetails);
                     break;
                 case R.id.ova:
                     Intent ovaContactDetails = new Intent(ContactOtherStaff.this, OtherStaffContent.class);
-                    ovaContactDetails.putExtra("contactName", getResources().getString(R.string.contact_ova));
-                    ovaContactDetails.putExtra("contatDesc", getResources().getString(R.string.reporting_desc_ova));
-                    ovaContactDetails.putExtra("contactNumber", getResources().getString(R.string.reporting_contact_ova));
+                    ovaContactDetails.putExtra(OtherStaffContent.CONTACT_NAME, getResources().getString(R.string.contact_ova));
+                    ovaContactDetails.putExtra(OtherStaffContent.CONTACT_DESC, getResources().getString(R.string.reporting_desc_ova));
+                    ovaContactDetails.putExtra(OtherStaffContent.CONTACT_NUMBER, getResources().getString(R.string.reporting_contact_ova));
                     startActivity(ovaContactDetails);
                     break;
                 case R.id.oig:
                     Intent oigContactDetails = new Intent(ContactOtherStaff.this, OtherStaffContent.class);
-                    oigContactDetails.putExtra("contactName", getResources().getString(R.string.contact_oig));
-                    oigContactDetails.putExtra("contatDesc", getResources().getString(R.string.reporting_desc_oig));
-                    oigContactDetails.putExtra("contactNumber", getResources().getString(R.string.reporting_contact_oig));
+                    oigContactDetails.putExtra(OtherStaffContent.CONTACT_NAME, getResources().getString(R.string.contact_oig));
+                    oigContactDetails.putExtra(OtherStaffContent.CONTACT_DESC, getResources().getString(R.string.reporting_desc_oig));
+                    oigContactDetails.putExtra(OtherStaffContent.CONTACT_NUMBER, getResources().getString(R.string.reporting_contact_oig));
                     startActivity(oigContactDetails);
                     break;
                 case R.id.ocrd:
                     Intent ocrdContactDetails = new Intent(ContactOtherStaff.this, OtherStaffContent.class);
-                    ocrdContactDetails.putExtra("contactName", getResources().getString(R.string.contact_ocrd));
-                    ocrdContactDetails.putExtra("contatDesc", getResources().getString(R.string.reporting_desc_ocrd));
-                    ocrdContactDetails.putExtra("contactNumber", getResources().getString(R.string.reporting_contact_ocrd));
+                    ocrdContactDetails.putExtra(OtherStaffContent.CONTACT_NAME, getResources().getString(R.string.contact_ocrd));
+                    ocrdContactDetails.putExtra(OtherStaffContent.CONTACT_DESC, getResources().getString(R.string.reporting_desc_ocrd));
+                    ocrdContactDetails.putExtra(OtherStaffContent.CONTACT_NUMBER, getResources().getString(R.string.reporting_contact_ocrd));
                     startActivity(ocrdContactDetails);
                     break;
             }

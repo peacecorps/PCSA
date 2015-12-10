@@ -47,6 +47,14 @@
             android:label="@string/title_activity_contact_post_staff" >
         </activity>
         <activity
+            android:name="com.peacecorps.pcsa.reporting.ContactOtherStaff"
+            android:label="@string/title_activity_contact_other_staff" >
+        </activity>
+        <activity
+            android:name="com.peacecorps.pcsa.reporting.OtherStaffContent"
+            android:label="@string/title_activity_other_staff_content" >
+        </activity>
+        <activity
             android:name="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust"
             android:label="@string/title_activity_circle_of_trust"
             android:parentActivityName=".MainActivity" >
