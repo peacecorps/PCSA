@@ -49,57 +49,34 @@
         android:textSize="@dimen/sub_title_font" />
     <Button
         android:id="@+id/reporting_steps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
         android:text="@string/reporting_steps"
-        android:background="@drawable/bg_btn_rounded_rectangle"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textStyle="bold" />
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_types"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn_rounded_rectangle"
         android:text="@string/reporting_types"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textStyle="bold" />
+        style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn_rounded_rectangle"
         android:text="@string/reporting_contact"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textStyle="bold" />
+        style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_resources"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn_rounded_rectangle"
         android:text="@string/reporting_resources"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textStyle="bold" />
+        android:layout_marginTop="10dp"
+        style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_confidentiality"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn_rounded_rectangle"
         android:text="@string/reporting_confidentiality"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textStyle="bold" />
+        android:layout_marginTop="10dp"
+        style="@style/NavigateWrapButton" />
     </LinearLayout>
     </ScrollView>
