@@ -91,9 +91,8 @@
         android:text="@string/reporting_faq"
         android:id="@+id/reporting_faq"
         android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:background="@drawable/bg_btn_rounded_rectangle"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textSize="12sp"
+        style="@style/AppButton"
+        android:textSize="@dimen/text_extra_small"
         android:layout_weight="1"
         android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 

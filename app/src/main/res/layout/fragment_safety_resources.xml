@@ -26,7 +26,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_normal"
                 android:textColor="#fff"
                 android:text="Friends and community members"
                 />
@@ -35,32 +35,26 @@
                 android:id="@+id/PCMOButton"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:textSize="20dp"
-                android:background="@drawable/bg_btn_rounded_rectangle"
-                android:textColor="@color/primary_text_default_material_dark"
-                android:textStyle="bold"
+                android:textSize="@dimen/text_normal"
                 android:text="learn about the effect of Sexual Assualt"
-                android:layout_marginTop="50dp"/>
+                android:layout_marginTop="50dp"
+                style="@style/AppButton"/>
             <Button
                 android:id="@+id/SSMButton"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:textSize="20dp"
-                android:background="@drawable/bg_btn_rounded_rectangle"
-                android:textColor="@color/primary_text_default_material_dark"
-                android:textStyle="bold"
+                android:textSize="@dimen/text_normal"
                 android:text="Bystander intervention tactics"
-                android:layout_marginTop="70dp"/>
+                android:layout_marginTop="70dp"
+                style="@style/AppButton"/>
             <Button
                 android:id="@+id/SARLButton"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:textSize="20dp"
-                android:background="@drawable/bg_btn_rounded_rectangle"
-                android:textColor="@color/primary_text_default_material_dark"
-                android:textStyle="bold"
+                android:textSize="@dimen/text_normal"
                 android:text="Predator tactics"
-                android:layout_marginTop="70dp"/>
+                android:layout_marginTop="70dp"
+                style="@style/AppButton"/>
 
         </LinearLayout>
 </ScrollView>

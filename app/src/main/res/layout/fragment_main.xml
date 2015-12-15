@@ -26,52 +26,27 @@
 
         <Button
             android:id="@+id/getButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
+            style="@style/NavigateButton"
             android:text="@string/get_help"
             android:layout_marginTop="50dp"/>
         <Button
             android:id="@+id/circleButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
+            style="@style/NavigateButton"
             android:text="@string/circle"
             android:layout_marginTop="20dp"/>
         <Button
             android:id="@+id/reportButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
+            style="@style/NavigateButton"
             android:text="@string/reporting"
             android:layout_marginTop="20dp"/>
         <Button
             android:id="@+id/safetyResourceButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
+            style="@style/NavigateButton"
             android:text="@string/safety"
             android:layout_marginTop="20dp"/>
         <Button
             android:id="@+id/getHelpButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
+            style="@style/NavigateButton"
             android:text="@string/helping_others"
             android:layout_marginTop="20dp"/>
 

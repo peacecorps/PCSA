@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/reporting_change_location"
                 android:layout_margin="20dp"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_small"
                 android:textColor="@color/primary_text_default_material_dark"/>
 
             <Spinner
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:text="@string/reporting_current_location"
             android:layout_margin="20dp"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_small"
             android:textColor="@color/primary_text_default_material_dark"/>
 
         <TextView
