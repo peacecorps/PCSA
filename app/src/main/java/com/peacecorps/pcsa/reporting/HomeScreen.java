@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.peacecorps.pcsa.R;
 
@@ -51,16 +52,20 @@ public class HomeScreen extends Activity {
         reportingMoreResources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent types = new Intent(HomeScreen.this, Resources.class);
-                startActivity(types);
+                //Commented out because screen is blank.
+                Toast.makeText(HomeScreen.this, "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                //Intent types = new Intent(HomeScreen.this, Resources.class);
+                //startActivity(types);
             }
         });
 
         reportingConfidentiality.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent types = new Intent(HomeScreen.this, Confidentiality.class);
-                startActivity(types);
+                //Commented out because the screen is blank.
+                Toast.makeText(HomeScreen.this, "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                //Intent types = new Intent(HomeScreen.this, Confidentiality.class);
+                //startActivity(types);
             }
         });
 
