@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.safety_resources.SafetyResources;
@@ -30,7 +29,6 @@ public class MainActivityFragment extends Fragment {
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
         Button reportingProcessButton = (Button) rootView.findViewById(R.id.reportButton);
         Button safetyResourceButton = (Button) rootView.findViewById(R.id.safetyResourceButton);
-        Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
 
         reportingProcessButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +46,7 @@ public class MainActivityFragment extends Fragment {
         safetyResourceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(getActivity(), SafetyResources.class));
-
+                startActivity(new Intent(getActivity(), SafetyResources.class));
             }
         });
 
@@ -58,13 +54,6 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), CircleIntro.class));
-            }
-        });
-
-        getHelpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
             }
         });
 
