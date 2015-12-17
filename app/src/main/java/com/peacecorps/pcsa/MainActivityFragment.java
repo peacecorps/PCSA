@@ -43,7 +43,7 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View v) {
                 //Temporarily commented out until the functionality is implemented.
                 //startActivity(new Intent(getActivity(), HomeScreen.class));
-                Toast.makeText(getActivity(), "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -52,7 +52,15 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View v) {
                 //Temporarily commented out until the functionality is implemented.
                 //startActivity(new Intent(getActivity(), SafetyResources.class));
-                Toast.makeText(getActivity(), "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        getHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //getHelpButton does not have any functioanlity yet.
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 

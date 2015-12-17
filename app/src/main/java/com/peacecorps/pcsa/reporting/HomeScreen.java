@@ -57,7 +57,7 @@ public class HomeScreen extends Activity {
                 startActivity(types);
                 */
 
-                Toast.makeText(HomeScreen.this, "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -69,7 +69,7 @@ public class HomeScreen extends Activity {
                 startActivity(types);
                 */
                 
-                Toast.makeText(HomeScreen.this, "This functionality is currently unavailable.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
