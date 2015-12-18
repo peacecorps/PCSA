@@ -68,7 +68,7 @@ public class Trustees extends AppCompatActivity {
                 editor.putString(comrade6, comrade6editText.getText().toString());
 
                 editor.commit();
-                Toast.makeText(getApplicationContext(), "Comrades phone numbers has been updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
             }
         });
     }

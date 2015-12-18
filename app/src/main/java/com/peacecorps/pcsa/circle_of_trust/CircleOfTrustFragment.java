@@ -101,7 +101,6 @@ public class CircleOfTrustFragment extends Fragment {
         }
 
         try {
-            int totalComrades = 0;
             sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
             // The numbers variable holds the Comrades numbers
             String numbers[] = {sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
@@ -111,19 +110,13 @@ public class CircleOfTrustFragment extends Fragment {
             for(String number : numbers) {
                 if(number != ""){
                     sms.sendTextMessage(number, null, message, null, null);
-                    totalComrades++;
                 }
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle(R.string.msg_sent); // title bar string
             builder.setPositiveButton(R.string.ok, null);
 
-            //Can't say that you sent it to 6 people, if you don't have 6 comrades!
-            if(totalComrades == 1){
-                builder.setMessage("This message has been sent to " + totalComrades + " Comrade");
-            }else{
-                builder.setMessage("This message has been sent to " + totalComrades + " Comrades");
-            }
+            builder.setMessage(getString(R.string.confirmation_message));
 
             AlertDialog errorDialog = builder.create();
             errorDialog.show(); // display the Dialog
