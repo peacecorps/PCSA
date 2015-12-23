@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.peacecorps.pcsa.R;
 
@@ -51,16 +52,24 @@ public class HomeScreen extends Activity {
         reportingMoreResources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /* Temporarily commented out until the functionality is implemented
                 Intent types = new Intent(HomeScreen.this, Resources.class);
                 startActivity(types);
+                */
+
+                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
         reportingConfidentiality.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /* Temporarily commented out until the functionality is implemented.
                 Intent types = new Intent(HomeScreen.this, Confidentiality.class);
                 startActivity(types);
+                */
+                
+                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
