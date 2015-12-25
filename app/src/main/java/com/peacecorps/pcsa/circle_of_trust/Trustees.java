@@ -1,9 +1,10 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.R;
 
 
-public class Trustees extends ActionBarActivity {
+public class Trustees extends AppCompatActivity {
 
     EditText comrade1editText;
     EditText comrade2editText;
@@ -31,7 +32,9 @@ public class Trustees extends ActionBarActivity {
     public static final String comrade4 = "comrade4Key";
     public static final String comrade5 = "comrade5Key";
     public static final String comrade6 = "comrade6Key";
+
     SharedPreferences sharedpreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,33 +49,27 @@ public class Trustees extends ActionBarActivity {
         okButton = (Button) findViewById(R.id.okButton);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        editor = sharedpreferences.edit();
+
+        comrade1editText.setText(sharedpreferences.getString(comrade1, ""));
+        comrade2editText.setText(sharedpreferences.getString(comrade2, ""));
+        comrade3editText.setText(sharedpreferences.getString(comrade3, ""));
+        comrade4editText.setText(sharedpreferences.getString(comrade4, ""));
+        comrade5editText.setText(sharedpreferences.getString(comrade5, ""));
+
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Comrades phone numbers has been updated", Toast.LENGTH_LONG).show();
+                editor.putString(comrade1, comrade1editText.getText().toString());
+                editor.putString(comrade2, comrade2editText.getText().toString());
+                editor.putString(comrade3, comrade3editText.getText().toString());
+                editor.putString(comrade4, comrade4editText.getText().toString());
+                editor.putString(comrade5, comrade5editText.getText().toString());
+                editor.putString(comrade6, comrade6editText.getText().toString());
+
+                editor.commit();
+                Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_trustees, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

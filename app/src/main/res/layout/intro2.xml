@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="#ffffff"
         android:paddingRight="32dp"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_normal"
         android:text="When you are feeling insecure or needs a comrades attention.\nPrees the button"/>
 
     <LinearLayout

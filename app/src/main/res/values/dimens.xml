@@ -10,9 +10,11 @@
     <dimen name="title_font">24sp</dimen>
     <dimen name="sub_title_font">20sp</dimen>
     <dimen name="menu_icon_width">200dp</dimen>
+    <dimen name="text_extra_small">12sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_normal">20sp</dimen>
+    <dimen name="text_large">28sp</dimen>
 
-    <!-- Background colors-->
-    <color name="background_app">#2FAA96</color>
-    <color name="background_textview">#3b8471</color>
-    <color name="background_clicked">#FFC25C</color>
+    <dimen name="app_button_side_padding">5dp</dimen>
+
 </resources>

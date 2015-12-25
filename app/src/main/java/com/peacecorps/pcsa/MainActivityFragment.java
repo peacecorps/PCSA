@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.safety_resources.SafetyResources;
@@ -29,6 +30,7 @@ public class MainActivityFragment extends Fragment {
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
         Button reportingProcessButton = (Button) rootView.findViewById(R.id.reportButton);
         Button safetyResourceButton = (Button) rootView.findViewById(R.id.safetyResourceButton);
+        Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
 
         reportingProcessButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,14 +41,26 @@ public class MainActivityFragment extends Fragment {
         getHelpNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), HomeScreen.class));
+                //Temporarily commented out until the functionality is implemented.
+                //startActivity(new Intent(getActivity(), HomeScreen.class));
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
         safetyResourceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), SafetyResources.class));
+                //Temporarily commented out until the functionality is implemented.
+                //startActivity(new Intent(getActivity(), SafetyResources.class));
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        getHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //getHelpButton does not have any functioanlity yet.
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 
