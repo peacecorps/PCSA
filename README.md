@@ -1,7 +1,6 @@
 
 # PCSA
-Home screen
-![alt text](screenshots/pic.png "Home screen of the app")
+
 ## Introduction
 
 PCSA Android is an Android app developed in Java
@@ -19,7 +18,7 @@ Download [Android Studio](http://developer.android.com/sdk/index.html) and the r
 ###Installation:
 Go to your terminal and execute this command
 
-$ git clone https://github.com/systers/PCSA-Android
+    `$ git clone https://github.com/systers/PCSA-Android`
 
 Or download the ZIP file from above
 
@@ -42,6 +41,7 @@ If there are any other questions or concerns, please contact the Systers contrib
 
 To help us fix some issues or to post the ones you found, go to the [issue list](https://github.com/systers/PCSA-Android/issues)
 
-
+## How the app should look
+![alt text](screenshots/pic.png "Home screen of the app")
 
 
