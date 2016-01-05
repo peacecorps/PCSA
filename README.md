@@ -1,42 +1,41 @@
 # PCSA
+![alt text](screenshots/pic.png "Home screen of the app")
+## Introduction
 
-<<<<<<< HEAD
- * Introduction
+    PCSA Android is an Android app developed in Java
 
-    Peace Corps is committed to providing a compassionate and supportive response to 
-        all Volunteers who have been sexually assaulted. To that end, the Peace Corps makes 
-        the following commitment to our Volunteers who are victims of sexual assault.
-=======
+    Peace Corps is committed to providing a compassionate and supportive response to all Volunteers who have been sexually assaulted. To that end, the Peace Corps makes the following commitment to our Volunteers who are victims of sexual assault.
 
-Peace Corps is committed to providing a compassionate and supportive response to 
-all Volunteers who have been sexually assaulted. To that end, the Peace Corps makes 
-the following commitment to our Volunteers who are victims of sexual assault.
+    This project is to support the initiative by creating a mobile app that PCVs can readily have accessible to report or gain information on Peace Corps Safety and Security procedures.
 
-This project is to support thsi initiative by creating a mobile app that PCVs can readily have accessible to report or
-gain information on Peace Corps Safety and Security procedures.
->>>>>>> parent of eea5665... added README
+    You can learn more about the Systers organization, whose members work on the development of this app, [here](http://anitaborg.org/get-involved/systers/)
 
-    This project is to support this initiative by creating a mobile app that PCVs can readily have accessible to report or gain information on Peace Corps Safety and Security procedures.
+## Getting Started
 
-    The mobile application will be developed in both Android and iOS platforms.
+    Download [Android Studio](http://developer.android.com/sdk/index.html) and the required SDK tools or get the Eclipse ADT plugin
 
-<<<<<<< HEAD
- * Requirements
+###Installation:
 
-    You should have either the Eclipse IDE or Android Studio installed to run the project, since it the PCSA application is an android app. Make sure you have downloaded the ZIP file of the PCSA Android App from github or git clone in your terminal.
+    ```bash
+    $ git clone https://github.com/systers/PCSA-Android
+    ```
+    Or download ZIP from above
 
- * Recommended modules
+###Opening and Running 
 
-    If your emulator is slow, it is recommended you install an external one, such as from Genymotion. This way you may run the app quicker.
+    Open Android Studio and choose the option to open an existing project. 
+    
+    Navigate to the project and select the folder named 'PCSA-Android'.
 
- * Installation
+    Press the play button inside Android Studio, choose the emulator, and the PCSA app should now be running. 
 
-    To install, first clone the object from Github and install as you normally would. Then, open it from Eclipse or Android Studio by selecting the PCSA Android app from your Downloads folder. If prompted, install the required build tools, and then go ahead and press the play button to run. Make sure to select an emulator. 
+## Troubleshooting/Issues
 
- * Troubleshooting
+    If there are any problems encountered when installing the IDE, you may want to check and make sure you have a JDK and JRE installed. If you experience trouble building or running the project, you may not have the necessary build tools, which you can download directly through the IDE. If the app does not run on the emulator, it may be that the emulator is too slow, and you should look into installing one from an outside source. 
 
-    If there are any problems encountered when installing the IDE, you may want to check and make sure you have a JDK and JRE installed. If you experience trouble building or running the project, you may not have the necessary build tools, which you can download directly through the IDE. If the app does not run on the emulator, it may be that the emulator is too slow, and you should look into installing one from an outside source. If there are any other problems, please contact the Systers contributors. 
+    If there are any other concerns, please contact the Systers contributors. 
 
-=======
->>>>>>> parent of eea5665... added README
+    To help us fix some issues, go to the [issue list](https://github.com/systers/PCSA-Android/issues)
+
+
 
