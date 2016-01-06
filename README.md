@@ -8,6 +8,7 @@ PCSA Android is an Android app developed in Java
 Peace Corps is committed to providing a compassionate and supportive response to all Volunteers who have been sexually assaulted. To that end, the Peace Corps makes the following commitment to our Volunteers who are victims of sexual assault.
 
 This project is to support the initiative by creating a mobile app that PCVs can readily have accessible to report or gain information on Peace Corps Safety and Security procedures.
+![alt text](screenshots/pic.png "Home screen of the app")
 
 You can learn more about the Systers organization, whose members work on the development of this app [here](http://anitaborg.org/get-involved/systers/) and join our mailing list [here](http://systers.org/mailman/listinfo/systers)
 
@@ -41,7 +42,5 @@ If there are any other questions or concerns, please contact the Systers contrib
 
 To help us fix some issues or to post the ones you found, go to the [issue list](https://github.com/systers/PCSA-Android/issues)
 
-## How the app should look
-![alt text](screenshots/pic.png "Home screen of the app")
 
 
