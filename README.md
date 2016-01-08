@@ -32,6 +32,9 @@ Navigate to the project and select the folder named 'PCSA-Android'.
 
 Press the play button inside Android Studio, choose the emulator, and the PCSA app should now be running. 
 
+## Documentation
+Latest documentation for PCSA can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
+
 ## Contributing
 Please submit a pull request if you wish to add on any improvements you have made to the app
 
