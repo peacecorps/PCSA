@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.peacecorps.pcsa.Constants.SmsConstants;
 import com.peacecorps.pcsa.R;
 
 
@@ -89,13 +90,13 @@ public class CircleOfTrustFragment extends Fragment {
         String message = "";
         switch(optionSelected)
         {
-            case "Come get me":
+            case SmsConstants.COME_GET_ME:
                 message = getString(R.string.come_get_me_message);
                 break;
-            case "Call I need an interruption":
+            case SmsConstants.CALL_NEED_INTERRUPTION:
                 message = getString(R.string.interruption_message);
                 break;
-            case "I need to talk":
+            case SmsConstants.NEED_TO_TALK:
                 message = getString(R.string.need_to_talk_message);
                 break;
         }
