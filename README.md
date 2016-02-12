@@ -36,7 +36,12 @@ Press the play button inside Android Studio, choose the emulator, and the PCSA a
 Latest documentation for PCSA can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
 
 ## Contributing
-If you want to contribute to PCSA-Android, subscribe to our [systers-dev](http://systers.org/mailman/listinfo/systers-dev) mailing list and shoot an introductory email. Pick an open issue from the [issue list](https://github.com/systers/PCSA-Android/issues) claim it in the comments, fix the issue and send us a pull request. If you have any suggestions or issues to report, you can also discuss them in the mailing list.
+If you want to contribute to PCSA-Android, subscribe to our [systers-dev](http://systers.org/mailman/listinfo/systers-dev) mailing list and shoot an introductory email. Pick an open issue from the [issue list](https://github.com/systers/PCSA-Android/issues) claim it in the comments, fix the issue and send us a pull request. 
+If you find an issue yourself you can report it, a community member will get back to you and approve the issue. Then you can fix it and submit a PR. Please go through our issue list first and make sure the issues you are reporting  do not replicate the issues already reported.
+
+### Avoid doing the following mistakes
+1. Fix a new issue and submit a PR without reporting and getting it approved at first.
+2. Fix an issue assigned to somebody else and submit a PR before the assignee does. 
 
 ## Troubleshooting/Issues
 
