@@ -9,6 +9,7 @@
     ******************************************-->
     <string name="reporting_process">Reporting Process</string>
     <string name="updated_phone_numbers">"Comrades' phone numbers have been updated"</string>
+    <string name="updated_phone_numbers_fail">"Unable to update Comrades' phone numbers"</string>
     <string name="unavailable_function">This functionality is currently unavailable.</string>
     <string name="reporting_process_sub">Learn all about reporting</string>
     <string name="reporting_types">Reporting Types</string>
