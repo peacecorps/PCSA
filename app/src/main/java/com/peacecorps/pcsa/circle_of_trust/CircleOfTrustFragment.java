@@ -106,10 +106,10 @@ public class CircleOfTrustFragment extends Fragment {
             // The numbers variable holds the Comrades numbers
             String numbers[] = {sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
                     sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
-                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
+                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, "")};
 
             for(String number : numbers) {
-                if(number != ""){
+                if(!number.isEmpty()){
                     sms.sendTextMessage(number, null, message, null, null);
                 }
             }
