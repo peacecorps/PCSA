@@ -10,4 +10,7 @@
         android:padding="10dp"
         android:scrollbars="vertical"
         android:fadeScrollbars="false"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:autoLink="web|email"
+        android:textColorLink="#024002"
+    />
