@@ -8,11 +8,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.Constants.SmsConstants;
@@ -23,9 +25,15 @@ import com.peacecorps.pcsa.R;
  * A placeholder fragment containing a simple view.
  */
 public class CircleOfTrustFragment extends Fragment {
+    private static final String TAG = CircleOfTrustFragment.class.getSimpleName();
+    private static int REQUEST_CODE_TRUSTEES = 1001;
+
     ImageButton requestButton;
     ImageButton editButton;
+    ImageView[] comradesViews;
     SharedPreferences sharedPreferences;
+
+    private String[] phoneNumbers;
 
     private String optionSelected;
     public CircleOfTrustFragment() {
@@ -40,7 +48,7 @@ public class CircleOfTrustFragment extends Fragment {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),Trustees.class));
+                startActivityForResult(new Intent(getActivity(),Trustees.class),REQUEST_CODE_TRUSTEES);
             }
         });
         requestButton.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +57,40 @@ public class CircleOfTrustFragment extends Fragment {
                 showOptions();
             }
         });
+        comradesViews = new ImageView[]{(ImageView) rootView.findViewById(R.id.com1Button),(ImageView) rootView.findViewById(R.id.com2Button),
+                (ImageView) rootView.findViewById(R.id.com3Button),(ImageView) rootView.findViewById(R.id.com4Button),
+                (ImageView) rootView.findViewById(R.id.com5Button),(ImageView) rootView.findViewById(R.id.com6Button)};
+        loadContactPhotos();
         return rootView;
+    }
+
+    private void loadContactPhotos() {
+
+        if (phoneNumbers == null) {
+            loadPhoneNumbers();
+        }
+        //reset to defaults
+        for(ImageView view:comradesViews)
+        {
+            view.setImageResource(R.mipmap.ic_comrade);
+        }
+
+        for (int i = 0; i < phoneNumbers.length; i++) {
+            String number = phoneNumbers[i];
+            if (number != null && number.length() > 0) {
+                ContactPhotoLoader contactPhotoLoader = new ContactPhotoLoader();
+                contactPhotoLoader.setContext(this.getActivity());
+                ImageView button = null;
+                if (comradesViews.length > i) {
+                    button = comradesViews[i];
+                }
+
+                if (button != null) {
+                    contactPhotoLoader.setOutputView(button);
+                    contactPhotoLoader.execute(number);
+                }
+            }
+        }
     }
 
     public void showOptions(){
@@ -103,13 +144,16 @@ public class CircleOfTrustFragment extends Fragment {
 
         try {
             sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
+
+            if(phoneNumbers == null)
+            {
+                loadPhoneNumbers();
+            }
             // The numbers variable holds the Comrades numbers
-            String numbers[] = {sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
-                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
-                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, "")};
+            String numbers[] = phoneNumbers;
 
             for(String number : numbers) {
-                if(!number.isEmpty()){
+                if (!number.isEmpty()) {
                     sms.sendTextMessage(number, null, message, null, null);
                 }
             }
@@ -127,5 +171,33 @@ public class CircleOfTrustFragment extends Fragment {
             Toast.makeText(getActivity(), R.string.message_failed, Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    private boolean loadPhoneNumbers() {
+        sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
+        try {
+            phoneNumbers = new String[]{sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
+                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
+                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
+            return true;
+        } catch (Exception e) {
+            Log.e(TAG, "Unable to load comrades numbers from shared preferences", e);
+        }
+
+        return false;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_CODE_TRUSTEES) {
+            refreshPhotos();
+        }
+
+    }
+
+    private void refreshPhotos() {
+        phoneNumbers = null;
+        loadContactPhotos();
     }
 }
