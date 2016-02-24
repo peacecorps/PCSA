@@ -16,5 +16,9 @@
     <dimen name="text_large">28sp</dimen>
 
     <dimen name="app_button_side_padding">5dp</dimen>
+    <dimen name="contact_pick_button_margin">8dp</dimen>
+    <dimen name="contact_pick_button_width">30dp</dimen>
+    <dimen name="photo_border_width">2dp</dimen>
+    <dimen name="contact_pick_padding_top_bottom">5dp</dimen>
 
 </resources>

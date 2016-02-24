@@ -128,5 +128,7 @@
     <string name="ok">OK</string>
     <string name="confirmation_message">This message has been sent to all registered Comrades</string>
     <string name="message_failed">Message Sending Failed, Try again Later</string>
+    <string name="no_phone_number">No phone number found</string>
+    <string name="choose_number">Choose a number</string>
 
 </resources>

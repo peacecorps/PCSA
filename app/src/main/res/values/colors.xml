@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
     <!-- Background colors-->
     <color name="background_app">#2FAA96</color>
     <color name="background_textview">#3b8471</color>
     <color name="background_clicked">#FFC25C</color>
+    <color name="photo_border">#FFFFFF</color>
 </resources>
