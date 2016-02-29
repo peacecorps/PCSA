@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#018e9f"
     android:layout_weight="10"
     android:id="@+id/main">
 
@@ -16,8 +16,8 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="#ffffff"
         android:paddingRight="32dp"
-        android:textSize="@dimen/text_normal"
-        android:text="When you are feeling insecure or needs a comrades attention.\nPrees the button"/>
+        android:textSize="@dimen/text_large"
+        android:text="@string/circle_of_trust_slide_two"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
