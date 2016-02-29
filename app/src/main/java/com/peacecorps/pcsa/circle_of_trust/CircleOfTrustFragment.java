@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
@@ -17,8 +18,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.peacecorps.pcsa.Constants;
 import com.peacecorps.pcsa.Constants.SmsConstants;
 import com.peacecorps.pcsa.R;
+
+import java.util.ArrayList;
 
 
 /**
@@ -34,6 +38,7 @@ public class CircleOfTrustFragment extends Fragment {
     SharedPreferences sharedPreferences;
 
     private String[] phoneNumbers;
+    LocationHelper locationHelper;
 
     private String optionSelected;
     public CircleOfTrustFragment() {
@@ -61,7 +66,20 @@ public class CircleOfTrustFragment extends Fragment {
                 (ImageView) rootView.findViewById(R.id.com3Button),(ImageView) rootView.findViewById(R.id.com4Button),
                 (ImageView) rootView.findViewById(R.id.com5Button),(ImageView) rootView.findViewById(R.id.com6Button)};
         loadContactPhotos();
+        locationHelper = new LocationHelper(getActivity());
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        locationHelper.startAcquiringLocation();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        locationHelper.stopAcquiringLocation();
     }
 
     private void loadContactPhotos() {
@@ -132,7 +150,16 @@ public class CircleOfTrustFragment extends Fragment {
         switch(optionSelected)
         {
             case SmsConstants.COME_GET_ME:
-                message = getString(R.string.come_get_me_message);
+                Location location = locationHelper.retrieveLocation(false);
+                if(location == null) {
+                    message = getString(R.string.come_get_me_message);
+                }else{
+                    message = getString(R.string.come_get_me_message_with_location);
+                    message = message.replace(Constants.TAG_LOCATION,location.getLatitude() +"," + location.getLongitude());
+                    String locationUrl = Constants.LOCATION_URL.replace("LAT" , String.valueOf(location.getLatitude()))
+                            .replace("LON" , String.valueOf(location.getLongitude()));
+                    message = message.replace(Constants.TAG_LOCATION_URL,locationUrl);
+                }
                 break;
             case SmsConstants.CALL_NEED_INTERRUPTION:
                 message = getString(R.string.interruption_message);
@@ -154,7 +181,9 @@ public class CircleOfTrustFragment extends Fragment {
 
             for(String number : numbers) {
                 if (!number.isEmpty()) {
-                    sms.sendTextMessage(number, null, message, null, null);
+                    //Fix sending messages if the length is more than single sms limit
+                    ArrayList<String> parts = sms.divideMessage(message);
+                    sms.sendMultipartTextMessage(number, null, parts, null, null);
                 }
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
