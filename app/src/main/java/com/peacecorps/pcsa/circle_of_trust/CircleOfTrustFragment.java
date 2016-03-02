@@ -182,7 +182,9 @@ public class CircleOfTrustFragment extends Fragment {
             int counter=0;
             for(String number : numbers) {
                 if (!number.isEmpty()) {
-                    sms.sendTextMessage(number, null, message, null, null);
+                    //Fix sending messages if the length is more than single sms limit
+                    ArrayList<String> parts = sms.divideMessage(message);
+                    sms.sendMultipartTextMessage(number, null, parts, null, null);
                     counter++;
                 }
             }
