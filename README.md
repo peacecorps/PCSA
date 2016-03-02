@@ -43,6 +43,10 @@ If you find an issue yourself you can report it, a community member will get bac
 1. Fix a new issue and submit a PR without reporting and getting it approved at first.
 2. Fix an issue assigned to somebody else and submit a PR before the assignee does. 
 
+### Best Practices
+1. Please use meaningful commit messages in PRs.
+2. Do not over commit (Use more than one commit for a small change).
+
 ## Troubleshooting/Issues
 
 If there are any problems encountered when installing the IDE, you may want to check and make sure you have a JDK and JRE installed. If you experience trouble building or running the project, you may not have the necessary build tools, which you can download directly through the IDE. If the app does not run on the emulator, it may be that the emulator is too slow, and you should look into installing one from an outside source. 
