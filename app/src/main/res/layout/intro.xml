@@ -17,7 +17,7 @@
         android:textColor="@color/intro_text_color"
         android:paddingRight="@dimen/intro_padding"
         android:textSize="@dimen/text_large"
-        android:text="@string/intro_top_text"/>
+        android:text="@string/slide_one_head"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -44,7 +44,7 @@
         android:paddingLeft="@dimen/intro_padding_64"
         android:paddingRight="@dimen/intro_padding_64"
         android:textSize="@dimen/text_large"
-        android:text="@string/intro_bottom_text"
+        android:text="@string/slide_one_button"
         android:fontFamily="sans-serif-thin"
         />
     <TextView

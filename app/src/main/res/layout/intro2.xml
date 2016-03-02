@@ -16,8 +16,8 @@
         android:fontFamily="sans-serif-thin"
         android:textColor="@color/intro_text_color"
         android:paddingRight="@dimen/intro_padding"
-        android:textSize="@dimen/text_normal"
-        android:text="@string/intro2_top_text"/>
+        android:textSize="@dimen/text_large"
+        android:text="@string/circle_of_trust_slide_two"/>
 
     <LinearLayout
         android:layout_width="fill_parent"

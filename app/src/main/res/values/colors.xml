@@ -6,7 +6,7 @@
     <color name="background_clicked">#FFC25C</color>
     <color name="background_fragment_circle_of_trust">#2FAA96</color>
     <color name="intro_background">#ffdfb68a</color>
-    <color name="intro2_background">#00BCD4</color>
+    <color name="intro2_background">#018e9f</color>
     <color name="intro3_background">#5C6BC0</color>
     <color name="intro4_background">#4CAF50</color>
     <color name="intro_text_color">#ffffff</color>
