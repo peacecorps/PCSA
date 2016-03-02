@@ -132,5 +132,9 @@
     <string name="no_phone_number">No phone number found</string>
     <string name="choose_number">Choose a number</string>
     <string name="circle_of_trust_slide_two">When you are feeling insecure or need comrades\' attention.\nPress the button</string>
+    <string name="confirmation_message1">This message has been sent to</string>
+    <string name="confirmation_message2">registered Comrades</string>
+    <string name="no_comrade_title">No Comrades Registered</string>
+    <string name="no_comrade_msg">Message not send to any comrade, since none is registered</string>
 
 </resources>

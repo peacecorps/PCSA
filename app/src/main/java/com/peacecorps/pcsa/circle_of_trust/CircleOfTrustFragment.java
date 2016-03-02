@@ -179,21 +179,38 @@ public class CircleOfTrustFragment extends Fragment {
             // The numbers variable holds the Comrades numbers
             String numbers[] = phoneNumbers;
 
+            int counter=0;
             for(String number : numbers) {
                 if (!number.isEmpty()) {
                     //Fix sending messages if the length is more than single sms limit
                     ArrayList<String> parts = sms.divideMessage(message);
                     sms.sendMultipartTextMessage(number, null, parts, null, null);
+                    counter++;
                 }
             }
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle(R.string.msg_sent); // title bar string
-            builder.setPositiveButton(R.string.ok, null);
+            if(counter!=0)
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle(R.string.msg_sent); // title bar string
+                builder.setPositiveButton(R.string.ok, null);
 
-            builder.setMessage(getString(R.string.confirmation_message));
+                builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2));
 
-            AlertDialog errorDialog = builder.create();
-            errorDialog.show(); // display the Dialog
+
+                AlertDialog errorDialog = builder.create();
+                errorDialog.show(); // display the Dialog
+
+            }
+            else
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle(R.string.no_comrade_title); // title bar string
+                builder.setPositiveButton(R.string.ok, null);
+
+                builder.setMessage(R.string.no_comrade_msg);
+                AlertDialog errorDialog = builder.create();
+                errorDialog.show(); // display the Dialog
+            }
 
         }catch (Exception e)
         {
