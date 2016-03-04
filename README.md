@@ -48,6 +48,7 @@ If you find an issue yourself you can report it, a community member will get bac
 ### Best Practices
 1. Please use meaningful commit messages in PRs.
 2. Do not over commit (Use more than one commit for a small change).
+3. Please use separate PRs for separate issues/tasks
 
 ## Troubleshooting/Issues
 
