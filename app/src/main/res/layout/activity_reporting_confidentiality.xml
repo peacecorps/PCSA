@@ -34,7 +34,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero"
+        android:layout_height="@dimen/reporting_confidentiality_layout_height"
         android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:fadeScrollbars="false"
