@@ -234,7 +234,7 @@
             android:layout_gravity="center"
             android:textColor="@color/intro_text_color"
             android:background="@drawable/btn_rounded_rectangle"
-            android:text="OK"
+            android:text="@string/add_comrades_save"
             android:textSize="@dimen/text_normal"
             android:layout_marginTop="@dimen/trustee_margin_top"
             android:layout_marginBottom="@dimen/trustee_margin_bottom"/>
