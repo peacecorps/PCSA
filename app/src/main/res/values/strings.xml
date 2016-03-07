@@ -34,7 +34,8 @@
     <string name="title_activity_contact_post_staff">ContactPostStaff</string>
     <string name="title_activity_contact_other_staff">Contact Other Staff</string>
     <string name="title_activity_other_staff_content">Other Staff Content</string>
-
+    <string name="dialog_call">Voice Call</string>
+    <string name="dialog_message">Send Message</string>
     <!-- Button texts and other texts for contact staff-->
     <string name="contact_pcmo">Contact PCMO</string>
     <string name="contact_ssm">Contact SSM</string>
@@ -136,5 +137,11 @@
     <string name="confirmation_message2">registered Comrades</string>
     <string name="no_comrade_title">No Comrades Registered</string>
     <string name="no_comrade_msg">Message not send to any comrade, since none is registered</string>
+    <string name="contact_pcmo_via">Contact PCMO via</string>
+    <string name="contact_ssm_via">Contact SSM via</string>
+    <string name="contact_sarl_via">Contact SARL via</string>
+    <string name="contact">Contact</string>
+    <string name="via">Via</string>
+
 
 </resources>

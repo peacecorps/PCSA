@@ -51,7 +51,7 @@
     <dimen name="text_extra_small">12sp</dimen>
     <dimen name="text_small">16sp</dimen>
     <dimen name="text_normal">20sp</dimen>
-    <dimen name="text_large">28sp</dimen>
+    <dimen name="text_large">25sp</dimen>
     <dimen name="safety_resource_text_size">40sp</dimen>
 
     <dimen name="app_button_side_padding">5dp</dimen>
@@ -65,5 +65,9 @@
     <dimen name="button_margin_right_otherstaff">5dp</dimen>
     <dimen name="button_width_poststaff">265dp</dimen>
     <dimen name="icon_size_poststaff">48dp</dimen>
+    <dimen name="dialog_divider_height">2dp</dimen>
+    <dimen name="dialog_icon_size">60dp</dimen>
+    <dimen name="dialog_icon_marginleft">30dp</dimen>
+    <dimen name="dialog_icon_marginright">15dp</dimen>
 
 </resources>
