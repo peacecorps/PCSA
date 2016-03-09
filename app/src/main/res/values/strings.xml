@@ -135,7 +135,7 @@
     <string name="confirmation_message1">This message has been sent to</string>
     <string name="confirmation_message2">registered Comrades</string>
     <string name="no_comrade_title">No Comrades Registered</string>
-    <string name="no_comrade_msg">Message not send to any comrade, since none is registered</string>
+    <string name="no_comrade_msg">Failed to send message since no Comrades have been registered</string>
 
     <string name="contact_pcmo_via">Contact PCMO via</string>
     <string name="contact_ssm_via">Contact SSM via</string>
