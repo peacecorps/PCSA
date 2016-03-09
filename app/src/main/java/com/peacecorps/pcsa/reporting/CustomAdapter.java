@@ -85,7 +85,6 @@ public class CustomAdapter extends BaseAdapter {
         View view = layoutInflater.inflate(R.layout.dialog_list, null);
         listDialog.setContentView(view);
         ListView list1 = (ListView) listDialog.findViewById(R.id.dialog_listview);
-        list1.setAdapter(new CustomAdapter(activity));
 
         //Adding the header(title) to the dialog box
         TextView textView = new TextView(activity);
@@ -95,6 +94,8 @@ public class CustomAdapter extends BaseAdapter {
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
         textView.setGravity(Gravity.CENTER);
         list1.addHeaderView(textView);
+
+        list1.setAdapter(new CustomAdapter(activity));
 
         //Providing functionality to the listitems (Call and Message)
         list1.setOnItemClickListener((AdapterView.OnItemClickListener) activity);
