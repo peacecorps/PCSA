@@ -19,7 +19,7 @@
             android:textSize="@dimen/text_normal"
             android:layout_alignParentTop="true"
             android:textColor="@color/activity_trustee_text_color"
-            android:text="Add the Comrade Numbers here"/>
+            android:text="@string/add_comrades_text"/>
 
         <EditText
             android:id="@+id/comrade1EditText"
@@ -34,7 +34,7 @@
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
             android:inputType="number"
-            android:hint="Comrade 1"
+            android:hint="@string/comrade1"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 
@@ -68,7 +68,7 @@
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
-            android:hint="Comrade 2"
+            android:hint="@string/comrade2"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 
@@ -102,7 +102,7 @@
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
-            android:hint="Comrade 3"
+            android:hint="@string/comrade3"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 
@@ -136,7 +136,7 @@
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
-            android:hint="Comrade 4"
+            android:hint="@string/comrade4"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 
@@ -170,7 +170,7 @@
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
-            android:hint="Comrade 5"
+            android:hint="@string/comrade5"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 
@@ -204,7 +204,7 @@
             android:layout_gravity="center"
             android:inputType="number"
             android:textColor="@color/activity_trustee_edittext_color"
-            android:hint="Comrade 6"
+            android:hint="@string/comrade6"
             android:ems="@integer/ems"
             android:paddingTop="@dimen/padding_top"/>
 

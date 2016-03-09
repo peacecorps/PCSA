@@ -19,7 +19,7 @@
             android:gravity="center"
             android:textSize="@dimen/text_normal"
             android:textColor="@color/intro_text_color"
-            android:text="CIRCLE OF TRUST"
+            android:text="@string/circle_title"
             />
         <ImageButton
             android:id="@+id/editButton"
@@ -39,7 +39,7 @@
                 android:layout_height="@dimen/circle_of_trust_height"
                 android:src="@mipmap/ic_comrade"
                 android:layout_marginTop="@dimen/circle_of_trust_width"
-                android:layout_marginLeft="@dimen/zero"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_com1"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>
@@ -68,8 +68,7 @@
                 android:layout_marginTop="@dimen/circle_of_trust_width"
                 app:border="true"
                 app:border_color="@color/photo_border"
-                app:border_width="@dimen/photo_border_width"
-               />
+                app:border_width="@dimen/photo_border_width" />
 
             <ImageButton
                 android:id="@+id/requestButton"
@@ -77,14 +76,15 @@
                 android:layout_height="@dimen/circle_of_trust_image_height"
                 android:background="@mipmap/ic_help_me"
                 android:layout_marginTop="@dimen/circle_of_trust_width"
-                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_40"/>
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_request_button"/>
+
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com3Button"
                 android:layout_width="@dimen/circle_of_trust_width"
                 android:layout_height="@dimen/circle_of_trust_height"
                 android:src="@mipmap/ic_comrade"
                 android:layout_marginTop="@dimen/circle_of_trust_width"
-                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_40"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_request_button"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>

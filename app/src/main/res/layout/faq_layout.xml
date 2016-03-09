@@ -42,5 +42,5 @@
         android:maxLines="0"
         android:visibility="invisible"
         android:background="@drawable/bg_textview_faq_rounded_lower"
-        android:padding="10dp"/>
+        android:padding="@dimen/faq_padding"/>
 </LinearLayout>
