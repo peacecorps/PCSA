@@ -112,7 +112,7 @@ public class Trustees extends AppCompatActivity {
                                 old_comrade5.equals(new_comrade5) && old_comrade6.equals(new_comrade6))
                         {
                             //Nothing to update
-                            Toast.makeText(getApplicationContext(), getString(R.string.no_update), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), getString(R.string.not_updated_phone_numbers), Toast.LENGTH_LONG).show();
                         }
                         else {
                             //Need to update
