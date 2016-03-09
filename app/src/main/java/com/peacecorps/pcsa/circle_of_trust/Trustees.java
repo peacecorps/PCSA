@@ -71,19 +71,55 @@ public class Trustees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean check_duplicate_number= check_duplicate_number();
-                
+
+                //To store previous values (numbers) of comrades
+                String old_comrade1,old_comrade2,old_comrade3,old_comrade4,old_comrade5,old_comrade6;
+
+                //To store newly entered values (numbers) of comrades, if any
+                String new_comrade1,new_comrade2,new_comrade3,new_comrade4,new_comrade5,new_comrade6;
+
+                //Retrieving stored values
+                old_comrade1 = sharedpreferences.getString(comrade1,"");
+                old_comrade2 = sharedpreferences.getString(comrade2,"");
+                old_comrade3 = sharedpreferences.getString(comrade3,"");
+                old_comrade4 = sharedpreferences.getString(comrade4,"");
+                old_comrade5 = sharedpreferences.getString(comrade5,"");
+                old_comrade6 = sharedpreferences.getString(comrade6, "");
+
+                //Retrieving new values
+
+                new_comrade1 = comrade1editText.getText().toString();
+                new_comrade2 = comrade2editText.getText().toString();
+                new_comrade3 = comrade3editText.getText().toString();
+                new_comrade4 = comrade4editText.getText().toString();
+                new_comrade5 = comrade5editText.getText().toString();
+                new_comrade6 = comrade6editText.getText().toString();
+
                 if(check_duplicate_number)
                 {
-                    editor.putString(comrade1, comrade1editText.getText().toString());
-                    editor.putString(comrade2, comrade2editText.getText().toString());
-                    editor.putString(comrade3, comrade3editText.getText().toString());
-                    editor.putString(comrade4, comrade4editText.getText().toString());
-                    editor.putString(comrade5, comrade5editText.getText().toString());
-                    editor.putString(comrade6, comrade6editText.getText().toString());
+                    editor.putString(comrade1, new_comrade1);
+                    editor.putString(comrade2, new_comrade2);
+                    editor.putString(comrade3, new_comrade3);
+                    editor.putString(comrade4, new_comrade4);
+                    editor.putString(comrade5, new_comrade5);
+                    editor.putString(comrade6, new_comrade6);
 
                     boolean status = editor.commit();
                     if (status) {
-                        Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
+
+                        //Check if any updation is required
+                        if(old_comrade1.equals(new_comrade1) && old_comrade2.equals(new_comrade2) && old_comrade3.equals(new_comrade3) && old_comrade4.equals(new_comrade4) &&
+                                old_comrade5.equals(new_comrade5) && old_comrade6.equals(new_comrade6))
+                        {
+                            //Nothing to update
+                            Toast.makeText(getApplicationContext(), getString(R.string.no_update), Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            //Need to update
+                            Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
+                        }
+
+
                         //close activity after save
                         finish();
                     } else {
