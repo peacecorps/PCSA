@@ -194,7 +194,13 @@ public class CircleOfTrustFragment extends Fragment {
                 builder.setTitle(R.string.msg_sent); // title bar string
                 builder.setPositiveButton(R.string.ok, null);
 
-                builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2));
+                //For 1 comrade
+                if(counter == 1)
+                    builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message3));
+                else
+                    builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2));
+
+
 
 
                 AlertDialog errorDialog = builder.create();

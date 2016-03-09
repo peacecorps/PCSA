@@ -134,6 +134,7 @@
     <string name="circle_of_trust_slide_two">When you are feeling insecure or need comrades\' attention.\nPress the button</string>
     <string name="confirmation_message1">This message has been sent to</string>
     <string name="confirmation_message2">registered Comrades</string>
+    <string name="confirmation_message3">registered Comrade</string>
     <string name="no_comrade_title">No Comrades Registered</string>
     <string name="no_comrade_msg">Failed to send message since no Comrades have been registered</string>
 
