@@ -65,5 +65,10 @@
     <dimen name="button_margin_right_otherstaff">5dp</dimen>
     <dimen name="button_width_poststaff">265dp</dimen>
     <dimen name="icon_size_poststaff">48dp</dimen>
+    <dimen name="dialog_divider_height">2dp</dimen>
+    <dimen name="dialog_icon_size">60dp</dimen>
+    <dimen name="dialog_icon_marginleft">30dp</dimen>
+    <dimen name="dialog_icon_marginright">15dp</dimen>
+    <dimen name="dialog_text_size">25sp</dimen>
 
 </resources>
