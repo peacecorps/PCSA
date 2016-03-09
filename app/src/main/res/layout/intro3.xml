@@ -8,7 +8,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/zero"
+        android:layout_height="@dimen/intro_layout_height"
         android:layout_gravity="center"
         android:gravity="center"
         android:paddingLeft="@dimen/intro_padding"
@@ -21,7 +21,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/zero"
+        android:layout_height="@dimen/intro_layout_height"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_weight="@integer/intro4_linear_layout_weight"
@@ -37,7 +37,7 @@
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/zero"
+        android:layout_height="@dimen/intro_layout_height"
         android:layout_weight="@integer/intro4_linear_layout_weight"
         android:layout_gravity="center"
         android:gravity="center"
