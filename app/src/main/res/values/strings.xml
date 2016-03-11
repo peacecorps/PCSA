@@ -119,7 +119,7 @@
     <string name="come_get_me">Come get me</string>
     <string name="need_interruption">Call I need an interruption</string>
     <string name="need_to_talk">I need to talk</string>
-    <string name="cancel">cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="come_get_me_message">Come and get me. I need help getting home Safely. Call ASAP to get my Location.Sent through First Aide\'s Circle of Trust.</string>
     <string name="come_get_me_message_with_location">Come and get me. I need help getting home Safely. My last location #LOC# ( #LOC_URL# ).Sent through First Aide\'s Circle of Trust.</string>
     <string name="interruption_message">Call and pretend you need me. I need an interruption. Message sent through First Aide\'s Circle of Trust</string>
@@ -147,6 +147,7 @@
 
 
     <string name="add_comrades_save">Save</string>
+    <string name="message_options">Message Template</string>
 
 
 </resources>
