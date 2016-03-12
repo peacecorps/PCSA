@@ -2,7 +2,6 @@ package com.peacecorps.pcsa.circle_of_trust;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -13,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -59,7 +57,8 @@ public class CircleOfTrustFragment extends Fragment {
         requestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showOptions();
+                MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
+                messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
             }
         });
         comradesViews = new ImageView[]{(ImageView) rootView.findViewById(R.id.com1Button),(ImageView) rootView.findViewById(R.id.com2Button),
@@ -109,38 +108,6 @@ public class CircleOfTrustFragment extends Fragment {
                 }
             }
         }
-    }
-
-    public void showOptions(){
-        AlertDialog.Builder builderSingle = new AlertDialog.Builder(
-                getActivity());
-        builderSingle.setTitle(R.string.select_request);
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.select_dialog_singlechoice);
-        arrayAdapter.add(getString(R.string.come_get_me));
-        arrayAdapter.add(getString(R.string.need_interruption));
-        arrayAdapter.add(getString(R.string.need_to_talk));
-        builderSingle.setNegativeButton(R.string.cancel,
-                new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-
-
-        builderSingle.setAdapter(arrayAdapter,
-                new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        optionSelected = arrayAdapter.getItem(which);
-                        sendMessage(optionSelected);
-                    }
-                });
-        builderSingle.show();
     }
 
     public void sendMessage(String optionSelected)
