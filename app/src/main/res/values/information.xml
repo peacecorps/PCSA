@@ -109,13 +109,6 @@
     </string>
     <string name="reporting_contact_ocrd">202 692 2139</string>
 
-    <!-- Correct locations and corresponding details should be added here-->
-    <array name="locations">
-        <item>Uganda</item>
-        <item>Syria</item>
-        <item>Tunisia</item>
-    </array>
-
     <string name="loc1_name">Uganda</string>
     <string name="loc1_pcmo">1111</string>
     <string name="loc1_ssm">2222</string>

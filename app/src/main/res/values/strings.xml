@@ -1,17 +1,28 @@
 <resources>
     <string name="app_name">PCSA</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!--Common-->
+    <string name="unavailable_function">This functionality is currently unavailable.</string>
+    <string name="dialog_call">Voice Call</string>
+    <string name="dialog_message">Send Message</string>
+
+    <!--Activity Titles-->
+    <string name="title_activity_steps">Steps</string>
+    <string name="title_activity_faq">FAQ</string>
+    <string name="title_activity_confidentiality">Confidentiality</string>
+    <string name="title_activity_resources">Resources</string>
+    <string name="title_activity_contact_post_staff">ContactPostStaff</string>
+    <string name="title_activity_contact_other_staff">Contact Other Staff</string>
+    <string name="title_activity_other_staff_content">Other Staff Content</string>
+    <string name="title_activity_circle_of_trust">Circle Of Trust</string>
+    <string name="title_activity_trustees">Trustees</string>
+    <string name="title_activity_circle_intro">CircleIntro</string>
+    <string name="title_activity_saftey_resources">SafteyResources</string>
 
     <!--******************************************
     Strings related to reporting
     ******************************************-->
     <string name="reporting_process">Reporting Process</string>
-    <string name="updated_phone_numbers">"Comrades' phone numbers have been updated"</string>
-    <string name="not_updated_phone_numbers">No changes detected</string>
-    <string name="updated_phone_numbers_fail">"Unable to update Comrades' phone numbers"</string>
-    <string name="unavailable_function">This functionality is currently unavailable.</string>
     <string name="reporting_process_sub">Learn all about reporting</string>
     <string name="reporting_types">Reporting Types</string>
     <string name="reporting_services">Reporting Services</string>
@@ -25,31 +36,6 @@
     <string name="reporting_get_help">Get Help Now</string>
     <string name="reporting_get_help_sub1">Post Staff</string>
     <string name="reporting_get_help_sub2">Other Staff and Support Options</string>
-    <string name="reporting_get_help_foot1">Contact Other Staff &gt;&gt;</string>
-    <string name="reporting_get_help_foot2">&lt;&lt; Contact Post Staff</string>
-    <string name="title_activity_steps">Steps</string>
-    <string name="title_activity_faq">FAQ</string>
-    <string name="title_activity_testing">Testingg</string>
-    <string name="title_activity_confidentiality">Confidentiality</string>
-    <string name="title_activity_resources">Resources</string>
-    <string name="title_activity_contact_post_staff">ContactPostStaff</string>
-    <string name="title_activity_contact_other_staff">Contact Other Staff</string>
-    <string name="title_activity_other_staff_content">Other Staff Content</string>
-    <string name="dialog_call">Voice Call</string>
-    <string name="dialog_message">Send Message</string>
-    <!-- Button texts and other texts for contact staff-->
-    <string name="contact_pcmo">Contact PCMO</string>
-    <string name="contact_ssm">Contact SSM</string>
-    <string name="contact_sarl">Contact SARL</string>
-    <string name="reporting_change_location">Change Location</string>
-    <string name="reporting_current_location">This is information for</string>
-
-    <!-- Locations that are available on dropdown of Contact Staff-->
-    <string-array name="locations_array">
-        <item>Uganda</item>
-        <item>Syria</item>
-        <item>Tunisia</item>
-    </string-array>
     <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
 ·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
 ·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
@@ -70,16 +56,38 @@
 ·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
 ·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
 </string>
+
+    <!--Main Menu-->
     <string name="get_help">Get Help now</string>
     <string name="circle">Circle of Trust</string>
     <string name="reporting">Reporting Process</string>
     <string name="safety">Safety Resources</string>
     <string name="helping_others">Helping Others</string>
 
+    <!--Reporting Process-->
     <string name="contact_pcsaves">PC SAVES Anonymous Helpline</string>
     <string name="contact_ova">Office of Victim Advocacy</string>
     <string name="contact_oig">Office of Inspector General</string>
     <string name="contact_ocrd">Office of Civil Rights and Diversity</string>
+    <string name="contact_pcmo_via">Contact PCMO via</string>
+    <string name="contact_ssm_via">Contact SSM via</string>
+    <string name="contact_sarl_via">Contact SARL via</string>
+    <string name="contact">Contact</string>
+    <string name="via">Via</string>
+
+    <!-- Button texts and other texts for contact staff-->
+    <string name="contact_pcmo">Contact PCMO</string>
+    <string name="contact_ssm">Contact SSM</string>
+    <string name="contact_sarl">Contact SARL</string>
+    <string name="reporting_change_location">Change Location</string>
+    <string name="reporting_current_location">This is information for</string>
+
+    <!-- Locations that are available on dropdown of Contact Staff-->
+    <string-array name="locations_array">
+        <item>Uganda</item>
+        <item>Syria</item>
+        <item>Tunisia</item>
+    </string-array>
 
     <!--String related to Circle of Trust-->
     <string name="circle_title">CIRCLE OF TRUST</string>
@@ -87,7 +95,7 @@
     <string name="helping">Helping</string>
     <string name="friends_and_community">Friends and community members</string>
     <string name="learn_effect">learn about the effect of Sexual Assault</string>
-    <string name="bystander">Bystander intervention tactic</string>
+    <string name="bystander">Bystander intervention tactics</string>
     <string name="predator_tactic">Predator tactics</string>
     <string name="comrade1">Comrade 1</string>
     <string name="comrade2">Comrade 2</string>
@@ -95,26 +103,14 @@
     <string name="comrade4">Comrade 4</string>
     <string name="comrade5">Comrade 5</string>
     <string name="comrade6">Comrade 6</string>
-    <string name="ok_button">OK</string>
     <string name="slide_one_head">Just a few Steps on how to use</string>
     <string name="slide_one_button">Circle Of Trust</string>
-    <string name="slide_2_head">When you are feeling insecure or needs a comrades attention.\nPrees the button</string>
     <string name="slide_three_head">Circle Of Trust</string>
     <string name="slide_three_bottom">Select the message you want to send from here!</string>
     <string name="slide_four_head">The message will be sent to 6 Comrades for immediate intervention</string>
     <string name="slide_four_bottom">Done</string>
-    <string name="title_activity_circle_of_trust">CircleOfTrust</string>
-    <string name="str_cnt_mnu_edit">Edit</string>
-    <string name="str_cnt_mnu_share">Share</string>
-    <string name="str_cnt_mnu_delete">Delete</string>
-    <string name="title_activity_trustees">Trustees</string>
     <string name="add_comrades_text">Add the Comrade Numbers here</string>
-    <string name="title_activity_get_help_now">GetHelpNow</string>
     <string name="duplicate_number_errormessage">Duplicate Number!Please enter again</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_circle_intro">CircleIntro</string>
-    <string name="title_activity_saftey_resources">SafteyResources</string>
 
     <string name="select_request">Select a request</string>
     <string name="come_get_me">Come get me</string>
@@ -125,11 +121,8 @@
     <string name="come_get_me_message_with_location">Come and get me. I need help getting home Safely. My last location #LOC# ( #LOC_URL# ).Sent through First Aide\'s Circle of Trust.</string>
     <string name="interruption_message">Call and pretend you need me. I need an interruption. Message sent through First Aide\'s Circle of Trust</string>
     <string name="need_to_talk_message">I need to talk. Message sent through First Aide\'s Circle of Trust</string>
-    <string name="comrade1_number">+2348103425729</string>
-    <string name="comrade2_number">+2348111875720</string>
     <string name="msg_sent">Message sent</string>
     <string name="ok">OK</string>
-    <string name="confirmation_message">This message has been sent to all registered Comrades</string>
     <string name="message_failed">Message Sending Failed, Try again Later</string>
     <string name="no_phone_number">No phone number found</string>
     <string name="choose_number">Choose a number</string>
@@ -139,16 +132,13 @@
     <string name="confirmation_message3">registered Comrade</string>
     <string name="no_comrade_title">No Comrades Registered</string>
     <string name="no_comrade_msg">Failed to send message since no Comrades have been registered</string>
-
-    <string name="contact_pcmo_via">Contact PCMO via</string>
-    <string name="contact_ssm_via">Contact SSM via</string>
-    <string name="contact_sarl_via">Contact SARL via</string>
-    <string name="contact">Contact</string>
-    <string name="via">Via</string>
-
-
     <string name="add_comrades_save">Save</string>
     <string name="message_options">Message Template</string>
+
+    <!--Trustees-->
+    <string name="updated_phone_numbers">"Comrades' phone numbers have been updated"</string>
+    <string name="not_updated_phone_numbers">No changes detected</string>
+    <string name="updated_phone_numbers_fail">"Unable to update Comrades' phone numbers"</string>
 
 
 </resources>
