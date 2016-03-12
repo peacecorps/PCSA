@@ -33,6 +33,7 @@
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:textColor="@color/activity_trustee_edittext_color"
+            android:cursorVisible="false"
             android:inputType="number"
             android:hint="@string/comrade1"
             android:ems="@integer/ems"
