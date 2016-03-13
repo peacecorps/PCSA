@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,7 +21,7 @@ import com.peacecorps.pcsa.R;
  * Shows details of the Other Staff members to contact in case of crime
  * Allows user to call/send SMS to Other Staff members
  */
-public class OtherStaffContent extends Activity implements AdapterView.OnItemClickListener {
+public class OtherStaffContent extends FragmentActivity implements AdapterView.OnItemClickListener {
 
     public static final String CONTACT_NUMBER = "contactNumber";
     public static final String CONTACT_NAME = "contactName";
@@ -45,11 +46,12 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
         contactName.setText(details.getString(CONTACT_NAME));
         contactDescription.setText(details.getString(CONTACT_DESC));
         contactNow.setText("Contact Now");
-
         contactNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CustomAdapter.createDialog(getString(R.string.contact)+" "+details.getString(CONTACT_NAME)+" "+getString(R.string.via),OtherStaffContent.this).show();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact)+" "+details.getString(CONTACT_NAME)+" "+getString(R.string.via),
+                        OtherStaffContent.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
     }

@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,7 +30,7 @@ import java.util.Map;
  * Allows the user to call Post Staff in case of crime. The details for the
  * current location will be set by changing the location
  */
-public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
+public class ContactPostStaff extends FragmentActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
 
     private static final String PREF_LOCATION = "location" ;
 
@@ -74,7 +75,9 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getPcmoContact();
-                CustomAdapter.createDialog(getString(R.string.contact_pcmo_via), ContactPostStaff.this).show();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_pcmo_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(),getString(R.string.dialog_tag));
             }
         });
 
@@ -82,7 +85,9 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSsmContact();
-                CustomAdapter.createDialog(getString(R.string.contact_ssm_via), ContactPostStaff.this).show();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_ssm_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
 
@@ -90,7 +95,9 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSarlContact();
-                CustomAdapter.createDialog(getString(R.string.contact_sarl_via), ContactPostStaff.this).show();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_sarl_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
 
