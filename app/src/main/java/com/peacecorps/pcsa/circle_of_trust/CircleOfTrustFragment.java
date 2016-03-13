@@ -1,6 +1,5 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -157,32 +156,20 @@ public class CircleOfTrustFragment extends Fragment {
             }
             if(counter!=0)
             {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.msg_sent); // title bar string
-                builder.setPositiveButton(R.string.ok, null);
+                String contentToPost;
 
                 //For 1 comrade
                 if(counter == 1)
-                    builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message3));
+                    contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message3);
                 else
-                    builder.setMessage(getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2));
-
-
-
-
-                AlertDialog errorDialog = builder.create();
-                errorDialog.show(); // display the Dialog
-
+                    contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2);
+                CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.msg_sent),contentToPost);
+                customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
             }
             else
             {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.no_comrade_title); // title bar string
-                builder.setPositiveButton(R.string.ok, null);
-
-                builder.setMessage(R.string.no_comrade_msg);
-                AlertDialog errorDialog = builder.create();
-                errorDialog.show(); // display the Dialog
+                CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.no_comrade_title),getString(R.string.no_comrade_msg));
+                customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
             }
 
         }catch (Exception e)
