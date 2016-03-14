@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
+import com.peacecorps.pcsa.reporting.ContactPostStaff;
 import com.peacecorps.pcsa.safety_resources.SafetyResources;
 import com.peacecorps.pcsa.reporting.HomeScreen;
 
@@ -41,9 +42,10 @@ public class MainActivityFragment extends Fragment {
         getHelpNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Temporarily commented out until the functionality is implemented.
-                //startActivity(new Intent(getActivity(), HomeScreen.class));
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+
+                //Starting ContactPostStaff Activity
+                Intent intent = new Intent(getActivity(), ContactPostStaff.class);
+                startActivity(intent);
             }
         });
 
