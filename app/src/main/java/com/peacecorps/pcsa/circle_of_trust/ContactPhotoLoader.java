@@ -63,7 +63,7 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
 
         try {
             Integer thumbnailId = null;
-            if (cursor.moveToFirst()) {
+            if (cursor!= null && cursor.moveToFirst()) {
                 thumbnailId = cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
             }
             return thumbnailId;
@@ -71,6 +71,7 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
             Log.e(TAG, "Unable to load thumbnail ID", e);
             return null;
         } finally {
+            if(cursor !=null)
             cursor.close();
         }
 
@@ -89,7 +90,7 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
 
         try {
             Bitmap thumbnail = null;
-            if (cursor.moveToFirst()) {
+            if (cursor != null && cursor.moveToFirst()) {
                 final byte[] thumbnailBytes = cursor.getBlob(0);
                 if (thumbnailBytes != null) {
                     thumbnail = BitmapFactory.decodeByteArray(thumbnailBytes, 0, thumbnailBytes.length);
@@ -100,6 +101,7 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
             Log.e(TAG, "Unable to load thumbnail image", e);
             return null;
         } finally {
+            if(cursor != null)
             cursor.close();
         }
 

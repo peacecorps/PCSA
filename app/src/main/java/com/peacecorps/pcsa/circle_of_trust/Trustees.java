@@ -186,14 +186,14 @@ public class Trustees extends AppCompatActivity {
             Cursor cursor = null;
             String phoneNumber = "";
             Set<String> allNumbers = new HashSet<>();
-            int phoneIdx = 0;
+            int phoneIdx;
             try {
                 Uri result = data.getData();
                 String id = result.getLastPathSegment();
                 cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?", new String[]{id}, null);
                 phoneIdx = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DATA);
                 if (cursor.moveToFirst()) {
-                    while (cursor.isAfterLast() == false) {
+                    while (!cursor.isAfterLast()) {
                         phoneNumber = cursor.getString(phoneIdx);
                         allNumbers.add(phoneNumber);
                         cursor.moveToNext();
@@ -223,7 +223,7 @@ public class Trustees extends AppCompatActivity {
                 if (allNumbers.size() > 1) {
                     alert.show();
                 } else {
-                    String selectedNumber = phoneNumber.toString();
+                    String selectedNumber = phoneNumber;
                     selectedNumber = selectedNumber.replace("-", "");
                     phoneInput.setText(selectedNumber);
                 }
