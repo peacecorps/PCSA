@@ -139,6 +139,7 @@
     <string name="updated_phone_numbers">"Comrades' phone numbers have been updated"</string>
     <string name="not_updated_phone_numbers">No changes detected</string>
     <string name="updated_phone_numbers_fail">"Unable to update Comrades' phone numbers"</string>
+    <string name="dialog_tag">Alert_Dialog</string>
 
 
 </resources>
