@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,13 +60,12 @@ public class Trustees extends AppCompatActivity {
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
 
-        comrade1editText.setText(sharedpreferences.getString(comrade1, ""));
-        comrade2editText.setText(sharedpreferences.getString(comrade2, ""));
-        comrade3editText.setText(sharedpreferences.getString(comrade3, ""));
-        comrade4editText.setText(sharedpreferences.getString(comrade4, ""));
-        comrade5editText.setText(sharedpreferences.getString(comrade5, ""));
-        comrade6editText.setText(sharedpreferences.getString(comrade6, ""));
-
+        comrade1editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade1, "") + "</font>"));
+        comrade2editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade2, "") + "</font>"));
+        comrade3editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade3, "") + "</font>"));
+        comrade4editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade4, "") + "</font>"));
+        comrade5editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade5, "") + "</font>"));
+        comrade6editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade6, "") + "</font>"));
 
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
