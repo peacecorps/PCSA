@@ -70,20 +70,20 @@ public class Trustees extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean check_duplicate_number= check_duplicate_number();
+                boolean check_duplicate_number = check_duplicate_number();
 
                 //To store previous values (numbers) of comrades
-                String old_comrade1,old_comrade2,old_comrade3,old_comrade4,old_comrade5,old_comrade6;
+                String old_comrade1, old_comrade2, old_comrade3, old_comrade4, old_comrade5, old_comrade6;
 
                 //To store newly entered values (numbers) of comrades, if any
-                String new_comrade1,new_comrade2,new_comrade3,new_comrade4,new_comrade5,new_comrade6;
+                String new_comrade1, new_comrade2, new_comrade3, new_comrade4, new_comrade5, new_comrade6;
 
                 //Retrieving stored values
-                old_comrade1 = sharedpreferences.getString(comrade1,"");
-                old_comrade2 = sharedpreferences.getString(comrade2,"");
-                old_comrade3 = sharedpreferences.getString(comrade3,"");
-                old_comrade4 = sharedpreferences.getString(comrade4,"");
-                old_comrade5 = sharedpreferences.getString(comrade5,"");
+                old_comrade1 = sharedpreferences.getString(comrade1, "");
+                old_comrade2 = sharedpreferences.getString(comrade2, "");
+                old_comrade3 = sharedpreferences.getString(comrade3, "");
+                old_comrade4 = sharedpreferences.getString(comrade4, "");
+                old_comrade5 = sharedpreferences.getString(comrade5, "");
                 old_comrade6 = sharedpreferences.getString(comrade6, "");
 
                 //Retrieving new values
@@ -95,8 +95,7 @@ public class Trustees extends AppCompatActivity {
                 new_comrade5 = comrade5editText.getText().toString();
                 new_comrade6 = comrade6editText.getText().toString();
 
-                if(check_duplicate_number)
-                {
+                if (check_duplicate_number) {
                     editor.putString(comrade1, new_comrade1);
                     editor.putString(comrade2, new_comrade2);
                     editor.putString(comrade3, new_comrade3);
@@ -108,13 +107,11 @@ public class Trustees extends AppCompatActivity {
                     if (status) {
 
                         //Check if any updation is required
-                        if(old_comrade1.equals(new_comrade1) && old_comrade2.equals(new_comrade2) && old_comrade3.equals(new_comrade3) && old_comrade4.equals(new_comrade4) &&
-                                old_comrade5.equals(new_comrade5) && old_comrade6.equals(new_comrade6))
-                        {
+                        if (old_comrade1.equals(new_comrade1) && old_comrade2.equals(new_comrade2) && old_comrade3.equals(new_comrade3) && old_comrade4.equals(new_comrade4) &&
+                                old_comrade5.equals(new_comrade5) && old_comrade6.equals(new_comrade6)) {
                             //Nothing to update
                             Toast.makeText(getApplicationContext(), getString(R.string.not_updated_phone_numbers), Toast.LENGTH_LONG).show();
-                        }
-                        else {
+                        } else {
                             //Need to update
                             Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
                         }
@@ -126,13 +123,20 @@ public class Trustees extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers_fail), Toast.LENGTH_LONG).show();
                     }
 
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+        //Function to show cursor on being clicked
+        comrade1editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                comrade1editText.setCursorVisible(true);
+            }
+        });
+
     }
 
     public void addContact(View v) {
