@@ -4,13 +4,17 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -26,15 +30,20 @@ import java.util.Map;
  * Allows the user to call Post Staff in case of crime. The details for the
  * current location will be set by changing the location
  */
-public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener {
+public class ContactPostStaff extends FragmentActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
+
+    private static final String PREF_LOCATION = "location" ;
+
+    SharedPreferences sharedPreferences;
 
     Button contactPcmo;
     Button contactSsm;
     Button contactSarl;
     TextView currentLocation;
-    TextView contactOtherStaff;
+    ImageView contactOtherStaff;
 
     LocationDetails selectedLocationDetails;
+    private String numberToContact;
 
     private static final Map<String, LocationDetails> locationDetails;
     static {
@@ -46,6 +55,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_contact_post_staff);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         locationDetails.put(getResources().getString(R.string.loc1_name), new LocationDetails(getResources().getString(R.string.loc1_name), getResources().getString(R.string.loc1_pcmo), getResources().getString(R.string.loc1_ssm), getResources().getString(R.string.loc1_sarl)));
         locationDetails.put(getResources().getString(R.string.loc2_name), new LocationDetails(getResources().getString(R.string.loc2_name), getResources().getString(R.string.loc2_pcmo), getResources().getString(R.string.loc2_ssm), getResources().getString(R.string.loc2_sarl)));
         locationDetails.put(getResources().getString(R.string.loc3_name), new LocationDetails(getResources().getString(R.string.loc3_name), getResources().getString(R.string.loc3_pcmo), getResources().getString(R.string.loc3_ssm), getResources().getString(R.string.loc3_sarl)));
@@ -54,7 +65,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactSsm = (Button) findViewById(R.id.post_staff_ssm);
         contactSarl = (Button) findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
-        contactOtherStaff = (TextView) findViewById(R.id.link_to_other_staff);
+        contactOtherStaff = (ImageView) findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
         contactSsm.setText(R.string.contact_ssm);
@@ -63,23 +74,33 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactPcmo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getPcmoContact());
+                numberToContact = selectedLocationDetails.getPcmoContact();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_pcmo_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(),getString(R.string.dialog_tag));
             }
         });
 
         contactSsm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSsmContact());
+                numberToContact = selectedLocationDetails.getSsmContact();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_ssm_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
 
         contactSarl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSarlContact());
+                numberToContact = selectedLocationDetails.getSarlContact();
+                ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact_sarl_via),
+                        ContactPostStaff.this);
+                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
+
 
         Spinner locationList = (Spinner) findViewById(R.id.reporting_locationlist);
         locationList.setOnItemSelectedListener(this);
@@ -87,6 +108,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
                 R.array.locations_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationList.setAdapter(adapter);
+        //Load Last Location from Shared Preferences
+        locationList.setSelection(sharedPreferences.getInt(PREF_LOCATION,0));
 
         contactOtherStaff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,44 +121,6 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         });
     }
 
-    /**
-     * Creates a Dialog for the user to choose Dialer app or SMS app
-     * @param v the view clicked
-     * @param numberToContact contact number corresponding to the view
-     */
-    private void createDialog(View v, final String numberToContact){
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int optionSelected) {
-                contactStaff(optionSelected, numberToContact);
-            }
-        };
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(v.getContext(), R.style.pcsaAlertDialogStyle));
-        builder.setMessage("Contact Via").setPositiveButton("Voice Call", dialogClickListener)
-                .setNegativeButton("Send Message", dialogClickListener).show();
-    }
-
-    /**
-     * Opens Dialer or SMS
-     * @param action which app to open
-     * @param contactNumber the contact number of the selected person
-     */
-    private void contactStaff(int action, String contactNumber){
-        switch (action){
-            case DialogInterface.BUTTON_POSITIVE:
-                Intent callingIntent = new Intent(Intent.ACTION_CALL);
-                callingIntent.setData(Uri.parse("tel:"+contactNumber));
-                startActivity(callingIntent);
-                break;
-
-            case DialogInterface.BUTTON_NEGATIVE:
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setData(Uri.parse("sms:"+contactNumber));
-                startActivity(smsIntent);
-        }
-    }
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String selectedItem = (String) parent.getItemAtPosition(position);
@@ -143,10 +128,34 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
 
         // selectedLocationDetails holds all details about the location selected by the user
         selectedLocationDetails = locationDetails.get(selectedItem);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        //PREF_LOCATION field stores the index of Location in the list
+        editor.putInt(PREF_LOCATION, position);
+        editor.commit();
+
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        //For Voice Call
+        if(position == 1)
+        {
+            Intent callingIntent = new Intent(Intent.ACTION_CALL);
+            callingIntent.setData(Uri.parse("tel:" + numberToContact));
+            startActivity(callingIntent);
+        }
+        //For Message
+        else if(position == 2) {
+            Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+            smsIntent.setData(Uri.parse("sms:" + numberToContact));
+            startActivity(smsIntent);
+        }
     }
 }

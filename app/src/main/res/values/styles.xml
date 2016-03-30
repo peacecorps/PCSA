@@ -10,11 +10,6 @@
         <item name="android:textColor">@color/primary_text_default_material_dark</item>
     </style>
 
-    <style name="pcsaAlertDialogStyle">
-        <item name="android:background">@color/background_app</item>
-        <item name="android:textColorLink">@color/primary_text_default_material_dark</item>
-    </style>
-
     <style name="AppButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/bg_btn_rounded_rectangle</item>
         <item name="android:textColor">@color/primary_text_default_material_dark</item>
