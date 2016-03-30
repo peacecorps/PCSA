@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -32,22 +33,14 @@ import java.util.Set;
 public class Trustees extends AppCompatActivity {
 
     public static final int REQUEST_SELECT_CONTACT = 100;
-    EditText comrade1editText;
-    EditText comrade2editText;
-    EditText comrade3editText;
-    EditText comrade4editText;
-    EditText comrade5editText;
-    EditText comrade6editText;
+    public static final int NUMBER_OF_COMRADES = 6;
+    List<EditText> comradeEditText = new ArrayList<>(NUMBER_OF_COMRADES);
+
     Button okButton;
     private View selectedButton;
 
     public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String comrade1 = "comrade1Key";
-    public static final String comrade2 = "comrade2Key";
-    public static final String comrade3 = "comrade3Key";
-    public static final String comrade4 = "comrade4Key";
-    public static final String comrade5 = "comrade5Key";
-    public static final String comrade6 = "comrade6Key";
+    public static final List<String> comradeKey = Arrays.asList("comrade1Key", "comrade2Key", "comrade3Key", "comrade4Key", "comrade5Key", "comrade6Key");
 
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
@@ -56,44 +49,43 @@ public class Trustees extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trustees);
-        comrade1editText = (EditText) findViewById(R.id.comrade1EditText);
-        comrade2editText = (EditText) findViewById(R.id.comrade2EditText);
-        comrade3editText = (EditText) findViewById(R.id.comrade3EditText);
-        comrade4editText = (EditText) findViewById(R.id.comrade4EditText);
-        comrade5editText = (EditText) findViewById(R.id.comrade5EditText);
-        comrade6editText = (EditText) findViewById(R.id.comrade6EditText);
+
+        System.out.println(comradeEditText.size());
+        comradeEditText.add((EditText) findViewById(R.id.comrade1EditText));
+        comradeEditText.add((EditText) findViewById(R.id.comrade2EditText));
+        comradeEditText.add((EditText) findViewById(R.id.comrade3EditText));
+        comradeEditText.add((EditText) findViewById(R.id.comrade4EditText));
+        comradeEditText.add((EditText) findViewById(R.id.comrade5EditText));
+        comradeEditText.add((EditText) findViewById(R.id.comrade6EditText));
+
         okButton = (Button) findViewById(R.id.okButton);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
 
-        comrade1editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade1, "") + "</font>"));
-        comrade2editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade2, "") + "</font>"));
-        comrade3editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade3, "") + "</font>"));
-        comrade4editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade4, "") + "</font>"));
-        comrade5editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade5, "") + "</font>"));
-        comrade6editText.setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comrade6, "") + "</font>"));
+        for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+            comradeEditText.get(i).setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comradeKey.get(i), "") + "</font>"));
 
         okButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+           
+	    @Override
             public void onClick(View v) {
-                 boolean noDuplicateNumber = noDuplicateNumber();
+                 
+		boolean noDuplicateNumber = noDuplicateNumber();
 
                 //To store previous values (numbers) of comrades
-                String old_comrade1, old_comrade2, old_comrade3, old_comrade4, old_comrade5, old_comrade6;
+                List<String> old_comrade = new ArrayList<String>(NUMBER_OF_COMRADES);
 
                 //To store newly entered values (numbers) of comrades, if any
-                String new_comrade1, new_comrade2, new_comrade3, new_comrade4, new_comrade5, new_comrade6;
+                List<String> new_comrade = new ArrayList<String>(NUMBER_OF_COMRADES);
 
                 //Retrieving stored values
-                old_comrade1 = sharedpreferences.getString(comrade1, "");
-                old_comrade2 = sharedpreferences.getString(comrade2, "");
-                old_comrade3 = sharedpreferences.getString(comrade3, "");
-                old_comrade4 = sharedpreferences.getString(comrade4, "");
-                old_comrade5 = sharedpreferences.getString(comrade5, "");
-                old_comrade6 = sharedpreferences.getString(comrade6, "");
+                for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+                    old_comrade.add(sharedpreferences.getString(comradeKey.get(i), ""));
 
                 //Retrieving new values
+                for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+                    new_comrade.add(comradeEditText.get(i).getText().toString());
 
                 new_comrade1 = comrade1editText.getText().toString();
                 new_comrade2 = comrade2editText.getText().toString();
@@ -103,26 +95,34 @@ public class Trustees extends AppCompatActivity {
                 new_comrade6 = comrade6editText.getText().toString();
 
                 if (noDuplicateNumber) {
-                    editor.putString(comrade1, new_comrade1);
+                    
+		    editor.putString(comrade1, new_comrade1);
                     editor.putString(comrade2, new_comrade2);
                     editor.putString(comrade3, new_comrade3);
                     editor.putString(comrade4, new_comrade4);
                     editor.putString(comrade5, new_comrade5);
                     editor.putString(comrade6, new_comrade6);
+                
+                    for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+                        editor.putString(comradeKey.get(i), new_comrade.get(i));
 
                     boolean status = editor.commit();
                     if (status) {
 
                         //Check if any updation is required
-                        if (old_comrade1.equals(new_comrade1) && old_comrade2.equals(new_comrade2) && old_comrade3.equals(new_comrade3) && old_comrade4.equals(new_comrade4) &&
-                                old_comrade5.equals(new_comrade5) && old_comrade6.equals(new_comrade6)) {
-                            //Nothing to update
+                        boolean needToUpdate = false;
+                        for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+                            if(!old_comrade.get(i).equals(new_comrade.get(i))) needToUpdate = true;
+
+                        //Nothing to update
+                        if (!needToUpdate) {
                             Toast.makeText(getApplicationContext(), getString(R.string.not_updated_phone_numbers), Toast.LENGTH_LONG).show();
-                        } else {
-                            //Need to update
+                        }
+			
+                        //Need to update
+			else {
                             Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
                         }
-
 
                         //close activity after save
                         finish();
@@ -137,13 +137,15 @@ public class Trustees extends AppCompatActivity {
         });
 
         //Function to show cursor on being clicked
-        comrade1editText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                comrade1editText.setCursorVisible(true);
-            }
-        });
-
+        for(int i = 0; i < NUMBER_OF_COMRADES; i++) {
+            final EditText comradeText = comradeEditText.get(i);
+            comradeText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    comradeText.setCursorVisible(true);
+                }
+            });
+        }
     }
 
     /**
@@ -169,20 +171,25 @@ public class Trustees extends AppCompatActivity {
      */
     private EditText findInput(View view) {
         if (view != null) {
+            int index = -1;
             switch ((String) view.getTag()) {
                 case "1":
-                    return comrade1editText;
+                    index = 0;
                 case "2":
-                    return comrade2editText;
+                    index = 1;
                 case "3":
-                    return comrade3editText;
+                    index = 2;
                 case "4":
-                    return comrade4editText;
+                    index = 3;
                 case "5":
-                    return comrade5editText;
+                    index = 4;
                 case "6":
-                    return comrade6editText;
+                    index = 5;
             }
+            if(index != -1)
+                return comradeEditText.get(index);
+            else
+                return null;
         }
         return null;
     }
@@ -262,56 +269,44 @@ public class Trustees extends AppCompatActivity {
      * @param selectedNumber
      * @return true if duplicate exist
      */
-    private boolean noDuplicateContactNumber(String selectedNumber)
-    {
-       if(selectedNumber.equals(comrade1editText.getText().toString())
-                ||selectedNumber.equals(comrade2editText.getText().toString())
-                ||selectedNumber.equals(comrade3editText.getText().toString())
-                ||selectedNumber.equals(comrade4editText.getText().toString())
-                ||selectedNumber.equals(comrade5editText.getText().toString())
-                ||selectedNumber.equals(comrade6editText.getText().toString())) {
-           return false;
-       }
-        else {
-           return true;
-       }
-    }
+    private boolean noDuplicateContactNumber(String selectedNumber) {
 
+        boolean result = true;
+
+        for(int i = 0; i < NUMBER_OF_COMRADES; i++)
+	    if(comradeEditText.get(i).getText().toString().equals(selectedNumber));	    
+	        result = false;
+
+   	return result; 
+   }
+    
     /**
-     * Check for duplicate numbers
-     * @return true if no duplicate number else returns false
-     */
-    private boolean noDuplicateNumber() {
-        boolean noDuplicate = true;
-        List<String> comradeNumbers = nonEmptyComradeNumbers();
-        Set<String> uniqueNumbersSet = new HashSet<>();
-
-        for (String str : comradeNumbers) {
-            if (uniqueNumbersSet.add(str) == false) {
-                noDuplicate = false;
-            }
-        }
-        return noDuplicate;
-    }
-
-    /**
-     * Lists the comrades' numbers which are not empty
-     * @return List of numbers which are not empty
-     */
+    * Lists the comrades numbers which are not empty
+    * @return List of numbers which are not empty
+    */
     private List<String> nonEmptyComradeNumbers() {
-        String[] comradeNumbers = {comrade1editText.getText().toString(), comrade2editText.getText().toString(),
-                comrade3editText.getText().toString(), comrade4editText.getText().toString(),
-                comrade5editText.getText().toString(), comrade6editText.getText().toString()};
-        List<String> nonEmptyComradeNumbers = new ArrayList<String>();
-        for(String str : comradeNumbers)
-        {
-            if(!(str.length() == 0))
-            {
+        
+	List<String> nonEmptyComradeNumbers = new ArrayList<String>();
+        for(EditText number : comradeEditText) {
+            if(number.getText().toString().length() != 0)
                 nonEmptyComradeNumbers.add(str);
-            }
         }
+        
         return nonEmptyComradeNumbers;
-        //returns a list of nonempty comrade numbers
     }
-  
+ 
+    /**
+    * Check for duplicate numbers
+    * @return true if no duplicate number else returns false
+    */  
+    private boolean noDuplicatedNumber() {
+
+        Set<String> comradeTexts = new HashSet<>();
+
+        for (int i = 0; i < NUMBER_OF_COMRADES; i++)
+            comradeTexts.add(comradeEditText.get(i).getText().toString());
+
+        return comradeTexts.size() != NUMBER_OF_COMRADES;
+    }
 }
+
