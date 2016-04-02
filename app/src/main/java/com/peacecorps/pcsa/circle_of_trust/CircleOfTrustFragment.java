@@ -4,9 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +41,6 @@ public class CircleOfTrustFragment extends Fragment {
     private String[] phoneNumbers;
     LocationHelper locationHelper;
 
-    private String optionSelected;
     public CircleOfTrustFragment() {
     }
 
@@ -56,8 +59,16 @@ public class CircleOfTrustFragment extends Fragment {
         requestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
-                messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
+                if(checkMobileNetworkAvailable(getActivity()))
+                {
+                    MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
+                    messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),R.string.network_unavailable,Toast.LENGTH_LONG).show();
+                }
+
             }
         });
         comradesViews = new ImageView[]{(ImageView) rootView.findViewById(R.id.com1Button),(ImageView) rootView.findViewById(R.id.com2Button),
@@ -66,6 +77,11 @@ public class CircleOfTrustFragment extends Fragment {
         loadContactPhotos();
         locationHelper = new LocationHelper(getActivity());
         return rootView;
+    }
+
+    public static boolean checkMobileNetworkAvailable(Context appcontext) {
+        TelephonyManager tel = (TelephonyManager) appcontext.getSystemService(Context.TELEPHONY_SERVICE);
+        return (tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("") ? false : true);
     }
 
     @Override
