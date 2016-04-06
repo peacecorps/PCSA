@@ -167,7 +167,7 @@ public class CircleOfTrustFragment extends Fragment {
         }
 
         try {
-            sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
+            sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
 
             if(phoneNumbers == null)
             {
@@ -215,12 +215,12 @@ public class CircleOfTrustFragment extends Fragment {
      * @return true if the number retrieval is success
      */
     private boolean loadPhoneNumbers() {
-        sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
+        sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
         try {
 
             phoneNumbers = new String[Trustees.NUMBER_OF_COMRADES];
             for(int i = 0; i < Trustees.NUMBER_OF_COMRADES; i++)
-                phoneNumbers[i] = Trustees.comradeKey.get(i);
+                phoneNumbers[i] = Trustees.COMRADE_KEY.get(i);
 
             return true;
         } catch (Exception e) {
