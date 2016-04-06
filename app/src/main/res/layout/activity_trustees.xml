@@ -228,18 +228,15 @@
 
         <Button
             android:id="@+id/okButton"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/comrade6EditText"
             android:layout_width="@dimen/layout_width"
             android:layout_height="@dimen/trustee_button_height"
+            style="@style/NavigateButton"
             android:layout_gravity="center"
-            android:textColor="@color/intro_text_color"
-            android:background="@drawable/btn_rounded_rectangle"
+            android:layout_centerHorizontal="true"
             android:text="@string/add_comrades_save"
-            android:textSize="@dimen/text_normal"
+            android:layout_below="@id/comrade6EditText"
             android:layout_marginTop="@dimen/trustee_margin_top"
             android:layout_marginBottom="@dimen/trustee_margin_bottom"/>
-
 
     </RelativeLayout>
 
