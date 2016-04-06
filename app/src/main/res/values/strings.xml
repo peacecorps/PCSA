@@ -47,7 +47,7 @@
 ·	Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
 ·	Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
     </string>
-    C<string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
+    <string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
 ·	Consultation with my Country Director\n\n
 ·	File a report with local law enforcement\n\n
 ·	Request a site change\n\n
@@ -55,7 +55,7 @@
 ·	File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
 ·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
 ·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
-</string>
+    </string>
 
     <!--Main Menu-->
     <string name="get_help">Get Help now</string>
