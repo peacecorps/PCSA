@@ -71,7 +71,7 @@ public class Trustees extends AppCompatActivity {
 	    @Override
             public void onClick(View v) {
                  
-		boolean noDuplicateNumber = noDuplicateNumber();
+		boolean noDuplicateNumber = noDuplicatedNumber();
 
                 //To store previous values (numbers) of comrades
                 List<String> old_comrade = new ArrayList<String>(NUMBER_OF_COMRADES);
@@ -87,22 +87,9 @@ public class Trustees extends AppCompatActivity {
                 for(int i = 0; i < NUMBER_OF_COMRADES; i++)
                     new_comrade.add(comradeEditText.get(i).getText().toString());
 
-                new_comrade1 = comrade1editText.getText().toString();
-                new_comrade2 = comrade2editText.getText().toString();
-                new_comrade3 = comrade3editText.getText().toString();
-                new_comrade4 = comrade4editText.getText().toString();
-                new_comrade5 = comrade5editText.getText().toString();
-                new_comrade6 = comrade6editText.getText().toString();
 
                 if (noDuplicateNumber) {
-                    
-		    editor.putString(comrade1, new_comrade1);
-                    editor.putString(comrade2, new_comrade2);
-                    editor.putString(comrade3, new_comrade3);
-                    editor.putString(comrade4, new_comrade4);
-                    editor.putString(comrade5, new_comrade5);
-                    editor.putString(comrade6, new_comrade6);
-                
+
                     for(int i = 0; i < NUMBER_OF_COMRADES; i++)
                         editor.putString(COMRADE_KEY.get(i), new_comrade.get(i));
 
@@ -289,7 +276,7 @@ public class Trustees extends AppCompatActivity {
 	List<String> nonEmptyComradeNumbers = new ArrayList<String>();
         for(EditText number : comradeEditText) {
             if(number.getText().toString().length() != 0)
-                nonEmptyComradeNumbers.add(str);
+                nonEmptyComradeNumbers.add(number.getText().toString());
         }
         
         return nonEmptyComradeNumbers;
