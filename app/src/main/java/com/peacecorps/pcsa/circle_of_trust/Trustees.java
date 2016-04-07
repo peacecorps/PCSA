@@ -39,8 +39,8 @@ public class Trustees extends AppCompatActivity {
     Button okButton;
     private View selectedButton;
 
-    public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final List<String> comradeKey = Arrays.asList("comrade1Key", "comrade2Key", "comrade3Key", "comrade4Key", "comrade5Key", "comrade6Key");
+    public static final String MY_PREFERENCES = "MyPrefs" ;
+    public static final List<String> COMRADE_KEY = Arrays.asList("comrade1Key", "comrade2Key", "comrade3Key", "comrade4Key", "comrade5Key", "comrade6Key");
 
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
@@ -60,11 +60,11 @@ public class Trustees extends AppCompatActivity {
 
         okButton = (Button) findViewById(R.id.okButton);
 
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
 
         for(int i = 0; i < NUMBER_OF_COMRADES; i++)
-            comradeEditText.get(i).setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(comradeKey.get(i), "") + "</font>"));
+            comradeEditText.get(i).setText(Html.fromHtml("<font color='black'>" + sharedpreferences.getString(COMRADE_KEY.get(i), "") + "</font>"));
 
         okButton.setOnClickListener(new View.OnClickListener() {
            
@@ -81,7 +81,7 @@ public class Trustees extends AppCompatActivity {
 
                 //Retrieving stored values
                 for(int i = 0; i < NUMBER_OF_COMRADES; i++)
-                    old_comrade.add(sharedpreferences.getString(comradeKey.get(i), ""));
+                    old_comrade.add(sharedpreferences.getString(COMRADE_KEY.get(i), ""));
 
                 //Retrieving new values
                 for(int i = 0; i < NUMBER_OF_COMRADES; i++)
@@ -104,7 +104,7 @@ public class Trustees extends AppCompatActivity {
                     editor.putString(comrade6, new_comrade6);
                 
                     for(int i = 0; i < NUMBER_OF_COMRADES; i++)
-                        editor.putString(comradeKey.get(i), new_comrade.get(i));
+                        editor.putString(COMRADE_KEY.get(i), new_comrade.get(i));
 
                     boolean status = editor.commit();
                     if (status) {
