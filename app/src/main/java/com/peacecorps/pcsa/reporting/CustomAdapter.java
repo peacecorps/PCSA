@@ -33,8 +33,6 @@ public class CustomAdapter extends BaseAdapter {
     public static int[] icons = {R.mipmap.ic_call, R.mipmap.ic_message};
     private static LayoutInflater inflater;
 
-    private static Dialog listDialog;
-
     public CustomAdapter(Object object)
     {
         context = (Context)object;
@@ -60,49 +58,11 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View rowView;
-        rowView = inflater.inflate(R.layout.dialog_listitem, null);
+        rowView = inflater.inflate(R.layout.reporting_dialog_listitem, null);
         TextView textView = (TextView)rowView.findViewById(R.id.dialog_txt);
         ImageView imageView = (ImageView)rowView.findViewById(R.id.dialog_img);
         textView.setText(caption[position]);
         imageView.setImageResource(icons[position]);
         return rowView;
-    }
-
-    /**
-     * Creates a Dialog for the user to choose Dialer app or SMS app
-     *
-     * Any activity that needs a dialog box should call this function with the above parameters.
-     *
-     * @param title title of the dialog box
-     * @param activity The activity in which the dialog box needs to be instantiated
-     */
-    public static Dialog createDialog(final String title, Activity activity ){
-
-        //Initialising the dialog box
-        listDialog = new Dialog(activity);
-        listDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        listDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        LayoutInflater layoutInflater = LayoutInflater.from(activity);
-
-        //Initialising the listview
-        View view = layoutInflater.inflate(R.layout.dialog_list, null);
-        listDialog.setContentView(view);
-        ListView list1 = (ListView) listDialog.findViewById(R.id.dialog_listview);
-
-        //Adding the header(title) to the dialog box
-        TextView textView = new TextView(activity);
-        textView.setText(title);
-        textView.setTextColor(activity.getResources().getColor(R.color.primary_text_default_material_dark));
-        textView.setTypeface(Typeface.DEFAULT_BOLD);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        textView.setGravity(Gravity.CENTER);
-        list1.addHeaderView(textView);
-
-        list1.setAdapter(new CustomAdapter(activity));
-
-        //Providing functionality to the listitems (Call and Message)
-        list1.setOnItemClickListener((AdapterView.OnItemClickListener) activity);
-
-        return listDialog;
     }
 }
