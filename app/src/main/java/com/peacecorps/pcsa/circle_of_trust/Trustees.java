@@ -36,7 +36,6 @@ public class Trustees extends AppCompatActivity {
     public static final int NUMBER_OF_COMRADES = 6;
     List<EditText> comradeEditText = new ArrayList<>(NUMBER_OF_COMRADES);
 
-    Button okButton;
     private View selectedButton;
 
     public static final String MY_PREFERENCES = "MyPrefs" ;
@@ -58,7 +57,7 @@ public class Trustees extends AppCompatActivity {
         comradeEditText.add((EditText) findViewById(R.id.comrade5EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade6EditText));
 
-        okButton = (Button) findViewById(R.id.okButton);
+        Button okButton = (Button) findViewById(R.id.okButton);
 
         sharedpreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
