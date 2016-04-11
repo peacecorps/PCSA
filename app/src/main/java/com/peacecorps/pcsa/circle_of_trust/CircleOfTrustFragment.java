@@ -216,10 +216,9 @@ public class CircleOfTrustFragment extends Fragment {
         sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
         try {
 
-            phoneNumbers = new String[Trustees.NUMBER_OF_COMRADES];
-            for(int i = 0; i < Trustees.NUMBER_OF_COMRADES; i++)
-                phoneNumbers[i] = Trustees.COMRADE_KEY.get(i);
-
+            phoneNumbers = new String[]{sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
+                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
+                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
             return true;
         } catch (Exception e) {
             Log.e(TAG, "Unable to load comrades numbers from shared preferences", e);
@@ -245,4 +244,3 @@ public class CircleOfTrustFragment extends Fragment {
         loadContactPhotos();
     }
 }
-
