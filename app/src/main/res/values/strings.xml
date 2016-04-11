@@ -123,7 +123,7 @@
     <string name="need_to_talk_message">I need to talk. Message sent through First Aide\'s Circle of Trust</string>
     <string name="msg_sent">Message sent</string>
     <string name="ok">OK</string>
-    <string name="message_failed">Message Sending Failed, Try again Later</string>
+    <string name="message_failed">Message Sending Failed for Comrade </string>
     <string name="no_phone_number">No phone number found</string>
     <string name="choose_number">Choose a number</string>
     <string name="circle_of_trust_slide_two">When you are feeling insecure or need comrades\' attention.\nPress the button</string>
