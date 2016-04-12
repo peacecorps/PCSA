@@ -164,7 +164,6 @@ public class CircleOfTrustFragment extends Fragment {
                 break;
         }
 
-        try {
             sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
 
             if(phoneNumbers == null)
@@ -179,7 +178,12 @@ public class CircleOfTrustFragment extends Fragment {
                 if (!number.isEmpty()) {
                     //Fix sending messages if the length is more than single sms limit
                     ArrayList<String> parts = sms.divideMessage(message);
-                    sms.sendMultipartTextMessage(number, null, parts, null, null);
+                    try{
+                        sms.sendMultipartTextMessage(number, null, parts, null, null);
+                    }
+                    catch(Exception e){
+                        Toast.makeText(getActivity(), R.string.message_failed + (counter+1), Toast.LENGTH_LONG).show();
+                    }
                     counter++;
                 }
             }
@@ -201,10 +205,9 @@ public class CircleOfTrustFragment extends Fragment {
                 customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
             }
 
-        }catch (Exception e)
-        {
-            Toast.makeText(getActivity(), R.string.message_failed, Toast.LENGTH_LONG).show();
-        }
+
+
+
 
     }
 
