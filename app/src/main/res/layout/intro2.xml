@@ -32,7 +32,7 @@
             android:layout_gravity="center"
             android:paddingLeft="@dimen/intro_padding_16"
             android:paddingRight="@dimen/intro_padding_16"
-            android:src="@mipmap/ic_help_me"/>
+            android:src="@drawable/ic_help_me"/>
     </LinearLayout>
 
 </LinearLayout>

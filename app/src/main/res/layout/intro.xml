@@ -32,7 +32,7 @@
             android:layout_gravity="center"
             android:paddingLeft="@dimen/intro_padding_16"
             android:paddingRight="@dimen/intro_padding_16"
-            android:src="@mipmap/ic_circle"/>
+            android:src="@drawable/ic_circle"/>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"

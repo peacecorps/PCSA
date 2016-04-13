@@ -70,7 +70,7 @@
                 android:layout_height="@dimen/icon_size_poststaff"
                 android:id="@+id/link_to_other_staff"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/ic_arrow_right"
+                android:src="@drawable/ic_arrow_right"
                 android:layout_weight="0.75"/>
         </LinearLayout>
 
