@@ -1,17 +1,17 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.ContactsContract;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -207,19 +207,29 @@ public class Trustees extends AppCompatActivity {
                     cursor.close();
                 }
 
-                final CharSequence[] items = allNumbers.toArray(new String[allNumbers.size()]);
-                AlertDialog.Builder builder = new AlertDialog.Builder(Trustees.this);
-                builder.setTitle(getString(R.string.choose_number));
-                builder.setItems(items, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        String selectedNumber = items[item].toString();
-                        selectedNumber = selectedNumber.replace("-", "");
-                        phoneInput.setText(selectedNumber);
-                    }
-                });
-                AlertDialog alert = builder.create();
                 if (allNumbers.size() > 1) {
-                    alert.show();
+                    final CharSequence[] items = allNumbers.toArray(new String[allNumbers.size()]);
+                    new Handler().post(new Runnable() {
+                        public void run() {
+
+                            final ContactListDialog dialog = ContactListDialog.newInstance(Trustees.this, getString(R.string.choose_number), items);
+                            dialog.setListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                    String selectedNumber = items[position - 1].toString();
+                                    selectedNumber = selectedNumber.replace("-", "");
+                                    if (noDuplicateContactNumber(selectedNumber)) {
+                                        phoneInput.setText(selectedNumber);
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
+                                    }
+                                    dialog.dismiss();
+                                }
+                            });
+                            dialog.show(getSupportFragmentManager(), getString(R.string.choose_number));
+                        }
+                    });
+
                 } else {
                     String selectedNumber = phoneNumber;
                     selectedNumber = selectedNumber.replace("-", "");
