@@ -34,7 +34,7 @@
             android:paddingLeft="@dimen/intro_padding_16"
             android:paddingRight="@dimen/intro_padding_16"
             android:layout_weight="0.61"
-            android:src="@mipmap/ic_thumb"/>
+            android:src="@drawable/ic_thumb"/>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"

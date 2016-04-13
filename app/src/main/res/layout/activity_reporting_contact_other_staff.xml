@@ -71,7 +71,7 @@
                 android:layout_width="@dimen/icon_size_poststaff"
                 android:layout_height="@dimen/icon_size_poststaff"
                 android:layout_marginRight="@dimen/button_margin_right_otherstaff"
-                android:src="@mipmap/ic_arrow_left"
+                android:src="@drawable/ic_arrow_left"
                 android:id="@+id/link_to_post_staff"
                 android:gravity="center"/>
             <include

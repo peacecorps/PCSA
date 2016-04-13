@@ -23,6 +23,7 @@ import com.peacecorps.pcsa.Constants;
 import com.peacecorps.pcsa.Constants.SmsConstants;
 import com.peacecorps.pcsa.R;
 
+
 import java.util.ArrayList;
 
 
@@ -113,7 +114,7 @@ public class CircleOfTrustFragment extends Fragment {
         //reset to defaults
         for(ImageView view:comradesViews)
         {
-            view.setImageResource(R.mipmap.ic_comrade);
+            view.setImageResource(R.drawable.ic_comrade);
         }
 
         for (int i = 0; i < phoneNumbers.length; i++) {

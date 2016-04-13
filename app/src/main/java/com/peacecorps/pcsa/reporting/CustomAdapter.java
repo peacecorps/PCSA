@@ -30,7 +30,7 @@ public class CustomAdapter extends BaseAdapter {
 
     public static int[] caption = {R.string.dialog_call, R.string.dialog_message};
     Context context;
-    public static int[] icons = {R.mipmap.ic_call, R.mipmap.ic_message};
+    public static int[] icons = {R.drawable.ic_call, R.drawable.ic_message};
     private static LayoutInflater inflater;
 
     public CustomAdapter(Object object)
