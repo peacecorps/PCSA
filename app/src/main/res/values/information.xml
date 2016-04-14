@@ -107,6 +107,27 @@
         issues of discrimination and harassment, including sexual harassment, in the recruitment/service of Volunteers/Trainees.\n\n
         email: ocrd@peacecorps.gov
     </string>
+    <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
+·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
+·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
+·	Counseling from a licensed mental health professional\n\n
+·	Medical evacuation\n\n
+·	Accompaniment during medical evacuation\n\n
+·	Safety planning\n\n
+·	Explanation of your legal options\n \n
+·	Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
+·	Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
+    </string>
+    <string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
+·	Consultation with my Country Director\n\n
+·	File a report with local law enforcement\n\n
+·	Request a site change\n\n
+·	Request a host family change\n\n
+·	File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
+·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
+·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
+    </string>
+
     <string name="reporting_contact_ocrd">202 692 2139</string>
 
     <string name="loc1_name">Uganda</string>
