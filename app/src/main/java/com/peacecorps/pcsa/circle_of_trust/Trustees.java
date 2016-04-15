@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -37,6 +38,7 @@ public class Trustees extends AppCompatActivity {
     List<EditText> comradeEditText = new ArrayList<>(NUMBER_OF_COMRADES);
 
     private View selectedButton;
+    private Button okButton;
 
     public static final String MY_PREFERENCES = "MyPrefs" ;
     public static final List<String> COMRADE_KEY = Arrays.asList("comrade1Key", "comrade2Key", "comrade3Key", "comrade4Key", "comrade5Key", "comrade6Key");
@@ -57,7 +59,9 @@ public class Trustees extends AppCompatActivity {
         comradeEditText.add((EditText) findViewById(R.id.comrade5EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade6EditText));
 
-        Button okButton = (Button) findViewById(R.id.okButton);
+        okButton = (Button) findViewById(R.id.okButton);
+        okButton.setFocusable(true);
+        okButton.setFocusableInTouchMode(true);
 
         sharedpreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
@@ -220,6 +224,7 @@ public class Trustees extends AppCompatActivity {
                                     selectedNumber = selectedNumber.replace("-", "");
                                     if (noDuplicateContactNumber(selectedNumber)) {
                                         phoneInput.setText(selectedNumber);
+                                        setFocusOnNextView();
                                     } else {
                                         Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
                                     }
@@ -235,6 +240,7 @@ public class Trustees extends AppCompatActivity {
                     selectedNumber = selectedNumber.replace("-", "");
                     if(noDuplicateContactNumber(selectedNumber)) {
                         phoneInput.setText(selectedNumber);
+                        setFocusOnNextView();
                     }
                     else {
                         Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
@@ -248,6 +254,31 @@ public class Trustees extends AppCompatActivity {
             }
         }
 
+    }
+
+    private void setFocusOnNextView() {
+        int index = -1;
+        View currentFocus = selectedButton;
+        String tag = (String)currentFocus.getTag();
+        try
+        {
+            index = Integer.parseInt(tag);
+            Log.d("index", String.valueOf(index));
+        }catch (NumberFormatException e){
+            e.printStackTrace();
+        }
+
+        if(index >=0 && index <= comradeEditText.size()) {
+            boolean isEmpty = false;
+            for (int i = 0; i < comradeEditText.size() && !isEmpty; ++i) {
+                if (comradeEditText.get(i).getText().toString().equals("")) {
+                    isEmpty = true;
+                    comradeEditText.get(i).requestFocus();
+                }
+            }
+            if (!isEmpty)
+                okButton.requestFocus();
+        }
     }
 
     private void showNoPhoneNumberToast() {
