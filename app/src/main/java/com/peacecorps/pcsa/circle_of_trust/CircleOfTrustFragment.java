@@ -7,6 +7,7 @@ import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
@@ -36,12 +37,26 @@ import java.util.ArrayList;
 public class CircleOfTrustFragment extends Fragment {
     private static final String TAG = CircleOfTrustFragment.class.getSimpleName();
     private static int REQUEST_CODE_TRUSTEES = 1001;
+    private long VIBRATION_TIME = 300; // Length of vibration in milliseconds
+    private long VIBRATION_PAUSE = 200;
+    /**
+     * TODO : Add info about vibration pattern in intro activity
+     */
+    private long[] patternSuccess = {0, // Start immediately
+      VIBRATION_TIME
+    };
+
+    private long[] patternFailure = {0, // Start immediately
+            VIBRATION_TIME, VIBRATION_PAUSE, VIBRATION_TIME, // Each element then alternates between vibrate, sleep, vibrate, sleep...
+    };
 
     ImageView[] comradesViews;
     SharedPreferences sharedPreferences;
 
     private String[] phoneNumbers;
     LocationHelper locationHelper;
+
+    private Vibrator vibrator;
 
     public CircleOfTrustFragment() {
     }
@@ -50,6 +65,10 @@ public class CircleOfTrustFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_circle_of_trust, container, false);
+
+        // Get instance of Vibrator from current Context
+        vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+
         ImageButton requestButton = (ImageButton) rootView.findViewById(R.id.requestButton);
         ImageButton editButton = (ImageButton) rootView.findViewById(R.id.editButton);
         editButton.setOnClickListener(new View.OnClickListener() {
@@ -63,11 +82,19 @@ public class CircleOfTrustFragment extends Fragment {
             public void onClick(View v) {
                 if(checkMobileNetworkAvailable(getActivity()))
                 {
+                    if (vibrator.hasVibrator()) {
+                        // Only perform success pattern one time (-1 means "do not repeat")
+                        vibrator.vibrate(patternSuccess, -1);
+                    }
                     MessageDialogBox messageDialogBox = MessageDialogBox.newInstance(CircleOfTrustFragment.this,getActivity());
                     messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
                 }
                 else
                 {
+                    if (vibrator.hasVibrator()) {
+                        // Only perform failure pattern one time (-1 means "do not repeat")
+                        vibrator.vibrate(patternFailure, -1);
+                    }
                     Toast.makeText(getActivity(),R.string.network_unavailable,Toast.LENGTH_LONG).show();
                 }
 
