@@ -1,5 +1,6 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -19,4 +20,15 @@ public class CircleOfTrust extends AppCompatActivity {
         setContentView(R.layout.activity_circle_of_trust);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(CircleOfTrustFragment.sentReceiver, new IntentFilter(CircleOfTrustFragment.SENT));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(CircleOfTrustFragment.sentReceiver);
+    }
 }

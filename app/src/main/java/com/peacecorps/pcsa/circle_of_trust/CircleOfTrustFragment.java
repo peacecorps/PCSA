@@ -1,7 +1,11 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
+import android.app.Activity;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.net.ConnectivityManager;
@@ -26,6 +30,7 @@ import com.peacecorps.pcsa.R;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /*
@@ -43,7 +48,7 @@ public class CircleOfTrustFragment extends Fragment {
      * TODO : Add info about vibration pattern in intro activity
      */
     private long[] patternSuccess = {0, // Start immediately
-      VIBRATION_TIME
+            VIBRATION_TIME
     };
 
     private long[] patternFailure = {0, // Start immediately
@@ -58,6 +63,13 @@ public class CircleOfTrustFragment extends Fragment {
 
     private Vibrator vibrator;
 
+    public final static String SENT = "300";
+    private static int msgParts;
+    private static List<Boolean> sent = new ArrayList<>();
+    ArrayList<PendingIntent> sentIntents = new ArrayList<>();
+    private String numbers[];
+    static BroadcastReceiver sentReceiver;
+
     public CircleOfTrustFragment() {
     }
 
@@ -66,6 +78,43 @@ public class CircleOfTrustFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_circle_of_trust, container, false);
 
+        //To verify if SMS is sent
+        sentReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                boolean anyError = false;
+                switch (getResultCode()) {
+                    case Activity.RESULT_OK:
+                        break;
+                    case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
+                    case SmsManager.RESULT_ERROR_NO_SERVICE:
+                    case SmsManager.RESULT_ERROR_NULL_PDU:
+                    case SmsManager.RESULT_ERROR_RADIO_OFF:
+                        anyError = true;
+                        break;
+                }
+                sent.add(anyError);
+                msgParts--;
+                if (msgParts == 0) {
+                    String logMessage = "";
+                    for(int i =0; i<sent.size();++i)
+                    {
+                        if(!numbers[i].isEmpty())
+                        {
+                            if(!sent.get(i))
+                                logMessage += numbers[i] + " : " + getString(R.string.sms_send_pass);
+                            else
+                                logMessage += numbers[i] + " : " + getString(R.string.sms_send_fail);
+                            logMessage += "\n";
+                        }
+
+                    }
+                    CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.log_title),logMessage);
+                    customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
+                    sent.clear();
+                }
+            }
+        };
         // Get instance of Vibrator from current Context
         vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -192,51 +241,59 @@ public class CircleOfTrustFragment extends Fragment {
                 break;
         }
 
-            sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
+        sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MY_PREFERENCES, Context.MODE_PRIVATE);
 
-            if(phoneNumbers == null)
-            {
-                loadPhoneNumbers();
+        if(phoneNumbers == null)
+        {
+            loadPhoneNumbers();
+        }
+        // The numbers variable holds the Comrades numbers
+        numbers = phoneNumbers;
+
+        int counter=0;
+
+        //Fix sending messages if the length is more than single sms limit
+        ArrayList<String> parts = sms.divideMessage(message);
+        int numParts = parts.size();
+        for (int i = 0; i < numParts; i++) {
+            sentIntents.add(PendingIntent.getBroadcast(getActivity(), 0, new Intent(
+                    SENT), 0));
+        }
+        int numRegisteredComrades = 0;
+        for(String number : numbers) {
+            if (!number.isEmpty()) {
+                numRegisteredComrades++;
             }
-            // The numbers variable holds the Comrades numbers
-            String numbers[] = phoneNumbers;
-
-            int counter=0;
-            for(String number : numbers) {
-                if (!number.isEmpty()) {
-                    //Fix sending messages if the length is more than single sms limit
-                    ArrayList<String> parts = sms.divideMessage(message);
-                    try{
-                        sms.sendMultipartTextMessage(number, null, parts, null, null);
-                    }
-                    catch(Exception e){
-                        Toast.makeText(getActivity(), R.string.message_failed + (counter+1), Toast.LENGTH_LONG).show();
-                    }
-                    counter++;
+        }
+        msgParts = numParts * numRegisteredComrades;
+        for(String number : numbers) {
+            if (!number.isEmpty()) {
+                try{
+                    sms.sendMultipartTextMessage(number, null, parts, sentIntents, null);
                 }
+                catch(Exception e){
+                    Toast.makeText(getActivity(), R.string.message_failed + (counter+1), Toast.LENGTH_LONG).show();
+                }
+                counter++;
             }
-            if(counter!=0)
-            {
-                String contentToPost;
+        }
+        if(counter!=0)
+        {
+            String contentToPost;
 
-                //For 1 comrade
-                if(counter == 1)
-                    contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message3);
-                else
-                    contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2);
-                CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.msg_sent),contentToPost);
-                customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
-            }
+            //For 1 comrade
+            if(counter == 1)
+                contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message3) +" " + getString(R.string.receive_log);
             else
-            {
-                CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.no_comrade_title),getString(R.string.no_comrade_msg));
-                customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
-            }
-
-
-
-
-
+                contentToPost = getString(R.string.confirmation_message1)+ " " + counter + " "+ getString(R.string.confirmation_message2)+ " " + getString(R.string.receive_log);
+            CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.msg_sent),contentToPost);
+            customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
+        }
+        else
+        {
+            CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.no_comrade_title),getString(R.string.no_comrade_msg));
+            customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
+        }
     }
 
     /**
