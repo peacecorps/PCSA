@@ -64,6 +64,7 @@ public class CircleOfTrustFragment extends Fragment {
     private Vibrator vibrator;
 
     public final static String SENT = "300";
+    private static boolean firstTime = false;
     private static int msgParts;
     private static List<Boolean> sent = new ArrayList<>();
     ArrayList<PendingIntent> sentIntents = new ArrayList<>();
@@ -82,6 +83,11 @@ public class CircleOfTrustFragment extends Fragment {
         sentReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+                if(firstTime)
+                {
+                    firstTime = false;
+                    sent.clear();
+                }
                 boolean anyError = false;
                 switch (getResultCode()) {
                     case Activity.RESULT_OK:
@@ -266,6 +272,7 @@ public class CircleOfTrustFragment extends Fragment {
             }
         }
         msgParts = numParts * numRegisteredComrades;
+        firstTime = true;
         for(String number : numbers) {
             if (!number.isEmpty()) {
                 try{
