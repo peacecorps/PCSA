@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app">
+
+    <ImageView
+        android:layout_width="@dimen/splash_screen_imgsize"
+        android:layout_height="@dimen/splash_screen_imgsize"
+        android:src="@drawable/ic_logo"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_aide"
+        android:textStyle="bold"
+        android:textSize="@dimen/splash_screen_title_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:id="@+id/textView"
+        android:textColor="@color/photo_border"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_screen_progress"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
