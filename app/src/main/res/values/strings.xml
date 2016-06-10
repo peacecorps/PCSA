@@ -108,9 +108,9 @@
     <string name="no_phone_number">No phone number found</string>
     <string name="choose_number">Choose a number</string>
     <string name="circle_of_trust_slide_two">When you are feeling insecure or need comrades\' attention.\nPress the button</string>
-    <string name="confirmation_message1">This message has been sent to</string>
-    <string name="confirmation_message2">registered Comrades</string>
-    <string name="confirmation_message3">registered Comrade</string>
+    <string name="confirmation_message1">This message is being sent to</string>
+    <string name="confirmation_message2">registered Comrades.</string>
+    <string name="confirmation_message3">registered Comrade.</string>
     <string name="no_comrade_title">No Comrades Registered</string>
     <string name="no_comrade_msg">Failed to send message since no Comrades have been registered</string>
     <string name="add_comrades_save">Save</string>
@@ -123,6 +123,10 @@
     <string name="dialog_tag">Alert_Dialog</string>
     <string name="network_unavailable">Please check your network connection and try again</string>
     <string name="first_aide">First Aide</string>
+    <string name="sms_send_fail">Failed</string>
+    <string name="sms_send_pass">Sent</string>
+    <string name="log_title">SMS Log Report</string>
+    <string name="receive_log">You\'ll receive the delivery report shortly</string>
 
 
 </resources>
