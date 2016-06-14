@@ -61,7 +61,6 @@ public class Trustees extends AppCompatActivity {
 
         okButton = (Button) findViewById(R.id.okButton);
         okButton.setFocusable(true);
-        okButton.setFocusableInTouchMode(true);
 
         sharedpreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
