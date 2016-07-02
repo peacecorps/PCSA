@@ -130,6 +130,7 @@
 
 
 
+
         </LinearLayout>
 
         <LinearLayout
@@ -157,7 +158,17 @@
                 />
         </LinearLayout>
 
-
-
+        <TextView
+            android:id="@+id/post_staff_current_post_html"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reporting_current_post_html_text"
+            android:autoLink="web|email"
+            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+            android:layout_marginLeft="@dimen/contacting_post_staff_marginLeft"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text_default_material_dark"
+            />
     </LinearLayout>
 </ScrollView>
