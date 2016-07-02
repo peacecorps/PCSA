@@ -78,12 +78,12 @@
     <string name="learn_effect">learn about the effect of Sexual Assault</string>
     <string name="bystander">Bystander intervention tactics</string>
     <string name="predator_tactic">Predator tactics</string>
-    <string name="comrade1">Comrade 1</string>
-    <string name="comrade2">Comrade 2</string>
-    <string name="comrade3">Comrade 3</string>
-    <string name="comrade4">Comrade 4</string>
-    <string name="comrade5">Comrade 5</string>
-    <string name="comrade6">Comrade 6</string>
+    <string name="comrade1">Name 1</string>
+    <string name="comrade2">Name 2</string>
+    <string name="comrade3">Name 3</string>
+    <string name="comrade4">Name 4</string>
+    <string name="comrade5">Name 5</string>
+    <string name="comrade6">Name 6</string>
     <string name="slide_one_head">Just a few Steps on how to use</string>
     <string name="slide_one_button">Circle Of Trust</string>
     <string name="slide_three_head">Circle Of Trust</string>
@@ -158,5 +158,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="reporting_current_post_html_text">If you are in a country not listed, contact your country of service or the US Embassy ( http://travel.state.gov/content/passports/english/emergencies.html )</string>
+    <string name="circle_subtitle">My Trustees</string>
+    <string name="no_name">No Name</string>
+    <string name="unregistered">Register</string>
 
 </resources>

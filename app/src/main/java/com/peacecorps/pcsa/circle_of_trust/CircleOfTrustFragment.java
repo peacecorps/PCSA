@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.Constants;
@@ -30,7 +31,10 @@ import com.peacecorps.pcsa.R;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 
 /*
@@ -40,7 +44,9 @@ import java.util.List;
  * @since 2015-08-18
  */
 public class CircleOfTrustFragment extends Fragment {
-    private static final String TAG = CircleOfTrustFragment.class.getSimpleName();
+    public static final String TAG = CircleOfTrustFragment.class.getSimpleName();
+    private static final String MY_PREFERENCES = "MyPreference";
+    private static final String NAME_KEY = "ComradeName";
     private static int REQUEST_CODE_TRUSTEES = 1001;
     private long VIBRATION_TIME = 300; // Length of vibration in milliseconds
     private long VIBRATION_PAUSE = 200;
@@ -57,6 +63,7 @@ public class CircleOfTrustFragment extends Fragment {
 
     ImageView[] comradesViews;
     SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     private String[] phoneNumbers;
     LocationHelper locationHelper;
@@ -69,7 +76,10 @@ public class CircleOfTrustFragment extends Fragment {
     private static List<Boolean> sent = new ArrayList<>();
     ArrayList<PendingIntent> sentIntents = new ArrayList<>();
     private String numbers[];
-    static BroadcastReceiver sentReceiver;
+    public static BroadcastReceiver sentReceiver;
+    static Map allNames = new HashMap();
+    TextView comrade1Name,comrade2Name,comrade3Name,comrade4Name,comrade5Name,comrade6Name;
+    TextView[] allTextViews;
 
     public CircleOfTrustFragment() {
     }
@@ -78,6 +88,19 @@ public class CircleOfTrustFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_circle_of_trust, container, false);
+
+        sharedPreferences = getActivity().getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        comrade1Name = (TextView) rootView.findViewById(R.id.com1ButtonName);
+        comrade2Name = (TextView) rootView.findViewById(R.id.com2ButtonName);
+        comrade3Name = (TextView) rootView.findViewById(R.id.com3ButtonName);
+        comrade4Name = (TextView) rootView.findViewById(R.id.com4ButtonName);
+        comrade5Name = (TextView) rootView.findViewById(R.id.com5ButtonName);
+        comrade6Name = (TextView) rootView.findViewById(R.id.com6ButtonName);
+        allTextViews = new TextView[]{comrade1Name,comrade2Name,comrade3Name,comrade4Name,comrade5Name,comrade6Name};
+
+        for(int i = 0; i<allTextViews.length; ++i)
+            allTextViews[i].setText(sharedPreferences.getString(NAME_KEY+i,getString(R.string.unregistered)));
 
         //To verify if SMS is sent
         sentReceiver = new BroadcastReceiver() {
@@ -329,8 +352,25 @@ public class CircleOfTrustFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == REQUEST_CODE_TRUSTEES) {
             refreshPhotos();
-        }
+            Iterator it = allNames.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                allTextViews[(Integer)pair.getKey() - 1].setText(pair.getValue().toString());
+                editor.putString(NAME_KEY + ((Integer)pair.getKey()-1),pair.getValue().toString());
+            }
 
+            for(int i = 0; i < Trustees.NUMBER_OF_COMRADES; i++) {
+                if(!allNames.containsKey(i+1) && !(phoneNumbers[i].isEmpty())){
+                    allTextViews[i].setText(phoneNumbers[i]);
+                    editor.putString(NAME_KEY + i,phoneNumbers[i]);
+                }
+                if(phoneNumbers[i].isEmpty()) {
+                    allTextViews[i].setText(getString(R.string.unregistered));
+                    editor.putString(NAME_KEY + i,getString(R.string.unregistered));
+                }
+            }
+            editor.commit();
+        }
     }
 
     /**

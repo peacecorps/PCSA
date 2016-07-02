@@ -36,6 +36,7 @@ public class Trustees extends AppCompatActivity {
     public static final int REQUEST_SELECT_CONTACT = 100;
     public static final int NUMBER_OF_COMRADES = 6;
     List<EditText> comradeEditText = new ArrayList<>(NUMBER_OF_COMRADES);
+    List<Integer> indexesUpdated = new ArrayList<>();
 
     private View selectedButton;
     private Button okButton;
@@ -101,7 +102,14 @@ public class Trustees extends AppCompatActivity {
                         //Check if any updation is required
                         boolean needToUpdate = false;
                         for(int i = 0; i < NUMBER_OF_COMRADES; i++)
-                            if(!old_comrade.get(i).equals(new_comrade.get(i))) needToUpdate = true;
+                            if(!old_comrade.get(i).equals(new_comrade.get(i))){
+                                needToUpdate = true;
+                                if(CircleOfTrustFragment.allNames.containsKey(i+1) && !indexesUpdated.contains(i))
+                                {
+                                    CircleOfTrustFragment.allNames.remove(i+1);
+                                }
+
+                            }
 
                         //Nothing to update
                         if (!needToUpdate) {
@@ -181,6 +189,7 @@ public class Trustees extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == REQUEST_SELECT_CONTACT) {
             final EditText phoneInput = findInput(selectedButton);
+            int tag = Integer.parseInt(selectedButton.getTag().toString());
             if(phoneInput == null){
                 return;
             }
@@ -188,12 +197,16 @@ public class Trustees extends AppCompatActivity {
             String phoneNumber = "";
             Set<String> allNumbers = new HashSet<>();
             int phoneIdx;
+            String contactDisplayName;
             try {
                 Uri result = data.getData();
                 String id = result.getLastPathSegment();
                 cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?", new String[]{id}, null);
                 phoneIdx = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DATA);
                 if (cursor.moveToFirst()) {
+                    contactDisplayName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                    CircleOfTrustFragment.allNames.put(tag,contactDisplayName);
+                    indexesUpdated.add(tag-1);
                     while (!cursor.isAfterLast()) {
                         phoneNumber = cursor.getString(phoneIdx);
                         allNumbers.add(phoneNumber);

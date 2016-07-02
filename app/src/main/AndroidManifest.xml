@@ -59,14 +59,6 @@
             android:label="@string/title_activity_other_staff_content" >
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust"
-            android:label="@string/title_activity_circle_of_trust"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.peacecorps.pcsa.MainActivity" />
-        </activity>
-        <activity
             android:name="com.peacecorps.pcsa.circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
             android:parentActivityName="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust"
