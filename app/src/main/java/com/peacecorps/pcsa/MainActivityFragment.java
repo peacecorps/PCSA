@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
+import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
 import com.peacecorps.pcsa.reporting.HomeScreen;
 
@@ -21,6 +23,7 @@ import com.peacecorps.pcsa.reporting.HomeScreen;
 public class MainActivityFragment extends Fragment {
 
     public final static String TAG = "MainActivityFragment";
+    private boolean introFinished = false;
 
     public MainActivityFragment() {
     }
@@ -71,12 +74,29 @@ public class MainActivityFragment extends Fragment {
         circleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), CircleIntro.class));
+                if(!introFinished)
+                    startActivityForResult(new Intent(getActivity(), CircleIntro.class),2);
+                else
+                {
+                    //Swapping CircleOfTrustFragment into the container
+                    CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
+                    MainActivity.swapFragmentIn(getActivity(),circleOfTrustFragment,CircleOfTrustFragment.TAG);
+                }
             }
         });
-
         return rootView;
     }
 
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode)
+        {
+            case 2:
+                introFinished = true;
+                //Swapping CircleOfTrustFragment into the container
+                CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
+                MainActivity.swapFragmentIn(getActivity(),circleOfTrustFragment,CircleOfTrustFragment.TAG);
+        }
+    }
 }

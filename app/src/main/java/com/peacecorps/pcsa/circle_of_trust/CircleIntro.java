@@ -40,15 +40,15 @@ public class CircleIntro extends AppIntro {
     /**
      * Loads the regular activity if the first run is skipped or finished.
      */
-    private void loadMainActivity(){
+    private void loadMainActivity() {
 
         settings = getSharedPreferences("prefs", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("firstRun", false);
         editor.commit();
-        Intent intent = new Intent(this, CircleOfTrust.class);
-        startActivity(intent);
-        finish();
+        Intent intent = new Intent();
+        setResult(2, intent);
+        finish();//finishing activity
     }
 
     @Override
