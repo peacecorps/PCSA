@@ -1,6 +1,8 @@
 package com.peacecorps.pcsa;
 
+import android.annotation.TargetApi;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -22,6 +24,8 @@ import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
+import com.peacecorps.pcsa.safety_tools.BystanderInterventionFragment;
+import com.peacecorps.pcsa.safety_tools.RadarFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,13 +37,24 @@ public class MainActivity extends AppCompatActivity {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private static final String TAG = MainActivity.class.getSimpleName();
+    public static String FRAGMENT_TAG = MainActivityFragment.TAG;
+    private FragmentManager fragmentManager = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Fragment mainActivityFragment = new MainActivityFragment();
-        swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG);
+        if(savedInstanceState != null)
+        {
+            Fragment unknownFragment = fragmentManager.findFragmentByTag(FRAGMENT_TAG);
+            // Insert the fragment by replacing any existing fragment without adding to backstack
+            MainActivity.swapFragmentIn(this,unknownFragment,FRAGMENT_TAG,false);
+        }
+        else
+        {
+            Fragment mainActivityFragment = new MainActivityFragment();
+            swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG,false);
+        }
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -53,16 +68,27 @@ public class MainActivity extends AppCompatActivity {
         expListView.setAdapter(listAdapter);
     }
 
-    public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG)
+    public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG, boolean addToBackStack)
     {
-        // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.fade_in,R.anim.fade_out,R.anim.fade_in,R.anim.fade_out)
-                .add(R.id.fragment_container
-                        , fragment)
-                .addToBackStack(TAG)
-                .commit();
+        // Insert the fragment by replacing any existing fragment
+        FRAGMENT_TAG = TAG;
+        if(addToBackStack){
+            fragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.push_down_in,R.anim.push_down_out,R.anim.fade_in,R.anim.fade_out)
+                    .replace(R.id.fragment_container
+                            , fragment,TAG)
+                    .addToBackStack(TAG)
+                    .commit();
+        }
+        else
+        {
+            fragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.fade_in,R.anim.fade_out,R.anim.fade_in,R.anim.fade_out)
+                    .replace(R.id.fragment_container
+                            , fragment,TAG)
+                    .commit();
+        }
     }
 
     /**

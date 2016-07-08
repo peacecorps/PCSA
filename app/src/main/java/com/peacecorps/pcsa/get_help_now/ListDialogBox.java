@@ -8,6 +8,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,7 +34,7 @@ public abstract class ListDialogBox extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
+        setRetainInstance(true);
         String title = getArguments().getString("title");
         //Initialising the dialog box
         listDialog = new Dialog(context);
@@ -65,3 +67,4 @@ public abstract class ListDialogBox extends DialogFragment {
 
     protected abstract AdapterView.OnItemClickListener getItemClickListener();
 }
+

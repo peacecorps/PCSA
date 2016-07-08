@@ -11,20 +11,12 @@
 
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingStart="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/reporting_title"
@@ -33,20 +25,25 @@
                 android:layout_gravity="center"
                 android:text="@string/reporting_get_help"
                 android:textColor="@color/primary_text_default_material_dark"
-                android:textSize="@dimen/title_font"
+                android:textSize="@dimen/header_font"
                 android:textStyle="bold" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginTop="@dimen/view_margin"
+                android:layout_marginBottom="@dimen/view_margin"
+                android:background="@color/photo_border" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:gravity="center"
+                android:textSize="@dimen/sub_title_font"
+                android:text="@string/contact_post_staff"
+                />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/reporting_sub_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/reporting_get_help_sub1"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textSize="@dimen/sub_title_font" />
-
         <include
             android:id="@+id/post_staff_pcmo"
             layout="@layout/button"

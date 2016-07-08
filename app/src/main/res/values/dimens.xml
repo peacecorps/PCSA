@@ -53,7 +53,7 @@
 
     <!-- Title and sub-title font sizes-->
     <dimen name="title_font">28sp</dimen>
-    <dimen name="sub_title_font">20sp</dimen>
+    <dimen name="sub_title_font">24sp</dimen>
     <dimen name="menu_icon_width">200dp</dimen>
     <dimen name="text_extra_small">12sp</dimen>
     <dimen name="text_small">16sp</dimen>
@@ -78,7 +78,7 @@
     <dimen name="dialog_icon_marginright">15dp</dimen>
     <dimen name="reporting_dialog_text_size">25sp</dimen>
     <dimen name="circle_of_trust_dialog_text_size">20sp</dimen>
-    <dimen name="header_font">36sp</dimen>
+    <dimen name="header_font">32sp</dimen>
     <dimen name="view_height">2dp</dimen>
     <dimen name="view_margin">5dp</dimen>
     <dimen name="splash_screen_imgsize">240dp</dimen>
@@ -100,5 +100,23 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="progressbar_margin_top">59dp</dimen>
     <dimen name="circle_of_trust_image_name_size">15sp</dimen>
+    <dimen name="icon_size_radar">56dp</dimen>
+    <dimen name="bystander_button_textsize">18sp</dimen>
+    <dimen name="fragment_main_marginTop_35">35dp</dimen>
+    <dimen name="bystander_margin_below">29dp</dimen>
+    <dimen name="bystander_margin_bottom">72dp</dimen>
+    <dimen name="bystander_margin_below_text">91dp</dimen>
+    <dimen name="sub_title_font_22">22sp</dimen>
+    <dimen name="dialog_height">350dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="viewpager">320dp</dimen>
+    <dimen name="sub_title_font_safety_plan">20sp</dimen>
+    <dimen name="header_font_safety_plan">28sp</dimen>
 
 </resources>
