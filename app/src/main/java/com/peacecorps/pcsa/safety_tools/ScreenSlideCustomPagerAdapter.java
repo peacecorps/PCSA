@@ -13,7 +13,7 @@ import com.peacecorps.pcsa.R;
 /**
  * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
  * sequence.
- *@author rohan
+ * @author rohan
  * @since 08-07-2016.
  */
 public class ScreenSlideCustomPagerAdapter extends PagerAdapter {

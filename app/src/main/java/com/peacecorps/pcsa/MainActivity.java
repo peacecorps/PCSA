@@ -46,8 +46,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if(savedInstanceState != null)
         {
+            /*
+            * Check if instance of the required fragment is available
+            * in the backstack and swap it into the container
+            */
             Fragment unknownFragment = fragmentManager.findFragmentByTag(FRAGMENT_TAG);
-            // Insert the fragment by replacing any existing fragment without adding to backstack
             MainActivity.swapFragmentIn(this,unknownFragment,FRAGMENT_TAG,false);
         }
         else
