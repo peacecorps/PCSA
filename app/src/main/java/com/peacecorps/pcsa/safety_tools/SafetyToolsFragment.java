@@ -86,13 +86,11 @@ public class SafetyToolsFragment extends Fragment {
         });
 
         safetyPlanButton.setOnClickListener(new View.OnClickListener() {
-            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
                 //Swapping Safety Plan Fragment into the container
                 Intent intent  = new Intent(getActivity(),SafetyPlanActivity.class);
-                Bundle bundle = ActivityOptions.makeCustomAnimation(getActivity(), R.anim.push_down_in, R.anim.push_down_out).toBundle();
-                startActivity(intent, bundle);
+                startActivity(intent);
             }
         });
         return rootView;
