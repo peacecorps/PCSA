@@ -47,7 +47,8 @@ If you find an issue yourself you can report it, a community member will get bac
 4. Suggest completely new developments in the issue list. (Please use the mailing list for this kind of suggestions. Use issue list to suggest bugs/features in the already implemented sections.)
 
 ### Best Practices
-Read the wiki page on [PR Best Practices](https://github.com/systers/PCSA-Android/wiki) before you make a new PR.
+1. [Issue Reporting Best Practices](https://github.com/systers/PCSA-Android/wiki/Issue-Reporting-Best-Practices)
+2. [PR Best Practices] (https://github.com/systers/PCSA-Android/wiki/PR-Best-Practices)
 
 ## Troubleshooting/Issues
 
