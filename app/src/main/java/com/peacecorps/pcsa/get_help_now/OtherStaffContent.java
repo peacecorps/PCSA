@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +32,7 @@ public class OtherStaffContent extends Fragment implements AdapterView.OnItemCli
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_reporting_other_staff_content,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_reporting_other_staff_content,container,false);
 
         TextView contactName = (TextView) rootView.findViewById(R.id.reporting_contact_other_content);
         TextView contactDescription = (TextView) rootView.findViewById(R.id.reporting_contact_description);

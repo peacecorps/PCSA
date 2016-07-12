@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/primary_text_default_material_dark"
-            android:textSize="@dimen/title_font"
+            android:textSize="@dimen/sub_title_font"
             android:text="@string/circle_subtitle"
             />
         <ImageButton

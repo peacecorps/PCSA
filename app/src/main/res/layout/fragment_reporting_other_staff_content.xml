@@ -20,12 +20,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
-
             <TextView
                 android:id="@+id/reporting_contact_other_content"
                 android:layout_width="wrap_content"

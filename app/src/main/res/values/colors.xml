@@ -18,4 +18,13 @@
     <color name="text_color_link">#024002</color>
     <color name="main_yellow">#FFD590</color>
     <color name="dark_yellow">#FFC25C</color>
+    <color name="colorPrimary">#02845F</color>
+    <color name="colorPrimaryDark">#02845F</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#05D197</color>
+
+
+
 </resources>

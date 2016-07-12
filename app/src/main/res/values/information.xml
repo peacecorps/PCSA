@@ -108,24 +108,24 @@
         email: ocrd@peacecorps.gov
     </string>
     <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
-·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
-·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
-·	Counseling from a licensed mental health professional\n\n
-·	Medical evacuation\n\n
-·	Accompaniment during medical evacuation\n\n
-·	Safety planning\n\n
-·	Explanation of your legal options\n \n
-·	Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
-·	Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
+·Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
+·A sexual assault forensic exam (SAFE) to preserve evidence \n\n
+·Counseling from a licensed mental health professional\n\n
+·Medical evacuation\n\n
+·Accompaniment during medical evacuation\n\n
+·Safety planning\n\n
+·Explanation of your legal options\n \n
+·Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
+·Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
     </string>
     <string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
-·	Consultation with my Country Director\n\n
-·	File a report with local law enforcement\n\n
-·	Request a site change\n\n
-·	Request a host family change\n\n
-·	File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
-·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
-·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
+·Consultation with my Country Director\n\n
+·File a report with local law enforcement\n\n
+·Request a site change\n\n
+·Request a host family change\n\n
+·File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
+·Request the Peace Corps Office of Inspector General conduct an investigation\n\n
+·Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
     </string>
 
     <string name="reporting_contact_ocrd">202 692 2139</string>
@@ -144,4 +144,255 @@
     <string name="loc3_pcmo">7777</string>
     <string name="loc3_ssm">8888</string>
     <string name="loc3_sarl">9999</string>
+
+    <!-- Safety Tools-->
+
+    <!-- RADAR -->
+    <string name="radar_step1">
+        &lt;b>Recognize the danger&lt;/b>&lt;br/>&lt;br/>
+        Be aware of what is going on around you – be on the lookout for suspicious people and for situations that could pose a danger.&lt;br/>&lt;br/>
+        Be aware of how others perceive you – are your actions or dress inadvertently attracting unwanted attention?  Are you wearing jewelry, using a camera, working on a laptop, or flashing money that might grab the attention of a criminal?&lt;br/>&lt;br/>
+        Being able to recognize dangers lets us begin to figure out ways to reduce the risks. This is where it’s important to trust your instincts. If you have a bad feeling about something it’s a warning sign. Don’t dismiss it – listen to what that voice in the back of your head is saying or that uneasy feeling in your stomach is telling you.
+        For example, when you walk in to a crowded bus terminal, you recognize that there is a risk of being pickpocketed.
+    </string>
+    <string name="radar_step2">
+        &lt;b>Assess your options&lt;/b> &lt;br/>&lt;br/>
+        Now that you have recognized a potentially dangerous situation, what can you do in order to reduce the risk you face? In most situations, you will have choices to make. Identify as many options as you can.  For example, you can mitigate the risk
+        of going out at night by traveling in a group, by using a trusted taxi or even by choosing to return home at an earlier hour.
+    </string>
+    <string name="radar_step3">
+        &lt;b>Decide what’s best for you&lt;/b> &lt;br/>&lt;br/>
+        After figuring out what options you have, run the different scenarios in your head – say ‘What if’ – and decide which option is the best. You could try to defuse the situation by remaining calm and use good communication skills to keep the situation from escalating.  Maybe try an escape option
+        where you run towards safety, not just away from danger.  As a last resort, try a verbal, psychological, or physical defense tactic.&lt;br/>&lt;br/>
+        Sometimes your best option might be a bit unconventional. If it’s the best option to keep you safe, then it’s a good option.
+    </string>
+    <string name="radar_step4">
+        &lt;b>Act when the time is right&lt;/b> &lt;br/>&lt;br/>
+        After you decide on your best course of action, decide when to act. Sometimes you’ll need to act right away. Other times you can wait until the danger gets closer – but don’t wait until it gets too close! &lt;br/>&lt;br/>
+        Draw your own imaginary line – set your own personal tripwire. Once the danger crosses that line – whatever you decided for yourself – that’s when you act.
+    </string>
+    <string name="radar_step5">
+        &lt;b>Reassess as the situation changes&lt;/b> &lt;br/>&lt;br/>
+        And because no situation is static, you must constantly reassess your options as the conditions and circumstances change. If you encounter new risks or if you run out of options, start the cycle again.  &lt;br/>&lt;br/>
+    </string>
+
+    <!-- CopingFragment -->
+    <string name="coping_title1">Walk purposefully</string>
+    <string name="coping_title2">Look assertive</string>
+    <string name="coping_title3">Nod (to acknowledge) and keep on walking</string>
+    <string name="coping_title4">Dress appropriately</string>
+    <string name="coping_title5">Greetings</string>
+    <string name="coping_title6">Pretend that you heard something else</string>
+    <string name="coping_title7">Humor</string>
+    <string name="coping_title8">Be polite but firm</string>
+    <string name="coping_title9">Maintain your composure</string>
+    <string name="coping_title10">Never say “next time.”</string>
+
+    <string name="coping_subtitle1">Always walk with confidence and purpose.</string>
+    <string name="coping_subtitle2">Hold your head high, shoulders back and present yourself as a professional demanding respect.</string>
+    <string name="coping_subtitle3">Simply recognizing the person can help ward off unwanted attention. Many times an inappropriate comment is an effort to get attention.</string>
+    <string name="coping_subtitle4">Keep in mind what is culturally appropriate.</string>
+    <string name="coping_subtitle5">Sometimes a polite “Good Morning” can thwart a potential unwanted comment, but at other times it can escalate the situation.  If this strategy does not work, try a different one.</string>
+    <string name="coping_subtitle6">“I agree, it HAS been really great weather recently. Have a nice day, bye!”</string>
+    <string name="coping_subtitle7">Use humor to lighten the moment and solicit another response.  For example, if you are told that you would make a good lover, reply that your spouse is sure to agree!  Keep walking.  This may not work with a persistent individual, so please keep trying different strategies when needed.</string>
+    <string name="coping_subtitle8">It is quite normal to stand your ground. “I am offended by your comment; please do not address me in that manner.”</string>
+    <string name="coping_subtitle9">Try to remain calm even if you feel upset. The converse is also true; try not to show hostility as this may provoke a confrontation. It is best to remove yourself from a situation if you feel that you are losing control.</string>
+    <string name="coping_subtitle10">Make no promises for another time, because you can be sure that the next time they see you, they will remind you of that promise.</string>
+
+    <!-- CopingFragment -->
+    <string name="tactics_1">
+        &lt;b>Characteristics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often plan sexual assaults&lt;/b>&lt;br/>
+            ·\t\t\tSexual assault is not an accident.  Sexual predators know what they want to do, even if they have not already identified a specific target.  Most of them have a plan in mind for how they will select and control someone, or they will seek out an area where a potential victim might be isolated and unable to get help. When we say planned to some extent it may not mean days or weeks in advance but also planned in the particular moment.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often watch for vulnerabilities and opportunities&lt;/b>&lt;br/>
+            ·\t\t\tSexual predators look for cues to indicate they can dominate and control a potential victim. They look for signs indicating that someone would be unlikely or unable to resist.  For instance, people who are unaware of their surroundings, alone or lost; someone who is intoxicated or in some way incapacitated.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often test the boundaries of potential victims&lt;/b>&lt;br/>
+            ·\t\t\tTesting boundaries may involve inappropriate comments, unwanted touching or invading personal space. It is a way of measuring the amount of resistance a potential victim might offer. A person who offers little or no resistance to these advances might be seen as a suitable target.&lt;br/>&lt;br/>
+    </string>
+
+    <string name="tactics_2">
+        &lt;b>Tactics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tAttempt to isolate their potential victim&lt;/b>&lt;br/>
+            \t\t\t They may target someone who is already alone. For example, walking alone, or they may try to get their target alone by offering a ride in their car.&lt;br/> &lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tPersuasion and confidence&lt;/b>&lt;br/>
+            \t\t\tThis is the “Smooth Talker” who puts you at ease.  They make you feel comfortable and relaxed so you are not aware of their true intent.  They may try to persuade you to do something you feel uncomfortable about.  They might promise that they won’t try anything with you or reassure you by saying “You can trust me.”&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tPressure and guilt&lt;/b>&lt;br/>
+            \t\t\tSexual predators may try to coerce you by pressuring you to go farther in a relationship than you are ready or willing to go.  They may try to make you feel guilty if you do not give in to their advances. They might say “You are offending me culturally” or something similar to make Volunteers feel guilty.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tThreats and intimidation&lt;/b>&lt;br/>
+            \t\t\tSometimes the sexual predator threatens to physically harm the Volunteer or someone they care about.  They might also threaten to blackmail the Volunteer unless they comply.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tForce and violence&lt;/b>&lt;br/>
+            \t\t\tForce and Violence involves a direct physical attack to overpower a Volunteer.  It is what we frequently see on TV and in movies…like when the assailant jumps out of the bushes with a knife and attacks an unsuspecting jogger.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tDrugs, including alcohol&lt;/b>&lt;br/>
+    </string>
+
+    <!-- ByStanderFragment -->
+
+    <string name="bystander_verbal_victim">
+        &lt;b>•&lt;/b>\t\t\tDiffuse the situation by starting a new conversation&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tSay a friend is looking for the individual and leave together to find them&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTell the individual there is a previous engagement with others and they need to leave with you&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“I need your advice…” and pull them away from the immediate space&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you need help?” &lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“Let’s walk home together”&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you want me to call someone for you?” &lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“What can I do to help you?”&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you want me to talk to so-and-so for you?”
+    </string>
+
+    <string name="bystander_verbal_offender">
+    &lt;b>•&lt;/b>\t\t\tIntroduce yourself- let the predator know the individual isn’t alone &lt;br/>
+    &lt;b>•&lt;/b>\t\t\tEngage with the individual directly by starting a completely different conversation; example- sports, directions&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tUse humor to diffuse the situation&lt;br/>
+    &lt;b>•&lt;/b>\t\t\t“How would you feel if someone did that/said that to your sister/mother?”&lt;br/>
+    &lt;b>•&lt;/b>\t\t\t“I don’t like what you just said.”
+    </string>
+
+    <string name="bystander_non_verbal">
+    &lt;b>•&lt;/b>\t\t\tGet in line of vision and catch their eye&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tTake a group photo to document what the potential offender looks like&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tAsk/Assess situation with a thumbs up/down&lt;/b>&lt;br/>&lt;b>•&lt;/b>\t\t\tWave to your friend to indicate you are leaving to get them to come with you
+    &lt;b>•&lt;/b>\t\t\tText or call the Volunteer&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tUse a distraction to get the predator’s attention&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tStrike up a conversation with someone nearby to physically get closer&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tWalk towards the two, alone or with others, and engage in conversation&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tMake a show of picking up the phone to indicate you are alerting others&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tPhysically pull the individual away
+    </string>
+
+    <!-- Safety Plan Basics -->
+
+    <string name="safety_plan_basics_1">
+        &lt;b>•&lt;/b>\t\t\tExploring on-going risks and concerns associated with the incident&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAssessing strategies on how to respond when a perceived threat is present&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tMaintaining your safety and well-being
+    </string>
+
+    <string name="safety_plan_basics_2">
+        &lt;b>•&lt;/b>\t\t\tTo assist you in identifying strategies for mitigating on-going risks&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo outline possible responses and resources in instances of potential future harm&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo strengthen the partnership between you and staff in promoting your on-going safety and security and well-being&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo empower you to reclaim a sense of safety and security by addressing safety and security needs and concerns
+    </string>
+
+    <string name="safety_plan_basics_3">
+    &lt;b>•&lt;/b>\t\t\tGuarantee your future safety&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTake the place of working with a mental health specialist to identify ways to cope with emotions and stressful situations which may arise in the aftermath of an incident.  If you would like such assistance, counseling can be arranged through the PCMO&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_basics_4">
+    &lt;b>•&lt;/b>\t\t\tIf you choose to work with staff, be honest with sharing any concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify strategies that can be taken to reduce any on-going safety and security concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify strategies or actions post may take to support you in these efforts&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf you want post staff perspective and help, simply ask&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf you are feeling overwhelmed with fear or anxiety, have a conversation with the PCMO or a counselor to talk it out&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tSafety planning is an on-going process.  New concerns may arise that require adjusting it.  Modify your safety plan to accommodate any changes.
+   </string>
+
+    <!-- Safety Plan -->
+
+    <string name="safety_plan_1_concerns">
+        &lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tHave you anticipated where and in which ways you might come into contact with the perpetrator and perpetrator’s friends/family?&lt;br/>&lt;br/>
+        \t\t\tIf you were to come into contact with the perpetrator and perpetrator’s family/friends, what specific things could you do that might help you feel safe in that situation?&lt;br/>&lt;br/>
+        \t\t\tHave you thought about making a plan in case of emergencies of who you could call, where you could go, and how you could get there? How can Peace Corps assist you in developing this plan?
+    </string>
+
+    <string name="safety_plan_1_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf requested, establish contacts between PC and counterpart, neighbors, local police and community leaders so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave your important documents ready in case of an emergency
+    </string>
+
+    <string name="safety_plan_2_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you suspect the perpetrator or the perpetrator’s family/friends know where you live? If so, do you believe the perpetrator may have access to your housing?&lt;br/>&lt;br/>
+        \t\t\tDo you feel safe inside your home? What can Peace Corps do to help you feel safe inside your home (e.g., working locks on door/windows, etc.)?&lt;br/>&lt;br/>
+        \t\t\tIf you live with a host family or on a family compound, does anyone know about the incident? If not, would they be supportive if they were to learn of the incident?&lt;br/>&lt;br/>
+        \t\t\tIf the perpetrator or the perpetrator’s family/friends were to show up at your home are there people you can turn to for assistance?&lt;br/>&lt;br/>
+        \t\t\tIn the unlikely event of a non-medical emergency, are there local friends, community members, or other Volunteers nearby who you can stay with or contact for assistance? If not, can Peace Corps help you identify individuals and establish those contacts? &lt;br/>&lt;br/>
+        \t\t\tHow could you contact these individuals?&lt;br/>&lt;br/>
+        \t\t\tCan you think of other resources or things you can do to feel safer where you live? What can Peace Corps do to assist you with this?
+    </string>
+
+    <string name="safety_plan_2_action">
+        &lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAsk staff to conduct a safety inspection of your home, if necessary&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure needed security upgrades are completed&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure that you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTake steps to enhance privacy (use locks, keep curtains closed, etc)
+    </string>
+
+    <string name="safety_plan_4_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know your cell phone number? Your email address? Have you thought about what you would do if the perpetrator or perpetrator’s friends/family attempts to contact you or posts things about you online?  What can Peace Corps do to help you?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know any of your passwords? If so, have you considered changing your passwords?&lt;br/>&lt;br/>
+        \t\t\tDo you have any social media accounts (e.g., Facebook, Google, Twitter, Linked In, blogs)? Are you “friends” with the perpetrator or perpetrator’s friends/family? If so, do you know how to block the perpetrator or perpetrator’s family or friends?&lt;br/>&lt;br/>
+        \t\t\tAre you concerned that the perpetrator or perpetrator’s family/friends will contact you on the Internet?  If they do, have you thought about what you will do?
+    </string>
+
+    <string name="safety_plan_4_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tChange your SIM card or cellphone&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tChange user names and/or passwords for mail and other social media&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTry to avoid using location services or posting information that may divulge your location&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns or if the offender attempts to contact you.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tProgram your phone with important emergency numbers&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKeep phone charged and have enough minutes in case of an emergency.
+    </string>
+
+    <string name="safety_plan_3_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator or perpetrator’s family/friends know where you work?&lt;br/>&lt;br/>
+        \t\t\tDoes anyone else at work know about the incident?&lt;br/>&lt;br/>
+        \t\t\tIf your counterpart/supervisor learns about the incident, do you think it would make you more or less safe?&lt;br/>&lt;br/>
+        \t\t\tIf you work with the perpetrator, are there steps you can take to avoid interacting with the perpetrator?&lt;br/>&lt;br/>
+        \t\t\tIf the perpetrator shows up at your work are there people you can turn to for support?&lt;br/>&lt;br/>
+        \t\t\tIs there anything that the Peace Corps can do to help you feel safe at work?&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_3_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tMake sure PC has established contact with your counterpart so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify an emergency point of contact in the workplace&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tImmediately notify PC if the offender comes to your work&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf working in isolated areas seek accompaniment by a coworker or community member if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAvoid staying late or alone in the office or workplace&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_5_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you anticipate that you will see the perpetrator when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        \t\t\tDo you see the perpetrator’s family/friends when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        \t\t\tIf needed, is there someone you trust who can accompany you to the places you need to go?&lt;br/>&lt;br/>
+        \t\t\tIf you were approached by the perpetrator or perpetrator’s friends/family in a public place, do you know where you could go to be safe?&lt;br/>&lt;br/>
+        \t\t\tDo you have any concerns about rumors related to the incident that are mentioned by community members or other Volunteers? How might you respond to these? How might these rumors impact you? How can Peace Corps assist you in dealing with rumors?&lt;br/>&lt;br/>
+        \t\t\tAre there specific things you or Peace Corps can do that might help you feel safer in your community?
+    </string>
+
+    <string name="safety_plan_5_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEstablish regular check-in plan with PCMO and other PC staff&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tFind out what support services are available to you, including Volunteer Support Network and PCVLs&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react (over-reacting is okay)&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tBe aware of unhealthy coping mechanisms such as self-medicating, isolating oneself, hurting oneself, etc. and seek help from PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAsk Peace Corps for help before stress becomes overwhelming.
+    </string>
+
+    <string name="safety_plan_6_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you have any safety concerns with any modes of transportation related to the incident?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know your transportation routes? If yes, can you change the routes you take to work, home, shopping?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator or the perpetrator’s friends/family use the same transportation you do? If so, are there other ways you could get where you need to go? Is their opportunity for carpooling with someone else?&lt;br/>&lt;br/>
+        \t\t\tAre there specific things you can think of doing or that Peace Corps might do that might help you feel safer in transport?
+    </string>
+
+    <string name="safety_plan_6_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAssist with identifying a safe taxi/moto-taxi or bus services&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure that the Volunteer has readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react &lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tModify daily routines, change times and routes to frequent locations if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKeep personal belongings secure at all times
+
+    </string>
+
 </resources>

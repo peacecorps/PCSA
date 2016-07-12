@@ -17,7 +17,7 @@
     <string name="title_activity_circle_of_trust">Circle Of Trust</string>
     <string name="title_activity_trustees">Trustees</string>
     <string name="title_activity_circle_intro">CircleIntro</string>
-    <string name="title_activity_saftey_resources">SafteyResources</string>
+    <string name="title_activity_saftey_resources">SafetyResources</string>
 
     <!--******************************************
     Strings related to reporting
@@ -78,6 +78,7 @@
     <string name="learn_effect">learn about the effect of Sexual Assault</string>
     <string name="bystander">Bystander intervention tactics</string>
     <string name="predator_tactic">Predator tactics</string>
+    <string name="predator_tactic_title">Tactics of Sexual Predators</string>
     <string name="comrade1">Name 1</string>
     <string name="comrade2">Name 2</string>
     <string name="comrade3">Name 3</string>
@@ -133,10 +134,12 @@
     <string name="policies_glossary">Policies and Glossary</string>
     <string name="radar">RADAR</string>
     <string name="unwanted_attention">Dealing with Unwanted Attention</string>
+    <string name="unwanted_attention_title">Unwanted Attention</string>
     <string name="commonalities">Commonalities of Sexual Predators</string>
     <string name="bystander_intervention">Bystander Intervention</string>
     <string name="safety_plan_basics">Safety Plan Basics</string>
     <string name="safety_plan">Safety Plan Worksheet</string>
+    <string name="safety_plan_title">Safety Plan</string>
     <string name="benefits">Benefits of Seeking Staff Support</string>
     <string name="available_services">Services after a Sexual Assault</string>
     <string name="commitment">PCs commitment to Sexual Assault</string>
@@ -161,5 +164,40 @@
     <string name="circle_subtitle">My Trustees</string>
     <string name="no_name">No Name</string>
     <string name="unregistered">Register</string>
-
+    <string name="safety_tools_subtitle">Know all about your Safety Tools</string>
+    <string name="contact_post_staff">Contact Post Staff</string>
+    <string name="contact_other_staff">Contact Other Staff</string>
+    <string name="step_1">&lt;b>STEP 1&lt;/b></string>
+    <string name="step_2">&lt;b>STEP 2&lt;/b></string>
+    <string name="step_3">&lt;b>STEP 3&lt;/b></string>
+    <string name="step_4">&lt;b>STEP 4&lt;/b></string>
+    <string name="step_5">&lt;b>STEP 5&lt;/b></string>
+    <string name="step_6">&lt;b>STEP 6&lt;/b></string>
+    <string name="radar_subtitle">Steps to manage risk</string>
+    <string name="coping_title">Unwanted Attention Strategies</string>
+    <string name="coping_subtitle">Potential Response Strategies</string>
+    <string name="tactics_title">Tactics of Sexual Predators</string>
+    <string name="tactics_subtitle">Know what to look for</string>
+    <string name="bystander_intervention_subtitle">Potential Intervention Strategies</string>
+    <string name="bystander_potential_victim">Verbal with Potential Victim</string>
+    <string name="bystander_potential_offender">Verbal with Potential Offender</string>
+    <string name="bystander_tactics_both">Non Verbal Tactics for both</string>
+    <string name="safety_text_bystander">&lt;b>&lt;u>SAFETY IS YOUR FIRST PRIORITY&lt;/u>&lt;/b></string>
+    <string name="safety_plan_basics_subtitle">Practical steps that can help you manage your security following your incident</string>
+    <string name="basics_main">MAIN REASONS FOR A SAFETY PLAN</string>
+    <string name="basics_purpose">PURPOSE OF SAFETY PLAN</string>
+    <string name="basics_tips">TIPS FOR CREATING SAFETY PLAN</string>
+    <string name="basics_cannot">SAFETY PLANS CANNOT ...</string>
+    <string name="sample_fragment">Sample Fragment</string>
+    <string name="physical_safety">Physical Safety</string>
+    <string name="home_fragment">Home</string>
+    <string name="transport">Transportation</string>
+    <string name="safety_technology">Safety and Technology</string>
+    <string name="community">Community</string>
+    <string name="title_activity_safety_plan">SafetyPlanActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="workplace">Workplace</string>
+    <string name="safety_plan_subtitle">Safety and Security is always a primary concern for Peace Corps</string>
+    <string name="see_action">View Actions</string>
+    <string name="see_concerns">View Concerns</string>
 </resources>
