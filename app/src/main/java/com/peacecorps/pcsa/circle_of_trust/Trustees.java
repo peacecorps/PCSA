@@ -56,7 +56,6 @@ public class Trustees extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        System.out.println(comradeEditText.size());
         comradeEditText.add((EditText) findViewById(R.id.comrade1EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade2EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade3EditText));
