@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -44,6 +45,7 @@ public class BystanderInterventionFragment extends Fragment {
         safetyText.setText(Html.fromHtml(getActivity().getString(R.string.safety_text_bystander)));
         safetyText.setTextSize(TypedValue.COMPLEX_UNIT_SP,26);
         safetyText.setGravity(Gravity.CENTER);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.bystander_intervention);
 
 
         potentialOffender.setOnClickListener(new View.OnClickListener() {

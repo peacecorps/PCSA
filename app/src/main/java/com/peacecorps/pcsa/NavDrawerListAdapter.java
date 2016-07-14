@@ -89,13 +89,13 @@ public class NavDrawerListAdapter extends BaseExpandableListAdapter {
         else if(headerTitle.equals(_context.getString(R.string.user_login)))
             iconListHeader.setImageResource(R.drawable.ic_lock);
         else if(headerTitle.equals(_context.getString(R.string.get_help)) || headerTitle.equals(_context.getString(R.string.circle_title)))
-            iconListHeader.setVisibility(View.GONE);
+            iconListHeader.setVisibility(View.INVISIBLE);
         else
         {
             if(isExpanded)
-                iconListHeader.setImageResource(R.drawable.ic_down_circled_arrow);
+                iconListHeader.setImageResource(R.drawable.ic_down_arrow);
             else
-                iconListHeader.setImageResource(R.drawable.ic_right_circled_arrow);
+                iconListHeader.setImageResource(R.drawable.ic_right_arrow);
         }
         return convertView;
     }
@@ -115,10 +115,7 @@ public class NavDrawerListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.navbar_list_item, null);
         }
         TextView txtListChild = (TextView) convertView.findViewById(R.id.list_text);
-        ImageView iconListChild = (ImageView) convertView
-                .findViewById(R.id.navbar_item_icon);
         txtListChild.setText(childText);
-        iconListChild.setImageResource(R.drawable.ic_right_circled_arrow);
         return convertView;
     }
 

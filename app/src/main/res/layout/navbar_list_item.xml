@@ -10,13 +10,8 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/navbar_item_textsize"
         android:id="@+id/list_text"
+        android:paddingBottom="@dimen/contacting_post_staff_marginLeft"
+        android:paddingTop="@dimen/contacting_post_staff_marginLeft"
         android:textColor="@color/photo_border"
-        android:layout_centerVertical="true" />
-
-    <ImageView
-        android:id="@+id/navbar_item_icon"
-        android:layout_width="@dimen/navbar_icon_size"
-        android:layout_height="@dimen/navbar_icon_size"
-        android:layout_alignParentRight="true"/>
-
+        android:layout_gravity="center" />
 </RelativeLayout>
