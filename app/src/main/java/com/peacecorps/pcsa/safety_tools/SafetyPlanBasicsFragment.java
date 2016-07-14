@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +59,7 @@ public class SafetyPlanBasicsFragment extends Fragment {
                 showDialog(getString(R.string.basics_tips),getString(R.string.safety_plan_basics_4));
             }
         });
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.safety_plan_basics);
         return rootView;
     }
 

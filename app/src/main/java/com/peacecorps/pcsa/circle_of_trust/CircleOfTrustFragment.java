@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -88,6 +89,7 @@ public class CircleOfTrustFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_circle_of_trust, container, false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.circle_title);
 
         sharedPreferences = getActivity().getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();

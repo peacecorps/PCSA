@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +38,7 @@ public class Trustees extends AppCompatActivity {
     public static final int NUMBER_OF_COMRADES = 6;
     List<EditText> comradeEditText = new ArrayList<>(NUMBER_OF_COMRADES);
     List<Integer> indexesUpdated = new ArrayList<>();
+    Toolbar toolbar;
 
     private View selectedButton;
     private Button okButton;
@@ -52,6 +54,8 @@ public class Trustees extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trustees);
 
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         System.out.println(comradeEditText.size());
         comradeEditText.add((EditText) findViewById(R.id.comrade1EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade2EditText));

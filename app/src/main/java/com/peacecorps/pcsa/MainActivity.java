@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         safetyTools.add(getString(R.string.commonalities));
         safetyTools.add(getString(R.string.bystander_intervention));
         safetyTools.add(getString(R.string.safety_plan_basics));
-        safetyTools.add(getString(R.string.safety_plan));
+        safetyTools.add(getString(R.string.safety_plan_title));
 
         List<String> supportServices = new ArrayList<String>();
         supportServices.add(getString(R.string.benefits));

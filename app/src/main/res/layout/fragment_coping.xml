@@ -11,27 +11,12 @@
     android:background="@color/background_app"
     tools:context="com.peacecorps.pcsa.safety_tools.CopingFragment">
 
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textSize="@dimen/header_font"
         android:textStyle="bold"
-        android:text="@string/coping_title"
-        />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/view_height"
-        android:layout_marginTop="@dimen/view_margin"
-        android:layout_marginBottom="@dimen/view_margin"
-        android:background="@color/photo_border" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
         android:text="@string/coping_subtitle"

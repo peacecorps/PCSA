@@ -3,6 +3,7 @@ package com.peacecorps.pcsa.safety_tools;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -34,6 +35,7 @@ public class BystanderInterventionCommonFragment extends Fragment {
         subtitle.setText(Html.fromHtml(subtitleString));
         content.setMovementMethod(new ScrollingMovementMethod());
         content.setText(Html.fromHtml(contentString));
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.bystander_intervention);
         return rootView;
     }
 }

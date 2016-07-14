@@ -3,6 +3,7 @@ package com.peacecorps.pcsa.safety_tools;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -34,7 +35,7 @@ public class TacticsFragment extends Fragment {
         tacticsAssault.setMovementMethod(new ScrollingMovementMethod());
         characteristicsAssault.setText(Html.fromHtml(getActivity().getString(R.string.tactics_1)));
         tacticsAssault.setText(Html.fromHtml(getActivity().getString(R.string.tactics_2)));
-
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.tactics_title);
         return rootView;
     }
 }

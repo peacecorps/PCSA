@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -99,7 +100,7 @@ public class RadarFragment extends Fragment {
 
             }
         });
-
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.radar);
         return rootView;
     }
 }

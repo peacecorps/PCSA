@@ -3,7 +3,8 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:background="@color/main_yellow"
     android:layout_height="match_parent"
-    android:padding="@dimen/navbar_listitem_padding">
+    android:paddingTop="@dimen/navbar_listitem_padding"
+    android:paddingBottom="@dimen/navbar_listitem_padding">
 
     <TextView
         android:id="@+id/header_text"
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:textColor="@color/photo_border"
-        android:textSize="@dimen/navbar_item__header_textsize"
+        android:textSize="@dimen/navbar_item_header_textsize"
         android:textStyle="bold"
         android:padding="@dimen/navbar_listitem_padding"/>
     <ImageView

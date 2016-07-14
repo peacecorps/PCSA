@@ -2,6 +2,7 @@ package com.peacecorps.pcsa.safety_tools;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,7 @@ public class CopingFragment extends ListFragment{
                 getResources().getString(R.string.coping_title7),getResources().getString(R.string.coping_title8),
                 getResources().getString(R.string.coping_title9),getResources().getString(R.string.coping_title10)
         };
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.coping_title);
 
         FAQArrayAdapter faqArrayAdapter = new FAQArrayAdapter(getActivity(), titles, values);
         setListAdapter(faqArrayAdapter);
