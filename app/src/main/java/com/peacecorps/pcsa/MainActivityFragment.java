@@ -18,6 +18,7 @@ import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
 import com.peacecorps.pcsa.reporting.HomeScreen;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsContentFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyToolsFragment;
+import com.peacecorps.pcsa.support_services.SupportServicesFragment;
 
 
 /**
@@ -38,7 +39,7 @@ public class MainActivityFragment extends Fragment {
         Button circleButton = (Button) rootView.findViewById(R.id.circleButton);
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
         Button safetyToolsButton = (Button) rootView.findViewById(R.id.safetyToolsButton);
-        Button safetyResourceButton = (Button) rootView.findViewById(R.id.safetyResourceButton);
+        Button supportServicesButton = (Button) rootView.findViewById(R.id.supportServicesButton);
         Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.first_aide);
 
@@ -60,12 +61,12 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        safetyResourceButton.setOnClickListener(new View.OnClickListener() {
+        supportServicesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Temporarily commented out until the functionality is implemented.
-                //startActivity(new Intent(getActivity(), SafetyResources.class));
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+                //Swapping Support Services HomeFragment into the fragment container dynamically
+                Fragment supportServicesFragment = new SupportServicesFragment();
+                MainActivity.swapFragmentIn(getActivity(),supportServicesFragment,SupportServicesFragment.TAG,true);
             }
         });
 

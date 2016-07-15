@@ -40,9 +40,9 @@
             android:text="@string/safety_tools"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
-            android:id="@+id/safetyResourceButton"
+            android:id="@+id/supportServicesButton"
             style="@style/NavigateButton"
-            android:text="@string/safety"
+            android:text="@string/support_services"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
             android:id="@+id/getHelpButton"

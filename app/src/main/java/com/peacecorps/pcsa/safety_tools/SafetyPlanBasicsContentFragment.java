@@ -41,11 +41,18 @@ public class SafetyPlanBasicsContentFragment extends DialogFragment {
         String content = getArguments().getString(SafetyPlanBasicsFragment.CONTENT_KEY);
         contenttoDisplay.setText(Html.fromHtml(content));
         contenttoDisplay.setMovementMethod(new ScrollingMovementMethod());
-        titleToDisplay.setText(Html.fromHtml(title));
-        titleToDisplay.setTypeface(null,Typeface.BOLD);
-        titleToDisplay.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        titleToDisplay.setGravity(Gravity.CENTER);
-        getDialog().setTitle(title);
+        if(title != null) {
+            titleToDisplay.setText(Html.fromHtml(title));
+            titleToDisplay.setTypeface(null,Typeface.BOLD);
+            titleToDisplay.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            titleToDisplay.setGravity(Gravity.CENTER);
+            getDialog().setTitle(title);
+        }
+        else
+        {
+            titleToDisplay.setVisibility(View.GONE);
+            contenttoDisplay.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        }
         return rootView;
     }
 }
