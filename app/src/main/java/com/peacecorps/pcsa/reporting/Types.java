@@ -23,7 +23,7 @@ public class Types extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reporting_types);
+        setContentView(R.layout.fragment_reporting_types);
 
         TextView descBoth = (TextView) findViewById(R.id.reporting_both);
         TextView descStandard = (TextView) findViewById(R.id.reporting_standard);

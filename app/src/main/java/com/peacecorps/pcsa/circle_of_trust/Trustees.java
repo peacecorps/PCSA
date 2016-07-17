@@ -8,16 +8,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.ContactsContract;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 
 import java.util.ArrayList;
@@ -54,8 +57,11 @@ public class Trustees extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trustees);
 
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar)findViewById(R.id.toolbar_trustees);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle(R.string.title_activity_trustees);
         comradeEditText.add((EditText) findViewById(R.id.comrade1EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade2EditText));
         comradeEditText.add((EditText) findViewById(R.id.comrade3EditText));
@@ -350,6 +356,17 @@ public class Trustees extends AppCompatActivity {
             }
         }
         return noDuplicate;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
 

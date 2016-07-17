@@ -3,9 +3,7 @@ package com.peacecorps.pcsa;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +13,6 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
-import com.peacecorps.pcsa.reporting.HomeScreen;
-import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsContentFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyToolsFragment;
 import com.peacecorps.pcsa.support_services.SupportServicesFragment;
 
