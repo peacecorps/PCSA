@@ -1,7 +1,6 @@
 package com.peacecorps.pcsa.safety_tools;
 
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,12 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.HomeScreen;
 
 import java.util.ArrayList;
 import java.util.List;

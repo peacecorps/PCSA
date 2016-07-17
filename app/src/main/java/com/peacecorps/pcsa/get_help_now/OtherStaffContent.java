@@ -27,7 +27,7 @@ public class OtherStaffContent extends Fragment implements AdapterView.OnItemCli
     public static final String CONTACT_NUMBER = "contactNumber";
     public static final String CONTACT_NAME = "contactName";
     public static final String CONTACT_DESC = "contatDesc";
-    public static final String TAG = "OtherStaffContent" ;
+    public static final String TAG = OtherStaffContent.class.getSimpleName() ;
     static String contactNumber;
 
     @Nullable

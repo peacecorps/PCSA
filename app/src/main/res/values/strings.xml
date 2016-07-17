@@ -201,4 +201,7 @@
     <string name="see_action">View Actions</string>
     <string name="see_concerns">View Concerns</string>
     <string name="support_services_subtitle">Supporting PCVs</string>
+    <string name="benefits_subtitle">Important reasons for a volunteer to seek out Staff Support</string>
+    <string name="available_services_custom">Available Services</string>
+    <string name="commitment_subtitle">We assure you that ...</string>
 </resources>

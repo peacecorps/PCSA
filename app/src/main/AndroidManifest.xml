@@ -26,10 +26,6 @@
             android:name=".MainActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".reporting.HomeScreen"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity
             android:name=".reporting.Types"
             android:label="@string/title_activity_types"></activity>
         <activity
@@ -47,11 +43,11 @@
         <activity
             android:name=".circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
-            android:parentActivityName=".circle_of_trust.CircleOfTrust"
+            android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust" />
+                android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
         <activity
             android:name=".circle_of_trust.CircleIntro"

@@ -23,7 +23,7 @@ import com.peacecorps.pcsa.R;
  */
 public class ContactOtherStaff extends Fragment {
 
-    public static final String TAG = "ContactOtherStaff" ;
+    public static final String TAG = ContactOtherStaff.class.getSimpleName() ;
 
     @Nullable
     @Override

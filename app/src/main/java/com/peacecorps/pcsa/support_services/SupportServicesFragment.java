@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsContentFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsFragment;
@@ -45,6 +46,33 @@ public class SupportServicesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 showDialog(null,getString(R.string.some_info));
+            }
+        });
+        
+        benefitsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping BenefitsFragment into the container
+                BenefitsFragment benefitsFragment = new BenefitsFragment();
+                MainActivity.swapFragmentIn(getActivity(),benefitsFragment,BenefitsFragment.TAG,true);                
+            }
+        });
+        
+        servicesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping AvailableFragment into the container
+                AvailableFragment availableFragment = new AvailableFragment();
+                MainActivity.swapFragmentIn(getActivity(),availableFragment,AvailableFragment.TAG,true);
+            }
+        });
+        
+        commitmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping CommitmentFragment into the container
+                CommitmentFragment commitmentFragment = new CommitmentFragment();
+                MainActivity.swapFragmentIn(getActivity(),commitmentFragment,CommitmentFragment.TAG,true);
             }
         });
         return rootView;

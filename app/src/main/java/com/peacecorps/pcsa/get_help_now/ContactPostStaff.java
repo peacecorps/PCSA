@@ -34,7 +34,7 @@ import java.util.Map;
 public class ContactPostStaff extends Fragment implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
 
     private static final String PREF_LOCATION = "location" ;
-    public static final String TAG = "ContactPostStaff" ;
+    public static final String TAG = ContactPostStaff.class.getSimpleName() ;
 
     SharedPreferences sharedPreferences;
 
