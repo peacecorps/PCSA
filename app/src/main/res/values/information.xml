@@ -199,7 +199,7 @@
     <string name="coping_subtitle9">Try to remain calm even if you feel upset. The converse is also true; try not to show hostility as this may provoke a confrontation. It is best to remove yourself from a situation if you feel that you are losing control.</string>
     <string name="coping_subtitle10">Make no promises for another time, because you can be sure that the next time they see you, they will remind you of that promise.</string>
 
-    <!-- CopingFragment -->
+    <!-- TacticsFragment -->
     <string name="tactics_1">
         &lt;b>Characteristics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
         &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often plan sexual assaults&lt;/b>&lt;br/>
@@ -400,46 +400,134 @@
         &lt;br/>&lt;br/>Peace Corps has strict controls regarding which staff learn of and provide assistance to Volunteers who report sexual assault.</string>
 
     <!-- Benefits -->
-    <string name="benefits_info">•	So that appropriate and timely medical care can be provided.\n\t\t\t
-•	HIV and hepatitis testing, including HIV PEP\n\t\t\t
-•	STI screening\n\t\t\t
-•	Pregnancy testing and prophylaxis, if applicable \n\n
-•	So the Volunteer gets emotional support and mental health care\n\n
-•	Access to long-term health care through worker’s compensation after COS, if needed.\n\n
-•	To be informed about legal options and assistance.\n\n
-•	Help ensure the safety of the Volunteer and fellow Volunteers.\n\n
+    <string name="benefits_info">•	So that appropriate and timely medical care can be provided.&lt;br/>\t\t\t
+•	HIV and hepatitis testing, including HIV PEP&lt;br/>\t\t\t
+•	STI screening&lt;br/>\t\t\t
+•	Pregnancy testing and prophylaxis, if applicable &lt;br/>&lt;br/>
+•	So the Volunteer gets emotional support and mental health care&lt;br/>&lt;br/>
+•	Access to long-term health care through worker’s compensation after COS, if needed.&lt;br/>&lt;br/>
+•	To be informed about legal options and assistance.&lt;br/>&lt;br/>
+•	Help ensure the safety of the Volunteer and fellow Volunteers.&lt;br/>&lt;br/>
 •	Help ensure the safety of future Volunteers.
 </string>
 
-
+    <!-- PCs commitment to victims -->
     <string name="commitment_info">
         •\t\t\t	Staff will treat you with dignity and respect. No one deserves to be the victim of a sexual assault.
         Peace Corps will believe you if you report a rape or other sexual assault. No one at Peace Corps will blame you or think
-        the assault was your fault.\n\n
+        the assault was your fault.&lt;br/>&lt;br/>
 •\t\t\t	Staff will take appropriate steps to provide for your ongoing safety. Every effort will be made to keep you at your site as long
-        as it is safe for you to continue service. BUT – your safety must always come first.\n\n
+        as it is safe for you to continue service. BUT – your safety must always come first.&lt;br/>&lt;br/>
 •\t\t\t	Staff will provide you with the support you need to aid in your recovery. This means that Peace Corps will provide both
         medical care and emotional support following the event. Each case is handled based on the needs of the Volunteer
         and we do not automatically medevac or separate sexual assault victims from service. Although we may recommend medevac so
         that you can get the medical and psychological help you need, the decision to medevac is jointly determined by the Volunteer,
-        the PCMO and the Counseling and Outreach Unit in Washington.\n\n
+        the PCMO and the Counseling and Outreach Unit in Washington.&lt;br/>&lt;br/>
 •\t\t\t	Staff will help you to understand the relevant legal processes and your legal options. Peace Corps understands there may be
         significant cultural, language and legal challenges and as a result will help you navigate the local system. If you are
         interested in reporting to the police, we will stand beside you at every step of the process.The decision to report to the police is
-        yours and yours alone – we will respect whatever decision you make.\n\n
+        yours and yours alone – we will respect whatever decision you make.&lt;br/>&lt;br/>
 •\t\t\t	Staff will keep you informed of the progress of your case, should you choose to pursue prosecution. Peace Corps will ensure that you
         receive timely updates regarding your case whether or not you continue your service. A Victim Advocate will be available to answer
-        any questions or concerns you have regarding the status of your case.\n\n
+        any questions or concerns you have regarding the status of your case.&lt;br/>&lt;br/>
 •\t\t\t	Staff will work closely with you to make decisions regarding your continued service. No decisions about your site and service will be
-        made without your input and collaboration.\n\n
+        made without your input and collaboration.&lt;br/>&lt;br/>
 •\t\t\t	Staff will respect your privacy and will not, without your consent, disclose your identity or share the details of the incident with
         anyone who does not have a legitimate need to know. Only those people who will be directly involved in your medical, emotional
-        and security support will know your identity. \n\n
+        and security support will know your identity. &lt;br/>&lt;br/>
     \t\tThe Peace Corps Director has made it clear that all staff are expected to uphold these commitments, both in actions and words.
-        If you are sexually assaulted and you feel that Peace Corps staff members are not living up to the agency’s commitment, you can:\n\n
-        Contact the agency’s Office of Victim Advocacy, which is independent from staff at post.\n
+        If you are sexually assaulted and you feel that Peace Corps staff members are not living up to the agency’s commitment, you can:&lt;br/>&lt;br/>
+        Contact the agency’s Office of Victim Advocacy, which is independent from staff at post.&lt;br/>
         Contact the Office of the Inspector General, or OIG, which provides independent oversight of agency programs and operations
-        through regular audits, evaluations and investigations.  \n\n
+        through regular audits, evaluations and investigations.  &lt;br/>&lt;br/>
 •\t\t\t	If you feel that a sexual assault was not handled according to the agency’s Commitment to Sexual Assault Victims you can
         confidentially report to the OIG via an online web form located on Peace Corps’ website, or by phone, or email.</string>
+
+    <string name="ongoing_info">
+        •\t\t\t Legal Support&lt;br/>
+\t\t\to\t\t\t	If you are interested in reporting to the police, we will explain the process involved in filing a police report
+        and how the investigation and prosecution will be conducted. You will not be alone in this. We will be with you every step of the way.
+        Sometimes the investigative and judicial process may take a very long time and may be very different from the systems and procedures in the United States.
+        Even if you leave the country, Peace Corps will continue to work with the police and prosecutors and we will keep you informed.&lt;br/>&lt;br/>
+•\t\t\t Continuation of Service&lt;br/>
+\t\t\to\t\t\t	You will be part of the discussions about your continued service at site, in country, or in Peace Corps. Peace Corps’ goal is to do what we can to abide
+        by your choice to continue your service. Keep in mind, one of the biggest factors to be considered will be your personal safety.
+        Peace Corps will help you evaluate your options.&lt;br/>&lt;br/>
+•\t\t\t Medical and Psychological Support&lt;br/>
+\t\t\to\t\t\t	If you require medical or psychological support that is not available here you will be offered medical evacuation to Washington DC or your home of record.&lt;br/>&lt;br/>
+•\t\t\t Medevac and Early Termination Policies&lt;br/>
+\t\t\to\t\t\t	Volunteers who have been sexually assaulted have the right to a Medevac upon request.  A staff member will escort the Volunteer, unless declined by the Volunteer.&lt;br/>&lt;br/>
+•\t\t\t Interrupted Service and Respite Leave&lt;br/>
+\t\t\to\t\t\t	Peace Corps is currently updating policies that support Volunteers need for a time out from service.  Speak to your designated staff for the current status of these policies.
+    </string>
+
+    <string name="immediate_support_info">
+        •\t\t\t	Your safety and well-being is our primary concern. Once you notify Peace Corps, we will immediately mobilize resources to get support to you as quickly as possible.&lt;br/>&lt;br/>
+•\t\t\t	Once you contact the Duty Officer/PCMO, the Duty Officer or PCMO will coach you through the immediate first steps.&lt;br/>&lt;br/>
+•\t\t\t	The PCMO will speak with you to assess your immediate medical support needs and will work with you to determine next steps.&lt;br/>&lt;br/>
+•\t\t\t	The PCMO will also explain your options for reporting the assault.  They will also ask if you would like the support of a Sexual Assault Response Liaison.&lt;br/>&lt;br/>
+•\t\t\t	Peace Corps will ensure you are in a safe place, and help you consider the options and services available to you.  In many cases Peace Corps may bring you to the office, but recognize that this
+        may vary depending on your needs and circumstances.&lt;br/>&lt;br/>
+•\t\t\t	No matter what, Peace Corps will work with you to arrange transportation, lodging, medical appointments, legal, and any other appointments that may be necessary. If you want to report to the police, Peace Corps will help.&lt;br/>&lt;br/>
+    </string>
+
+    <!-- Confidentiality -->
+    <string name="confidentiality_center_text">
+        Confidentiality is preserving the privacy of another\’s information. The protection of a Volunteer\'s identity, personally identifying information   (PII),
+        and the details surrounding a crime, including sexual assaults, are all Peace Corps\’ utmost priority.  Staff, the Volunteer who has been assaulted and the Volunteer community all play a role in preserving privacy.
+    </string>
+
+    <string name="confidentiality_role_staff">
+        Peace Corps staff are held to high expectations with regards to confidentiality.   All Peace Corps staff and the independent Peace Corps Sexual Assault Hotline responders are trained to safeguard personal information.
+        If you believe your information is being mishandled, please call the Office of Inspector General (OIG  ).
+    </string>
+    
+    <string name="confidentiality_assault">
+        If you become the victim of a crime, choose who you trust with your sensitive information. Volunteer communications with other Volunteers may not be held to the same rules of privacy that apply to Peace Corps staff or Hotline responders.&lt;br/>
+        As one Volunteer shared:&lt;br/>&lt;br/>
+        &lt;b> “After the sexual assault, I needed the support of a fellow PCV and shared a little about what I was going through.  I had no idea that because I was seeking legal justice that the defense lawyer would contact that individual four months later
+        to fish for information to use against me in a court of law.  Had I known that anything that I said verbally or in an email would be fair game for court, I would have been more cautious and spoken to a counselor through secure communication earlier.”&lt;b/>
+    </string>
+
+    <string name="confidentiality_community">
+        When Volunteers learn of a fellow PCV\’s sexual assault their actions can make a difference - they can support the healing process or further hurt the Volunteer who was sexually assaulted. &lt;br/>
+        Some things to consider:&lt;br/>&lt;br/>
+    •\t\t\tWhat is your role in protecting information about a crime against a Volunteer?&lt;br/>
+    •\t\t\tIf you become aware of a crime committed against a fellow PCV, how might posting information on a social media platform, such as a blog or Facebook, impact or even endanger the Volunteer, their host community, or their friends and family?&lt;br/>
+    </string>
+
+    <!-- MythbustersFragment -->
+    <string name="mythbusters_title1">ASSUMPTION: Everyone and their neighbor’s goat will find out about what happened.</string>
+    <string name="mythbusters_title2">ASSUMPTION: The incident occurred at my site; therefore, I’ll get an automatic site change.</string>
+    <string name="mythbusters_title3">ASSUMPTION: The culture here is different, so Peace Corps staff will blame me for what happened.</string>
+    <string name="mythbusters_title4">ASSUMPTION: I was breaking a policy when the sexual assault occurred; therefore, staff will send me back to the U.S. ASAP.</string>
+    <string name="mythbusters_title5">ASSUMPTION: The process of reporting is difficult and time consuming.</string>
+    <string name="mythbusters_title6">ASSUMPTION: If I report, the assailant will become potentially dangerous to me.</string>
+    <string name="mythbusters_title7">Peace Corps didn’t respond the way I expected to last time I brought up an issue, so I doubt they would this time around.</string>
+    <string name="mythbusters_title8">ASSUMPTION: I was sexually assaulted by a PCV – I don’t want to press charges in my country of service and Peace Corps can’t do anything about what happened, so I might as well not report.</string>
+    <string name="mythbusters_title9">ASSUMPTION: If I choose to leave service after being assaulted, I automatically have to early terminate (E.T).</string>
+
+    <string name="mythbusters_subtitle1">FACT:  All Peace Corps staff have been trained to protect your information and any Peace Corps Staff who improperly disclose the identity of a Volunteer or other information
+        regarding a sexual assault may be subject to disciplinary action.</string>
+    <string name="mythbusters_subtitle2">FACT: You will be part of the discussions about your continued service at your site, in country, or in Peace Corps. No decision will be made without your input and your participation.
+        Keep in mind, one of the biggest factors to be considered will be your personal safety. Peace Corps will help you evaluate your options.</string>
+    <string name="mythbusters_subtitle3">: Peace Corps goes to great lengths to train staff in the field to understand sexual assault and respond to the needs of Volunteers who become the victims of violent crime. Designated Staff at post,
+        which include Safety and Security Managers, Peace Corps Medical Officers, and Sexual Assault Response Liaisons, are specially trained to respond to reports of sexual assault with compassion and professionalism. </string>
+    <string name="mythbusters_subtitle4">FACT: Peace Corps honors an Immunity Policy, which is a way for Peace Corps to promote reporting of sexual assault and ensure a compassionate and supportive response by the Agency.
+        Victims—and witnesses who didn’t help commit the sexual assault—need not fear any administrative consequences for reporting a sexual assault regardless of the circumstances or whether they were violating a Peace Corps policy when the incident occurred.
+        The Immunity Policy does not grant immunity for any criminal or civil liability for violations of law.</string>
+    <string name="mythbusters_subtitle5">FACT: You will not be alone in this. If you are interested in reporting to the police, we have specially trained staff that will explain the process involved in filing a police report and how the investigation and prosecution will
+        be conducted. Peace Corps can also hire an attorney to
+assist you with your legal options. Peace Corps will be with you every step of the way. Sometimes, the investigative and judicial process take a long time and will most likely be very different from the systems and procedures you may be familiar with in the United States.
+        But even if you leave the country, Peace Corps will continue to work with the police and prosecutors and will keep you informed about your case.
+</string>
+    <string name="mythbusters_subtitle6">FACT:  When you report any crime or incident, it is extremely important to assess your safety and security. Staff at post, particularly your Safety and Security Manager, can help you create a safety plan that addresses safety concerns
+        by creating solutions, contacts, and plans of action that will help keep you safe in the event of an emergency or encounter with an assailant.</string>
+    <string name="mythbusters_subtitle7">FACT: If you experience this problem, there is something you can do. Volunteers who feel their incident was neglected can report their concerns to the Office of the Inspector General.
+        Contact information for the OIG can be found at the end of this workbook. </string>
+    <string name="mythbusters_subtitle8">FACT: This is untrue. Volunteers can pursue an internal Peace Corps administrative process through the Volunteer/Trainee Sexual Misconduct Policy.
+        Initiating this process asks Peace Corps to address instances of sexual misconduct by other Volunteers separate from any criminal investigation or proceeding. The process allows Volunteers the opportunity to present a case for sexual misconduct before
+        a hearing panel of Peace Corps officials who will assess the case and determine whether disciplinary action is necessary to penalize the offender. </string>
+    <string name="mythbusters_subtitle9">FACT:  In many cases when a Volunteer is the victim of a crime, Interrupted Service is an option, which indicates that a Volunteer leaves service due to circumstances beyond their control. Additionally, if you are a victim of sexual assault,
+        you are also entitled to a medevac (45 days) which may be located in your home of record or Washington, DC.  Medevacs allow for Volunteers to return to service at the end of the 45 day period.</string>
 </resources>

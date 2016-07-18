@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.SingleTextViewFragment;
 
 /*
  * Bystander Intervention main fragment
@@ -29,10 +30,6 @@ public class BystanderInterventionFragment extends Fragment {
     public static final String TAG = BystanderInterventionFragment.class.getSimpleName();
     Button potentialVictim,potentialOffender,tacticsForBoth;
     TextView safetyText;
-    public static final String SUBTITLE_KEY = "subtitle";
-    public static final String CONTENT_KEY = "content";
-    Fragment bystanderInterventionCommonFragment = new BystanderInterventionCommonFragment();
-    Bundle data = new Bundle();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,37 +48,24 @@ public class BystanderInterventionFragment extends Fragment {
         potentialOffender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                swapCommonFragment(getString(R.string.bystander_potential_offender),getString(R.string.bystander_verbal_offender));
+                SingleTextViewFragment.showSingleTextLayout(getActivity(),TAG,getString(R.string.bystander_potential_offender),getString(R.string.bystander_verbal_offender));
             }
         });
 
         potentialVictim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                swapCommonFragment(getString(R.string.bystander_potential_victim),getString(R.string.bystander_verbal_victim));
+                SingleTextViewFragment.showSingleTextLayout(getActivity(),TAG,getString(R.string.bystander_potential_victim),getString(R.string.bystander_verbal_victim));
             }
         });
 
         tacticsForBoth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                swapCommonFragment(getString(R.string.bystander_tactics_both),getString(R.string.bystander_non_verbal));
+                SingleTextViewFragment.showSingleTextLayout(getActivity(),TAG,getString(R.string.bystander_tactics_both),getString(R.string.bystander_non_verbal));
             }
         });
 
         return rootView;
-    }
-
-    /**
-     * Populates the fragment with appropriate data according to the button clicked
-     * @param subtitle subtitle for the new fragment being created
-     * @param content content to be displayed in the new fragment
-     */
-    private void swapCommonFragment(String subtitle, String content)
-    {
-        data.putString(SUBTITLE_KEY,subtitle);
-        data.putString(CONTENT_KEY,content);
-        bystanderInterventionCommonFragment.setArguments(data);
-        MainActivity.swapFragmentIn(getActivity(),bystanderInterventionCommonFragment,BystanderInterventionCommonFragment.TAG,true);
     }
 }

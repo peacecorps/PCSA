@@ -119,5 +119,7 @@
     <dimen name="sub_title_font_safety_plan">20sp</dimen>
     <dimen name="header_font_safety_plan">28sp</dimen>
     <dimen name="navbar_icon_header_height">100dp</dimen>
+    <dimen name="center_font">16sp</dimen>
+    <dimen name="status_bar_size">24dp</dimen>
 
 </resources>
