@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:title="@string/title_name"
+        android:summary="@string/enter_name"
+        android:key="@string/key_name" />
+
+    <ListPreference
+        android:title="Country"
+        android:summary="@string/enter_country"
+        android:key="@string/key_country"
+        android:defaultValue="@string/uganda"
+        android:entries="@array/countryArray"
+        android:entryValues="@array/countryValues" />
+</PreferenceScreen>
