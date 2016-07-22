@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.SingleTextViewFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsContentFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsFragment;
 
@@ -52,9 +53,7 @@ public class SupportServicesFragment extends Fragment {
         benefitsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Swapping BenefitsFragment into the container
-                BenefitsFragment benefitsFragment = new BenefitsFragment();
-                MainActivity.swapFragmentIn(getActivity(),benefitsFragment,BenefitsFragment.TAG,true);                
+                SingleTextViewFragment.showSingleTextLayout(getActivity(),getString(R.string.benefits),getString(R.string.benefits_subtitle),getString(R.string.benefits_info));
             }
         });
         
@@ -70,11 +69,38 @@ public class SupportServicesFragment extends Fragment {
         commitmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Swapping CommitmentFragment into the container
-                CommitmentFragment commitmentFragment = new CommitmentFragment();
-                MainActivity.swapFragmentIn(getActivity(),commitmentFragment,CommitmentFragment.TAG,true);
+                SingleTextViewFragment.showSingleTextLayout(getActivity(),getString(R.string.commitment),getString(R.string.commitment_subtitle),getString(R.string.commitment_info));
             }
         });
+
+        afterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping AfterAssaultFragment into the container
+                AfterAssaultFragment afterAssaultFragment = new AfterAssaultFragment();
+                MainActivity.swapFragmentIn(getActivity(),afterAssaultFragment,AfterAssaultFragment.TAG,true);
+            }
+        });
+
+        confidentialityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping ConfidentialityFragment into the container
+                ConfidentialityFragment confidentialityFragment = new ConfidentialityFragment();
+                MainActivity.swapFragmentIn(getActivity(),confidentialityFragment,ConfidentialityFragment.TAG,true);
+            }
+        });
+
+        mythButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping MythbustersFragment into the container
+                MythbustersFragment mythbustersFragment = new MythbustersFragment();
+                MainActivity.swapFragmentIn(getActivity(),mythbustersFragment,MythbustersFragment.TAG,true);
+            }
+        });
+
+
         return rootView;
     }
 
@@ -88,8 +114,8 @@ public class SupportServicesFragment extends Fragment {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         SafetyPlanBasicsContentFragment safetyPlanBasicsContentFragment = new SafetyPlanBasicsContentFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(SafetyPlanBasicsFragment.TITLE_KEY,title);
-        bundle.putString(SafetyPlanBasicsFragment.CONTENT_KEY,contentToShow);
+        bundle.putString(SafetyPlanBasicsContentFragment.TITLE_KEY,title);
+        bundle.putString(SafetyPlanBasicsContentFragment.CONTENT_KEY,contentToShow);
         safetyPlanBasicsContentFragment.setArguments(bundle);
         safetyPlanBasicsContentFragment.show(fm,getString(R.string.sample_fragment));
     }

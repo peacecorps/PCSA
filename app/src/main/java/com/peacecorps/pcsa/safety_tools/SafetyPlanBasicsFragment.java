@@ -24,8 +24,6 @@ public class SafetyPlanBasicsFragment extends Fragment {
 
     Button mainReasons,cannot,purpose,tips;
     public static final String TAG = SafetyPlanBasicsFragment.class.getSimpleName();
-    public static final String TITLE_KEY = "title";
-    public static final String CONTENT_KEY = "content";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,44 +36,29 @@ public class SafetyPlanBasicsFragment extends Fragment {
         mainReasons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(getString(R.string.basics_main),getString(R.string.safety_plan_basics_1));
+                SafetyPlanBasicsContentFragment.showDialog(getActivity(),getString(R.string.basics_main),getString(R.string.safety_plan_basics_1));
             }
         });
         purpose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(getString(R.string.basics_purpose),getString(R.string.safety_plan_basics_2));
+                SafetyPlanBasicsContentFragment.showDialog(getActivity(),getString(R.string.basics_purpose),getString(R.string.safety_plan_basics_2));
             }
         });
         cannot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(getString(R.string.basics_cannot),getString(R.string.safety_plan_basics_3));
+                SafetyPlanBasicsContentFragment.showDialog(getActivity(),getString(R.string.basics_cannot),getString(R.string.safety_plan_basics_3));
             }
         });
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(getString(R.string.basics_tips),getString(R.string.safety_plan_basics_4));
+                SafetyPlanBasicsContentFragment.showDialog(getActivity(),getString(R.string.basics_tips),getString(R.string.safety_plan_basics_4));
             }
         });
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.safety_plan_basics);
         return rootView;
     }
-
-    /**
-     * Populates the required data for the dialog box which appears
-     * @param title title of the dialog box
-     * @param contentToShow  data to be displayed
-     */
-    private void showDialog(String title,String contentToShow)
-    {
-        FragmentManager fm = getActivity().getSupportFragmentManager();
-        SafetyPlanBasicsContentFragment safetyPlanBasicsContentFragment = new SafetyPlanBasicsContentFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString(TITLE_KEY,title);
-        bundle.putString(CONTENT_KEY,contentToShow);
-        safetyPlanBasicsContentFragment.setArguments(bundle);
-        safetyPlanBasicsContentFragment.show(fm,getString(R.string.sample_fragment));
-    }
+    
 }
