@@ -486,7 +486,7 @@
         If you become the victim of a crime, choose who you trust with your sensitive information. Volunteer communications with other Volunteers may not be held to the same rules of privacy that apply to Peace Corps staff or Hotline responders.&lt;br/>
         As one Volunteer shared:&lt;br/>&lt;br/>
         &lt;b> “After the sexual assault, I needed the support of a fellow PCV and shared a little about what I was going through.  I had no idea that because I was seeking legal justice that the defense lawyer would contact that individual four months later
-        to fish for information to use against me in a court of law.  Had I known that anything that I said verbally or in an email would be fair game for court, I would have been more cautious and spoken to a counselor through secure communication earlier.”&lt;b/>
+        to fish for information to use against me in a court of law.  Had I known that anything that I said verbally or in an email would be fair game for court, I would have been more cautious and spoken to a counselor through secure communication earlier.”&lt;br/>
     </string>
 
     <string name="confidentiality_community">
@@ -530,4 +530,128 @@ assist you with your legal options. Peace Corps will be with you every step of t
         a hearing panel of Peace Corps officials who will assess the case and determine whether disciplinary action is necessary to penalize the offender. </string>
     <string name="mythbusters_subtitle9">FACT:  In many cases when a Volunteer is the victim of a crime, Interrupted Service is an option, which indicates that a Volunteer leaves service due to circumstances beyond their control. Additionally, if you are a victim of sexual assault,
         you are also entitled to a medevac (45 days) which may be located in your home of record or Washington, DC.  Medevacs allow for Volunteers to return to service at the end of the 45 day period.</string>
+
+    <!-- Sexual Assault Awareness -->
+
+    <string name="was_content">
+       Even though the laws vary between countries, Peace Corps recognizes that sexual assault takes many forms. These include rape, attempted rape, and unwanted sexual contact, such as grabbing, fondling, or forced kissing.
+        the legal definition of sexual assault differs among Peace Corps countries.  However, Peace Corps asks these questions to help the agency classify crimes of a sexual nature &lt;br/>&lt;br/>
+        &lt;b>Sexual Assault:&lt;/b>&lt;br/>&lt;br/>
+        Was there unwanted kissing on the mouth or touching of the Volunteer\'s genitalia, anus, groin, breast, inner thigh or buttocks?  Were any of these acts attempted?&lt;br/>&lt;br/>
+        &lt;b>Aggravated Sexual Assault:&lt;/b>&lt;br/>&lt;br/>
+        Was there contact with the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks, or disrobing, or kissing AND any of the following: use of or threat of use of a weapon;
+        or the use or threat of use of force or intimidation; or the Volunteer was incapable of giving consent?  Were any of these acts attempted?&lt;br/>&lt;br/>
+        &lt;b>Rape:&lt;/b>&lt;br/>&lt;br/>
+        Was the vagina, anus or mouth penetrated against the will of the Volunteer?  Was the Volunteer forced to perform oral sex on another person or penetrate another person against his/her will? &lt;br/>&lt;br/>
+    </string>
+
+    <string name="sexual_assault_info">
+            If it is not consensual, then it is a crime.  Consensual means that both people are old enough to consent, have the capacity to consent, and agreed to the sexual contact.
+        There are two main considerations to help Volunteers judge whether or not a sexual act is consensual.&lt;br/>&lt;br/>
+
+        1.\t\t\tDid both people have the physical, mental, and legal capacity to consent?  Those with diminished capacity – for example, some people with disabilities,
+            some elderly people and people who have been drugged or are unconscious – may not have the ability to consent to have sex.&lt;br/>&lt;br/>
+        2.\t\t\tDid both participants agree to take part? Did someone use physical force to make you have sexual contact with him/her? Has someone threatened you or coerced you to make you
+            have intercourse with them?  If so, it is sexual assault.&lt;br/>&lt;br/>
+        If someone does not have the capacity to consent because they are too scared to say no, drunk or otherwise incapacitated, or one person does not want sexual contact, then it is sexual assault.
+        This applies to rape or sexual assault of a Volunteer or Trainee by another Volunteer or Trainee.If a Volunteer is drunk or otherwise incapacitated then it is not consensual sex.
+        If you are not sure if you were sexually assaulted, or even if something made you uncomfortable, don’t be afraid to discuss the incident with your PCMO or someone else you trust for support.
+        Even if weeks, months, or years have passed, it is never too late to report an incident of sexual assault so you can receive support to aid your healing and recovery.
+    </string>
+
+    <string name="common_qs_title1">I didn’t physically resist – does that mean it wasn’t rape?</string>
+    <string name="common_qs_title2">I used to date the person who assaulted me – does that mean it isn’t rape?</string>
+    <string name="common_qs_title3">I was drunk or the other person was drunk – does that mean it isn’t rape?</string>
+    <string name="common_qs_title4">I thought “no,” but didn’t say it – is it still rape?</string>
+    <string name="common_qs_title5">I became sexually aroused even though I did not consent – is it still rape?</string>
+    <string name="common_as1">People respond to an assault in many different ways. Just because you didn’t resist physically doesn’t mean it wasn’t rape – in fact, many victims experience the
+        survival instinct to “freeze” and do not physically resist due to fear that their attacker might become more violent.  Lack of consent can be expressed (saying “no”)
+        or can be implied through non-verbal cues and reactions by the non-consenting person.</string>
+    <string name="common_as2">Sexual assault can occur when the offender and the victim have a pre-existing relationship, even if the offender is the victim’s spouse.
+        It does not matter whether the other person is a former romantic partner or a complete stranger. It also doesn’t matter if you ever had sex in the past. If it is nonconsensual this time, it is rape.</string>
+    <string name="common_as3">Alcohol and drugs are not an excuse. The key question is still: did you consent or not?
+        Regardless of whether you were drunk or sober, if the sex is nonconsensual, it is rape. However, because each country has different definitions of “nonconsensual,”
+        please contact your PCMO or SSM if you have questions about your specific host country definitions and laws.
+        Peace Corps believes that if you were so intoxicated or drugged that you passed out and/or were unable to consent, it was rape. Both people must be conscious and willing participants.</string>
+    <string name="common_as4">It depends on the circumstances. If you didn’t say no because you were legitimately scared for your life or safety, then it may be a sexual assault.
+        In some cases it may be unsafe to resist, physically or verbally — for example, when someone has a knife or gun to your head, or threatens you, a fellow PCV, or community member if you say anything.</string>
+    <string name="common_as5">Sexual arousal and/or orgasm during rape is extremely common, yet rarely talked about. It is biological. Sexual arousal works from the same autonomic,
+        reflex-driven system associated with heart rate, digestion, and perspiration.  Sexual organs do not think, they are designed to respond to stimulation. Sexual arousal or orgasm during rape does not mean it felt good.
+        It does not mean you enjoyed it. It does not mean you asked for it. It does not mean you consented. Becoming sexually aroused does not equal consent.</string>
+
+    <string name="impact_sexual_assault">
+    &lt;b>Physical/Physiological:&lt;/b>&lt;br/>
+        •\t\t\tPhysical injury from the assault itself &lt;br/>
+        •\t\t\tPregnancy&lt;br/>
+        •\t\t\tSexually Transmitted Infections &lt;br/>
+        •\t\t\tSelf-medicating (i.e., alcohol/drug abuse) &lt;br/>
+        •\t\t\tSleep disorders&lt;br/>
+        •\t\t\tEating disorders &lt;br/>
+        •\t\t\tPhysical triggers (sights, smells, sounds, touching) that may produce a physical or psychological reaction &lt;br/>
+        •\t\t\tSelf-mutilation (self-inflicted cuts but not to commit suicide) &lt;br/>&lt;br/>
+
+    &lt;b>Psychological/ Emotional:&lt;/b>&lt;br/>
+        •\t\t\tDepression &lt;br/>
+        •\t\t\tAnger &lt;br/>
+        •\t\t\tFear &lt;br/>
+        •\t\t\tAnxiety &lt;br/>
+        •\t\t\tGuilt &lt;br/>
+        •\t\t\tShock&lt;br/>
+        •\t\t\tShame/ Embarrassment &lt;br/>&lt;br/>
+    It is important to recognize that all of the reactions are NORMAL. They are NORMAL reactions to an ABNORMAL situation.
+    They are symptoms of a traumatic experience that your body and mind are trying to deal with - like running a fever to fight off infection. While the symptoms are normal, it’s okay to seek help.
+
+    </string>
+
+    <string name="harassment_content">
+        The Peace Corps is committed to maintaining high standards of conduct in the workplace and providing all employees, Volunteers, and trainees a work environment that is free from harassment of any kind.
+        The Office of Civil Rights and Diversity, or OCRD, handles claims of harassment, including sexual harassment of a Volunteer or Trainee by a Peace Corps staff member or fellow Volunteer/ Trainee.
+    </string>
+
+    <string name="harassment_more">
+        Unwelcome sexual advances, requests for sexual favors, and other verbal or physical conduct of a sexual nature.
+        Sexual harassment is behavior that is unwelcome, offensive, can cause fear or anxiety and can impact job performance. The actions you may think are within tolerable ranges of acceptability
+        may be offensive to others. People have different thresholds of tolerance for many of these behaviors.
+        The bottom line is that ‘unwelcomed’ is determined by the recipient, not the person displaying the offensive conduct.&lt;br/>&lt;br/>
+
+        If you feel you are being sexually harassed, sharing this with either a Volunteer or staff  will better ensure that you get the help and support you deserve.&lt;br/>&lt;br/>
+        Cases of sexual harassment committed by a PCV or Peace Corps Staff member against a PCV can be reported to the Office of Civil Rights and Diversity (OCRD)
+    </string>
+
+    <string name="helping1">
+    &lt;b>Believe.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\t	If a survivor chooses to share their story with you, do not to question
+    their story, judge it, or ask for details about it.&lt;br/>
+	•\t\t\t	Show them and tell them that you believe them, and that they are believed. &lt;br/>
+ </string>
+
+ <string name="helping2">
+    &lt;b>Respect.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\t	Listen patiently and allow them to share their story on their own terms.
+    You may be the first and only person your friend tells.&lt;br/>
+    •\t\t\t	Encourage them to take their time, or reassure them that you are there to listen when they are ready. &lt;br/>
+    •\t\t\t	You can also respect their privacy by not sharing with others. &lt;br/></string>
+
+ <string name="helping3">
+    &lt;b>No pressure.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tIt is important to not ask/tell a survivor to report their assault to family, loved ones, the police,
+     or the authorities or seek certain help. &lt;br/>
+    •\t\t\tAllow a survivor to seek help and heal at their own pace.  Instead, offer to support them, accompany them
+    , or help them seek information at a pace that they want and are comfortable with. &lt;br/> </string>
+
+<string name="helping4">
+    &lt;b>Connect and share.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tA survivor may want additional support and information. You can provide an enormous amount
+     of support by expressing concern and offering to look into resources for them. This could be
+     medical treatment at a hospital, a sexual assault hotline, local advocacy services, counseling, or a local support group. &lt;br/>
+    •\t\t\tIt could also be as simple as providing a phone number or going with them to an appointment&lt;br/> </string>
+
+<string name="helping5">
+    &lt;b>Repeat.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tOffer to be there for your friend whenever they need you. Encourage them to come
+    back to you for further support when appropriate. Remind them that you will be there to listen when they do. &lt;br/>
+    •\t\t\tThis will help your friend know that you are a safe source of support and that they
+    can rely on when they need it.  &lt;br/>
+    •\t\t\tCreating this culture of openness with a friend can be comforting to a
+    survivor who may need space to begin healing on their own terms.&lt;br/> </string>
 </resources>
