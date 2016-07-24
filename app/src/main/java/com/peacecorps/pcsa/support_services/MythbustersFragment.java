@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.FAQArrayAdapter;
 
 /*
  * Mythbusters and Assumptions
