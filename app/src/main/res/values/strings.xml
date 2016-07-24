@@ -144,7 +144,7 @@
     <string name="available_services">Services after a Sexual Assault</string>
     <string name="commitment">PCs commitment to Sexual Assault</string>
     <string name="after_assault">What to do After an Assault?</string>
-    <string name="mythbusters">Mythbusters and Assumptions</string>
+    <string name="mythbusters">Peace Corps Mythbusters</string>
     <string name="was_assault">Was it Sexual Assault?</string>
     <string name="common_questions">Sexual Assault Common Questions</string>
     <string name="impact">Impact of Sexual Assault</string>
@@ -217,4 +217,10 @@
     <string name="first_time">first_time</string>
     <string name="prompt_please">Please enter your name to continue</string>
     <string name="country_default">Uganda</string>
+    <string name="ongoing_title">Peace Corps Ongoing Support</string>
+    <string name="immediate_title">Peace Corps Immediate Response</string>
+    <string name="confidentiality_subtitle">Everyone plays a role</string>
+    <string name="role_staff">Role of Staff</string>
+    <string name="community_title">Role of Volunteer Community</string>
+    <string name="assaulted_title">Role of Assaulted Volunteer</string>
 </resources>

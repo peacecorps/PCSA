@@ -121,5 +121,7 @@
     <dimen name="navbar_icon_header_height">100dp</dimen>
     <dimen name="padding_10">10dp</dimen>
     <dimen name="hint_size">19sp</dimen>
+    <dimen name="center_font">16sp</dimen>
+    <dimen name="status_bar_size">24dp</dimen>
 
 </resources>
