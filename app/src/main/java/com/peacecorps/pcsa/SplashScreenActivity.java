@@ -2,17 +2,15 @@ package com.peacecorps.pcsa;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ProgressBar;
 
 /**
  * This class handles showing splash screen for 2500 ms when the application is launched
  * @author rohan
- * @since 10-06-2016.
+ * @since 2016-06-10.
  */
 public class SplashScreenActivity extends Activity {
 
@@ -29,8 +27,6 @@ public class SplashScreenActivity extends Activity {
         progressBar = (ProgressBar)findViewById(R.id.splash_screen_progress);
         progressBar.getIndeterminateDrawable().setColorFilter(getResources().getColor(R.color.background_textview),android.graphics.PorterDuff.Mode.MULTIPLY);
         progressBar.setVisibility(View.VISIBLE);
-
-        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         new Handler().postDelayed(new Runnable() {
 
             /*
@@ -41,8 +37,7 @@ public class SplashScreenActivity extends Activity {
             @Override
             public void run() {
                 progressBar.setVisibility(View.GONE);
-                Intent i = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                i.putExtra(getString(R.string.first_time),sharedPreferences.getBoolean(getString(R.string.first_time),true));
+                Intent i = new Intent(SplashScreenActivity.this, SignupActivity.class);
                 startActivity(i);
                 finish();
             }

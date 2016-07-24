@@ -212,7 +212,7 @@
     <string name="enter_country">Enter your country</string>
     <string name="enter_name">Enter your name</string>
     <string name="uganda">Uganda</string>
-    <string name="title_activity_login">Login</string>
+    <string name="title_activity_login">Sign Up</string>
     <string name="login">Login</string>
     <string name="first_time">first_time</string>
     <string name="prompt_please">Please enter your name to continue</string>

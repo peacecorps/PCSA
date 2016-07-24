@@ -83,7 +83,7 @@
                 android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".SignupActivity"
             android:label="@string/title_activity_login"
             android:parentActivityName=".SplashScreenActivity"
             android:theme="@style/MyMaterialTheme">

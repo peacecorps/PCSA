@@ -14,13 +14,19 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
+/**
+ * This class registers the user name and country one-time when the app loads for the first time
+ * @author rohan
+ * @since 2016-07-24.
+ */
+public class SignupActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
     private Toolbar toolbar;
     private Button loginButton;
     private EditText name;
     private Spinner country;
     private String selected_country;
+    SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +36,12 @@ public class LoginActivity extends AppCompatActivity  implements AdapterView.OnI
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        editor = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this).edit();
-        editor.putBoolean(getString(R.string.first_time),false);
-        editor.commit();
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SignupActivity.this);
+        editor = sharedPreferences.edit();
 
-        if(!getIntent().getBooleanExtra(getString(R.string.first_time),true))
+        if(!sharedPreferences.getString(getString(R.string.key_name),"").equals(""))
         {
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            startActivity(new Intent(SignupActivity.this,MainActivity.class));
             finish();
         }
 
@@ -55,13 +60,13 @@ public class LoginActivity extends AppCompatActivity  implements AdapterView.OnI
             @Override
             public void onClick(View v) {
                 if(name.getText().toString().equals(""))
-                    Toast.makeText(LoginActivity.this, R.string.prompt_please,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, R.string.prompt_please,Toast.LENGTH_SHORT).show();
                 else {
                     editor.putBoolean(getString(R.string.first_aide), false);
                     editor.putString(getString(R.string.key_country), selected_country);
                     editor.putString(getString(R.string.key_name), name.getText().toString());
                     editor.commit();
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
                     finish();
                 }
             }
