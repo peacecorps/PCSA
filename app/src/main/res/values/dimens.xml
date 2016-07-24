@@ -52,7 +52,7 @@
     <dimen name="margin_top">30px</dimen>
 
     <!-- Title and sub-title font sizes-->
-    <dimen name="title_font">28sp</dimen>
+    <dimen name="title_font">32sp</dimen>
     <dimen name="sub_title_font">28sp</dimen>
     <dimen name="menu_icon_width">200dp</dimen>
     <dimen name="text_extra_small">12sp</dimen>
@@ -119,6 +119,8 @@
     <dimen name="sub_title_font_safety_plan">20sp</dimen>
     <dimen name="header_font_safety_plan">28sp</dimen>
     <dimen name="navbar_icon_header_height">100dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="hint_size">19sp</dimen>
     <dimen name="center_font">16sp</dimen>
     <dimen name="status_bar_size">24dp</dimen>
 

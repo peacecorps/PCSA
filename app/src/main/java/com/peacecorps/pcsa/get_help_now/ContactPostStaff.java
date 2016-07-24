@@ -12,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.MainActivity;
@@ -31,9 +29,8 @@ import java.util.Map;
  * @author Buddhiprabha Erabadda
  * @since 07-08-2015
  */
-public class ContactPostStaff extends Fragment implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
+public class ContactPostStaff extends Fragment implements AdapterView.OnItemClickListener {
 
-    private static final String PREF_LOCATION = "location" ;
     public static final String TAG = ContactPostStaff.class.getSimpleName() ;
 
     SharedPreferences sharedPreferences;
@@ -63,6 +60,7 @@ public class ContactPostStaff extends Fragment implements AdapterView.OnItemSele
         Button contactSsm = (Button) rootView.findViewById(R.id.post_staff_ssm);
         Button contactSarl = (Button) rootView.findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) rootView.findViewById(R.id.post_staff_current_location);
+        currentLocation.setText(getString(R.string.reporting_current_location) + " " + sharedPreferences.getString(getString(R.string.key_country),"") + getString(R.string.reporting_current_post));
         ImageView contactOtherStaff = (ImageView) rootView.findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
@@ -98,16 +96,7 @@ public class ContactPostStaff extends Fragment implements AdapterView.OnItemSele
                 contactOptionsDialogBox.show(getActivity().getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
-
-        Spinner locationList = (Spinner) rootView.findViewById(R.id.reporting_locationlist);
-        locationList.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.locations_array,R.layout.spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        locationList.setAdapter(adapter);
-        //Load Last Location from Shared Preferences
-        locationList.setSelection(sharedPreferences.getInt(PREF_LOCATION,0));
-
+        
         contactOtherStaff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,41 +109,7 @@ public class ContactPostStaff extends Fragment implements AdapterView.OnItemSele
 
         return rootView;
     }
-
-    /**
-     * Interface definition for a callback to be invoked when an item in Change Location view has been selected
-     * and then currentLocation TextView is set according to the selected item.
-     *
-     * @param parent The AdapterView where the selection happened
-     * @param view The view within the AdapterView that was clicked
-     * @param position The position of the view in the adapter
-     * @param id The row id of the item that is selected
-     */
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String selectedItem = (String) parent.getItemAtPosition(position);
-        currentLocation.setText(getResources().getString(R.string.reporting_current_location) + " " + selectedItem);
-
-        // selectedLocationDetails holds all details about the location selected by the user
-        selectedLocationDetails = locationDetails.get(selectedItem);
-
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        //PREF_LOCATION field stores the index of Location in the list
-        editor.putInt(PREF_LOCATION, position);
-        editor.commit();
-
-    }
-
-    /**
-     * Interface definition for a callback to be invoked when no item in Change Location view has been selected
-     *
-     *  @param parent The AdapterView where the selection happened
-     */
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
+    
     /**
      * Interface definition for a callback to be invoked when an item in this AdapterView has been clicked.
      *
@@ -179,5 +134,13 @@ public class ContactPostStaff extends Fragment implements AdapterView.OnItemSele
             smsIntent.setData(Uri.parse("sms:" + numberToContact));
             startActivity(smsIntent);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        selectedLocationDetails = locationDetails.get(sharedPreferences.getString(getString(R.string.key_country),getString(R.string.country_default)));
+        if(currentLocation != null)
+            currentLocation.setText(getString(R.string.reporting_current_location) + " " + sharedPreferences.getString(getString(R.string.key_country),"")+ getString(R.string.reporting_current_post));
     }
 }

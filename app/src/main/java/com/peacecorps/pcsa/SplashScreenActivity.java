@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 /**
  * This class handles showing splash screen for 2500 ms when the application is launched
  * @author rohan
- * @since 10-06-2016.
+ * @since 2016-06-10.
  */
 public class SplashScreenActivity extends Activity {
 
@@ -37,7 +37,7 @@ public class SplashScreenActivity extends Activity {
             @Override
             public void run() {
                 progressBar.setVisibility(View.GONE);
-                Intent i = new Intent(SplashScreenActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this, SignupActivity.class);
                 startActivity(i);
                 finish();
             }
