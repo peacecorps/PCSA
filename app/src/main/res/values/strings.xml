@@ -223,4 +223,5 @@
     <string name="role_staff">Role of Staff</string>
     <string name="community_title">Role of Volunteer Community</string>
     <string name="assaulted_title">Role of Assaulted Volunteer</string>
+    <string name="change_name">Go to Settings to change your name</string>
 </resources>

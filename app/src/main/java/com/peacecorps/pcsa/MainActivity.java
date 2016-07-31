@@ -14,9 +14,22 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
+import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
+import com.peacecorps.pcsa.safety_tools.BystanderInterventionFragment;
+import com.peacecorps.pcsa.safety_tools.CopingFragment;
+import com.peacecorps.pcsa.safety_tools.RadarFragment;
+import com.peacecorps.pcsa.safety_tools.SafetyPlanActivity;
+import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsFragment;
+import com.peacecorps.pcsa.safety_tools.TacticsFragment;
+import com.peacecorps.pcsa.support_services.AfterAssaultFragment;
+import com.peacecorps.pcsa.support_services.AvailableFragment;
+import com.peacecorps.pcsa.support_services.ConfidentialityFragment;
+import com.peacecorps.pcsa.support_services.MythbustersFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,6 +77,112 @@ public class MainActivity extends AppCompatActivity {
         prepareListData();
         listAdapter = new NavDrawerListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
+        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                switch (groupPosition)
+                {
+                    case 0:
+                        //Swapping ContactPostStaff into the fragment container dynamically
+                        Fragment contactPostStaffFragment = new ContactPostStaff();
+                        MainActivity.swapFragmentIn(MainActivity.this,contactPostStaffFragment,ContactPostStaff.TAG,true);
+                        mDrawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case 1:
+                        //Swapping CircleOfTrustFragment into the container
+                        CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
+                        MainActivity.swapFragmentIn(MainActivity.this,circleOfTrustFragment,CircleOfTrustFragment.TAG,true);
+                        mDrawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case 6:
+                        Intent intent = new Intent(MainActivity.this, UserSettingsActivity.class);
+                        startActivity(intent);
+                        mDrawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case 7:
+                        Toast.makeText(MainActivity.this,getString(R.string.change_name),Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+                switch (groupPosition)
+                {
+                    case 2:
+                        switch (childPosition)
+                        {
+                            case 0:
+                                //Swapping RadarFragment into the container
+                                RadarFragment radarFragment = new RadarFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,radarFragment,RadarFragment.TAG,true);
+                                break;
+                            case 1:
+                                //Swapping UnwantedAttentionStrategies into the container
+                                CopingFragment copingFragment = new CopingFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,copingFragment,CopingFragment.TAG,true);
+                                break;
+                            case 2:
+                                //Swapping TacticsFragment into the container
+                                TacticsFragment tacticsFragment = new TacticsFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,tacticsFragment, TacticsFragment.TAG,true);
+                                break;
+                            case 3:
+                                //Swapping Bystander Fragment into the container
+                                BystanderInterventionFragment bystanderInterventionFragment = new BystanderInterventionFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,bystanderInterventionFragment, BystanderInterventionFragment.TAG,true);
+                                break;
+                            case 4:
+                                //Swapping Safety Plan Basics Fragment into the container
+                                SafetyPlanBasicsFragment safetyPlanBasicsFragment = new SafetyPlanBasicsFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,safetyPlanBasicsFragment, SafetyPlanBasicsFragment.TAG,true);
+                                break;
+                            case 5:
+                                //Swapping Safety Plan Fragment into the container
+                                Intent intent  = new Intent(MainActivity.this,SafetyPlanActivity.class);
+                                startActivity(intent);
+                                break;
+
+                        }
+                        break;
+                    case 3:
+                        switch (childPosition)
+                        {
+                            case 0:
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.benefits),getString(R.string.benefits_subtitle),getString(R.string.benefits_info));            break;
+                            case 1:
+                                AvailableFragment availableFragment = new AvailableFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,availableFragment,AvailableFragment.TAG,true);
+                                break;
+                            case 2:
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.commitment),getString(R.string.commitment_subtitle),getString(R.string.commitment_info));
+
+                                break;
+                            case 3:
+                                //Swapping AfterAssaultFragment into the container
+                                AfterAssaultFragment afterAssaultFragment = new AfterAssaultFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,afterAssaultFragment,AfterAssaultFragment.TAG,true);
+                                break;
+                            case 4:
+                                //Swapping ConfidentialityFragment into the container
+                                ConfidentialityFragment confidentialityFragment = new ConfidentialityFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,confidentialityFragment,ConfidentialityFragment.TAG,true);
+                                break;
+                            case 5:
+                                //Swapping MythbustersFragment into the container
+                                MythbustersFragment mythbustersFragment = new MythbustersFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,mythbustersFragment,MythbustersFragment.TAG,true);
+                                break;
+                        }
+                        break;
+                    //TODO: inflate views for Sexual Assault Awareness and Policies-and-Glossary
+                }
+                mDrawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
     }
 
     public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG, boolean addToBackStack)
