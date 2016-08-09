@@ -1,6 +1,5 @@
 package com.peacecorps.pcsa.support_services;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.FAQ;
 
 /**
  * Available Services after a Sexual Assault
@@ -32,7 +31,7 @@ public class AvailableFragment extends Fragment {
 
         TextView descBoth = (TextView) rootView.findViewById(R.id.reporting_both);
         TextView descStandard = (TextView) rootView.findViewById(R.id.reporting_standard);
-        Button faq = (Button) rootView.findViewById(R.id.reporting_faq);
+        final Button faq = (Button) rootView.findViewById(R.id.reporting_faq);
 
         descBoth.setMovementMethod(new ScrollingMovementMethod());
         descStandard.setMovementMethod(new ScrollingMovementMethod());
@@ -43,9 +42,10 @@ public class AvailableFragment extends Fragment {
         faq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent faqPage = new Intent(getActivity(), FAQ.class);
-                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.reporting_faq);
-                startActivity(faqPage);
+                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.title_activity_faq);
+                Fragment faqFragment = new FAQFragment();
+                MainActivity.swapFragmentIn(getActivity(),faqFragment, FAQFragment.TAG,true);
+
             }
         });
         return rootView;
