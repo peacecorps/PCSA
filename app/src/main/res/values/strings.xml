@@ -223,4 +223,10 @@
     <string name="role_staff">Role of Staff</string>
     <string name="community_title">Role of Volunteer Community</string>
     <string name="assaulted_title">Role of Assaulted Volunteer</string>
+    <string name="sexual_assault">Sexual Assault</string>
+    <string name="sexual_assault_subtitle">Learn about Sexual Assault</string>
+    <string name="impact_subtitle">Effect of sexual assault on victim</string>
+    <string name="harassment_subtitle">Learn more about Sexual Harassment</string>
+    <string name="helping_subtitle">How to help/support a victim of Sexual Assault</string>
+    <string name="common_questions_">Common questions</string>
 </resources>

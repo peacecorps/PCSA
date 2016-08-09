@@ -14,6 +14,7 @@ import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
 import com.peacecorps.pcsa.safety_tools.SafetyToolsFragment;
+import com.peacecorps.pcsa.sexual_assault_awareness.MainFragment;
 import com.peacecorps.pcsa.support_services.SupportServicesFragment;
 
 
@@ -36,7 +37,7 @@ public class MainActivityFragment extends Fragment {
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
         Button safetyToolsButton = (Button) rootView.findViewById(R.id.safetyToolsButton);
         Button supportServicesButton = (Button) rootView.findViewById(R.id.supportServicesButton);
-        Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
+        Button assaultAwarenessButton = (Button) rootView.findViewById(R.id.assaultAwarenessButton);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.first_aide);
 
         safetyToolsButton.setOnClickListener(new View.OnClickListener() {
@@ -66,11 +67,12 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        getHelpButton.setOnClickListener(new View.OnClickListener() {
+        assaultAwarenessButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //getHelpButton does not have any functioanlity yet.
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+                //Swapping Sexual Assault MainScreen into the fragment container dynamically
+                Fragment assaultAwarenessFragment = new MainFragment();
+                MainActivity.swapFragmentIn(getActivity(),assaultAwarenessFragment,MainFragment.TAG,true);
             }
         });
 
