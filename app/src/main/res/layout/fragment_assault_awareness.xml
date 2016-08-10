@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:background="@color/background_app"
+    tools:context="com.peacecorps.pcsa.support_services.MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/primary_text_default_material_dark"
+            android:textSize="@dimen/sub_title_font"
+            android:textStyle="bold"
+            android:text="@string/sexual_assault_subtitle"
+            />
+
+        <Button
+            android:id="@+id/wasButton"
+            style="@style/NavigateButton"
+            android:text="@string/was_assault"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+        <Button
+            android:id="@+id/commonButton"
+            style="@style/NavigateButton"
+            android:textSize="18sp"
+            android:text="@string/common_questions"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+        <Button
+            android:id="@+id/impactButton"
+            style="@style/NavigateButton"
+            android:textSize="18sp"
+            android:text="@string/impact"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+        <Button
+            android:id="@+id/harassmentButton"
+            style="@style/NavigateButton"
+            android:textSize="18sp"
+            android:text="@string/harassment"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+        <Button
+            android:id="@+id/helpingButton"
+            style="@style/NavigateButton"
+            android:text="@string/helping_others"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+
+    </LinearLayout>
+
+</ScrollView>

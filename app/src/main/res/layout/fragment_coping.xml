@@ -18,7 +18,6 @@
         android:gravity="center"
         android:id="@+id/subtitle"
         android:textStyle="bold"
-        android:id="@+id/subtitle"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
         android:text="@string/coping_subtitle"

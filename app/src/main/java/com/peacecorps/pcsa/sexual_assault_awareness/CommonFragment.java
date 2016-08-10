@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.FAQArrayAdapter;
+import com.peacecorps.pcsa.support_services.FAQArrayAdapter;
 
 /*
  * Sexual Assault Common Questions
