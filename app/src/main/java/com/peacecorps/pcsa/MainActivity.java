@@ -2,7 +2,9 @@ package com.peacecorps.pcsa;
 
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -20,18 +22,26 @@ import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
+import com.peacecorps.pcsa.policies_glossary.FurtherResourcesFragment;
+import com.peacecorps.pcsa.policies_glossary.GlossaryFragment;
 import com.peacecorps.pcsa.safety_tools.BystanderInterventionFragment;
 import com.peacecorps.pcsa.safety_tools.CopingFragment;
 import com.peacecorps.pcsa.safety_tools.RadarFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanActivity;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsFragment;
 import com.peacecorps.pcsa.safety_tools.TacticsFragment;
+import com.peacecorps.pcsa.sexual_assault_awareness.CommonFragment;
+import com.peacecorps.pcsa.sexual_assault_awareness.HarassmentFragment;
+import com.peacecorps.pcsa.sexual_assault_awareness.HelpingFragment;
+import com.peacecorps.pcsa.sexual_assault_awareness.WasFragment;
 import com.peacecorps.pcsa.support_services.AfterAssaultFragment;
 import com.peacecorps.pcsa.support_services.AvailableFragment;
 import com.peacecorps.pcsa.support_services.ConfidentialityFragment;
 import com.peacecorps.pcsa.support_services.MythbustersFragment;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -43,10 +53,12 @@ public class MainActivity extends AppCompatActivity {
     private NavDrawerListAdapter listAdapter;
     private ExpandableListView expListView;
     private List<String> listDataHeader;
+    public static boolean refreshList= false;
     private HashMap<String, List<String>> listDataChild;
     private static final String TAG = MainActivity.class.getSimpleName();
     public static String FRAGMENT_TAG = MainActivityFragment.TAG;
     private FragmentManager fragmentManager = getSupportFragmentManager();
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             Fragment mainActivityFragment = new MainActivityFragment();
             swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG,false);
         }
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -158,7 +171,6 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case 2:
                                 SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.commitment),getString(R.string.commitment_subtitle),getString(R.string.commitment_info));
-
                                 break;
                             case 3:
                                 //Swapping AfterAssaultFragment into the container
@@ -177,7 +189,47 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                         }
                         break;
-                    //TODO: inflate views for Sexual Assault Awareness and Policies-and-Glossary
+                    case 4:
+                        switch (childPosition)
+                        {
+                            case 0:
+                                Fragment wasFragment = new WasFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,wasFragment,WasFragment.TAG,true);
+                                break;
+                            case 1:
+                                Fragment commonFragment = new CommonFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,commonFragment,CommonFragment.TAG,true);
+                                break;
+                            case 2:
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.impact),
+                                        getString(R.string.impact_subtitle),getString(R.string.impact_sexual_assault));                                break;
+                            case 3:
+                                Fragment harassmentFragment = new HarassmentFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,harassmentFragment,HarassmentFragment.TAG,true);
+                                break;
+                            case 4:
+                                Fragment helpingButton = new HelpingFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,helpingButton,HelpingFragment.TAG,true);
+                                break;
+                        }
+                        break;
+                    case 5:
+                        switch (childPosition)
+                        {
+                            case 0:
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.policies_title),getString(R.string.subtitle_policies)
+                                        ,getString(R.string.policies_all));
+                                break;
+                            case 1:
+                                GlossaryFragment glossaryFragment = new GlossaryFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,glossaryFragment,GlossaryFragment.TAG,true);
+                                break;
+                            case 2:
+                                FurtherResourcesFragment furtherResourcesFragment = new FurtherResourcesFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this,furtherResourcesFragment,FurtherResourcesFragment.TAG,true);
+                                break;
+                        }
+                        break;
                 }
                 mDrawer.closeDrawer(GravityCompat.START);
                 return true;
@@ -213,48 +265,31 @@ public class MainActivity extends AppCompatActivity {
      */
     private void prepareListData() {
 
-        listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
-        listDataHeader.add(getString(R.string.get_help));
-        listDataHeader.add(getString(R.string.circle_title));
-        listDataHeader.add(getString(R.string.safety_tools));
-        listDataHeader.add(getString(R.string.support_services));
-        listDataHeader.add(getString(R.string.sexual_assault_awareness));
-        listDataHeader.add(getString(R.string.policies_glossary));
-        listDataHeader.add(getString(R.string.settings));
-        listDataHeader.add(getString(R.string.user_login));
+        String[] headers = new String[]{getString(R.string.get_help),getString(R.string.circle_title),getString(R.string.safety_tools),
+                getString(R.string.support_services),getString(R.string.sexual_assault_awareness),getString(R.string.policies_glossary),
+                getString(R.string.settings),getString(R.string.user_login) + " " + sharedPreferences.getString(getString(R.string.key_name),"")};
+        listDataHeader = Arrays.asList(headers);
 
         List<String> getHelpNow = new ArrayList<>();
         List<String> circleOfTrust = new ArrayList<>();
-        List<String> safetyTools = new ArrayList<String>();
         List<String> settings = new ArrayList<String>();
         List<String> userLogin = new ArrayList<String>();
-        safetyTools.add(getString(R.string.radar));
-        safetyTools.add(getString(R.string.unwanted_attention));
-        safetyTools.add(getString(R.string.commonalities));
-        safetyTools.add(getString(R.string.bystander_intervention));
-        safetyTools.add(getString(R.string.safety_plan_basics));
-        safetyTools.add(getString(R.string.safety_plan_title));
 
-        List<String> supportServices = new ArrayList<String>();
-        supportServices.add(getString(R.string.benefits));
-        supportServices.add(getString(R.string.available_services));
-        supportServices.add(getString(R.string.commitment));
-        supportServices.add(getString(R.string.after_assault));
-        supportServices.add(getString(R.string.title_activity_confidentiality));
-        supportServices.add(getString(R.string.mythbusters));
+        String[] safety = new String[]{getString(R.string.radar),getString(R.string.unwanted_attention),getString(R.string.commonalities),
+                getString(R.string.bystander_intervention),getString(R.string.safety_plan_basics),getString(R.string.safety_plan_title)};
+        List<String> safetyTools = Arrays.asList(safety);
 
-        List<String> sexualAssaultAwareness = new ArrayList<String>();
-        sexualAssaultAwareness.add(getString(R.string.was_assault));
-        sexualAssaultAwareness.add(getString(R.string.common_questions));
-        sexualAssaultAwareness.add(getString(R.string.impact));
-        sexualAssaultAwareness.add(getString(R.string.harassment));
-        sexualAssaultAwareness.add(getString(R.string.helping_others));
+        String[] support = new String[]{getString(R.string.benefits),getString(R.string.available_services),getString(R.string.commitment),
+                getString(R.string.after_assault),getString(R.string.title_activity_confidentiality),getString(R.string.mythbusters)};
+        List<String> supportServices = Arrays.asList(support);
 
-        List<String> policiesGlossary = new ArrayList<String>();
-        policiesGlossary.add(getString(R.string.summary_sheet));
-        policiesGlossary.add(getString(R.string.glossary));
-        policiesGlossary.add(getString(R.string.further_resources));
+        String[] assault = new String[]{getString(R.string.was_assault),getString(R.string.common_questions),getString(R.string.impact),
+                getString(R.string.harassment),getString(R.string.helping_others)};
+        List<String> sexualAssaultAwareness = Arrays.asList(assault);
+
+        String[] policy = new String[]{getString(R.string.summary_sheet),getString(R.string.glossary),getString(R.string.further_resources)};
+        List<String> policiesGlossary = Arrays.asList(policy);
 
         listDataChild.put(listDataHeader.get(0), getHelpNow);
         listDataChild.put(listDataHeader.get(1), circleOfTrust);
@@ -291,6 +326,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         registerReceiver(CircleOfTrustFragment.sentReceiver, new IntentFilter(CircleOfTrustFragment.SENT));
+        if(refreshList)
+        {
+            refreshList = false;
+            prepareListData();
+            listAdapter = new NavDrawerListAdapter(this, listDataHeader, listDataChild);
+            expListView.setAdapter(listAdapter);
+        }
     }
 
     @Override

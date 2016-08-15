@@ -77,7 +77,9 @@ public class UserSettingsActivity extends AppCompatActivity {
             {
                 Preference preference = findPreference(key);
                 preference.setSummary(sharedPreferences.getString(key,""));
+                MainActivity.refreshList = true;
             }
+
         }
 
         @Override

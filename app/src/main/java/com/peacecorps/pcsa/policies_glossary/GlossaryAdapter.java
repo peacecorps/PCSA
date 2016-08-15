@@ -26,22 +26,22 @@ import java.util.Map;
 public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private List<String> dataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<String>> dataChild;
     private ExpandableListView listView;
 
     public GlossaryAdapter(Context context, List<String> listDataHeader,
                            HashMap<String, List<String>> listChildData, ExpandableListView expandableListView) {
         this._context = context;
-        this._listDataHeader = listDataHeader;
-        this._listDataChild = listChildData;
+        this.dataHeader = listDataHeader;
+        this.dataChild = listChildData;
         this.listView = expandableListView;
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .get(childPosition);
     }
 
@@ -71,18 +71,18 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .size();
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
+        return this.dataHeader.get(groupPosition);
     }
 
     @Override
     public int getGroupCount() {
-        return this._listDataHeader.size();
+        return this.dataHeader.size();
     }
 
     @Override
@@ -120,8 +120,8 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     public void filter(String textEntered)
     {
-        prepareListData(_context,_listDataHeader,_listDataChild);
-        Iterator listIt = _listDataHeader.iterator();
+        prepareListData(_context, dataHeader, dataChild);
+        Iterator listIt = dataHeader.iterator();
         while (listIt.hasNext())
         {
             String next = (String) listIt.next();
@@ -130,9 +130,9 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
             }
         }
 
-        for(Iterator<Map.Entry<String, List<String>>> it = _listDataChild.entrySet().iterator(); it.hasNext(); ) {
+        for(Iterator<Map.Entry<String, List<String>>> it = dataChild.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<String, List<String>> entry = it.next();
-            if(!_listDataHeader.contains(entry.getKey())) {
+            if(!dataHeader.contains(entry.getKey())) {
                 it.remove();
             }
         }
@@ -143,7 +143,6 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
     {
         listDataChild.clear();
         listDataHeader.clear();
-
         listDataHeader.add(context.getString(R.string.aggravated_sexual_assault));
         listDataHeader.add(context.getString(R.string.assailant));
         listDataHeader.add(context.getString(R.string.burglary));
