@@ -85,7 +85,6 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getGroupCount() {
-        Log.e("LOL", String.valueOf(this.dataHeader.size()));
         return this.dataHeader.size();
     }
 
@@ -149,9 +148,7 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         listDataHeader.clear();
         for(int i =0; i<23;i++)
             listDataHeader.add("");
-
         Collections.copy(listDataHeader,Arrays.asList(context.getResources().getStringArray(R.array.dataheaders)));
-
         // Adding child data
         List<String> assault = new ArrayList<String>();
         assault.add(context.getString(R.string.asexual_assault));
@@ -246,7 +243,5 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         listDataChild.put(listDataHeader.get(20), stalk);
         listDataChild.put(listDataHeader.get(21), theft);
         listDataChild.put(listDataHeader.get(22), vulnerability);
-
-        Log.e("prepareListData", String.valueOf(listDataHeader.size()));
     }
 }
