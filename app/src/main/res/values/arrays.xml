@@ -11,4 +11,73 @@
         <item>Syria</item>
         <item>Tunisia</item>
     </string-array>
+
+    <string-array name="headers">
+        <item>@string/get_help</item>
+        <item>@string/circle_title</item>
+        <item>@string/safety_tools</item>
+        <item>@string/support_services</item>
+        <item>@string/sexual_assault_awareness</item>
+        <item>@string/policies_glossary</item>
+        <item>@string/settings</item>
+        <item>@string/user_login</item>
+    </string-array>
+
+    <string-array name="safety">
+        <item>@string/radar</item>
+        <item>@string/unwanted_attention</item>
+        <item>@string/commonalities</item>
+        <item>@string/bystander_intervention</item>
+        <item>@string/safety_plan_basics</item>
+        <item>@string/safety_plan_title</item>
+    </string-array>
+
+    <string-array name="support">
+        <item>@string/benefits</item>
+        <item>@string/available_services</item>
+        <item>@string/commitment</item>
+        <item>@string/after_assault</item>
+        <item>@string/title_activity_confidentiality</item>
+        <item>@string/mythbusters</item>
+    </string-array>
+
+    <string-array name="assault">
+        <item>@string/was_assault</item>
+        <item>@string/common_questions</item>
+        <item>@string/impact</item>
+        <item>@string/harassment</item>
+        <item>@string/helping_others</item>
+    </string-array>
+
+    <string-array name="policy">
+        <item>@string/summary_sheet</item>
+        <item>@string/glossary</item>
+        <item>@string/further_resources</item>
+    </string-array>
+
+    <string-array name="dataheaders">
+        <item>@string/aggravated_sexual_assault</item>
+        <item>@string/assailant</item>
+        <item>@string/burglary</item>
+        <item>@string/intervention</item>
+        <item>@string/phenomenon</item>
+        <item>@string/cyber</item>
+        <item>@string/danger</item>
+        <item>@string/mitigate</item>
+        <item>@string/pii</item>
+        <item>@string/rape</item>
+        <item>@string/risk</item>
+        <item>@string/rob</item>
+        <item>@string/safe</item>
+        <item>@string/security</item>
+        <item>@string/sexual_assault</item>
+        <item>@string/exploit</item>
+        <item>@string/harass</item>
+        <item>@string/misconduct</item>
+        <item>@string/predator</item>
+        <item>@string/threat</item>
+        <item>@string/stalk</item>
+        <item>@string/theft</item>
+        <item>@string/vulnerability</item>
+    </string-array>
 </resources>

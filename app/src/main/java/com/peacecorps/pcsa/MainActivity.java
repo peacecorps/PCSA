@@ -43,6 +43,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -266,30 +267,19 @@ public class MainActivity extends AppCompatActivity {
     private void prepareListData() {
 
         listDataChild = new HashMap<String, List<String>>();
-        String[] headers = new String[]{getString(R.string.get_help),getString(R.string.circle_title),getString(R.string.safety_tools),
-                getString(R.string.support_services),getString(R.string.sexual_assault_awareness),getString(R.string.policies_glossary),
-                getString(R.string.settings),getString(R.string.user_login) + " " + sharedPreferences.getString(getString(R.string.key_name),"")};
-        listDataHeader = Arrays.asList(headers);
+        listDataHeader = new LinkedList<>(Arrays.asList(getResources().getStringArray(R.array.headers)));
+        String lastElement = listDataHeader.get(listDataHeader.size()-1) + " " + sharedPreferences.getString(getString(R.string.key_name),"");
+        listDataHeader.remove(listDataHeader.size()-1);
+        listDataHeader.add(lastElement);
 
         List<String> getHelpNow = new ArrayList<>();
         List<String> circleOfTrust = new ArrayList<>();
         List<String> settings = new ArrayList<String>();
         List<String> userLogin = new ArrayList<String>();
-
-        String[] safety = new String[]{getString(R.string.radar),getString(R.string.unwanted_attention),getString(R.string.commonalities),
-                getString(R.string.bystander_intervention),getString(R.string.safety_plan_basics),getString(R.string.safety_plan_title)};
-        List<String> safetyTools = Arrays.asList(safety);
-
-        String[] support = new String[]{getString(R.string.benefits),getString(R.string.available_services),getString(R.string.commitment),
-                getString(R.string.after_assault),getString(R.string.title_activity_confidentiality),getString(R.string.mythbusters)};
-        List<String> supportServices = Arrays.asList(support);
-
-        String[] assault = new String[]{getString(R.string.was_assault),getString(R.string.common_questions),getString(R.string.impact),
-                getString(R.string.harassment),getString(R.string.helping_others)};
-        List<String> sexualAssaultAwareness = Arrays.asList(assault);
-
-        String[] policy = new String[]{getString(R.string.summary_sheet),getString(R.string.glossary),getString(R.string.further_resources)};
-        List<String> policiesGlossary = Arrays.asList(policy);
+        List<String> safetyTools = Arrays.asList(getResources().getStringArray(R.array.safety));
+        List<String> supportServices = Arrays.asList(getResources().getStringArray(R.array.support));
+        List<String> sexualAssaultAwareness = Arrays.asList(getResources().getStringArray(R.array.assault));
+        List<String> policiesGlossary = Arrays.asList(getResources().getStringArray(R.array.policy));
 
         listDataChild.put(listDataHeader.get(0), getHelpNow);
         listDataChild.put(listDataHeader.get(1), circleOfTrust);
