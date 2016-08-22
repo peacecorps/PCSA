@@ -694,6 +694,9 @@ assist you with your legal options. Peace Corps will be with you every step of t
     <string name="burglary_info">
         Unlawful or forcible entry of a residence. This incident type usually, but not always, involves theft. The illegal entry may be forcible,
         such as breaking a window or slashing a screen, or may be without force by entering through an unlocked door or an open window. As long as the person entering has no legal right to be present in the residence, a burglary has occurred. Also includes illegal entry of a hotel room.
+        &lt;b>&lt;br/>&lt;br/>0What is a burglary?&lt;/b> &lt;br/>
+A burglary occurs anytime there is unlawful or unauthorized entry or attempted into your house, room or hotel room. Unlawful entry does not have to involve force or someone breaking in; unlawful entry occurs anytime someone who does not have permission enters your house or hotel room. Unlawful entry can occur through a window or door that is not locked or through a window or door that has been left open.
+
     </string>
 
     <string name="intervention_info">
@@ -796,7 +799,7 @@ assist you with your legal options. Peace Corps will be with you every step of t
     <string name="theft_info">
         The taking away of or attempt to take away property or cash without involving force or illegal entry. Includes pick pocketing, stolen purses,
     and theft from a residence that does not involve an illegal entry.
-        &lt;b>What is a theft? &lt;/b> &lt;br/>&lt;br/>
+        &lt;b>&lt;br/>&lt;br/>What is a theft? &lt;/b> &lt;br/>
     A theft occurs when property is stolen without a direct confrontation with the suspect and when there has not been illegal entry
     into the residence (including hotel room). For example, if you give someone permission to enter your house and that person steals your property, it is a theft.
     It is also a theft if your purse, cell phone, backpack or similar property is “snatched” away by a suspect or are not assaulted in any other way
