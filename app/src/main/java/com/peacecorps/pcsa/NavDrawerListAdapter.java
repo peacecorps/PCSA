@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,34 +19,34 @@ import android.widget.TextView;
 public class NavDrawerListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> _listDataHeader;
-    private HashMap<String, List<String>> _listDataChild;
+    private List<String> dataHeader;
+    private HashMap<String, List<String>> dataChild;
 
-    public NavDrawerListAdapter(Context _context, List<String> _listDataHeader, HashMap<String, List<String>> _listDataChild) {
+    public NavDrawerListAdapter(Context _context, List<String> dataHeader, HashMap<String, List<String>> dataChild) {
         this._context = _context;
-        this._listDataHeader = _listDataHeader;
-        this._listDataChild = _listDataChild;
+        this.dataHeader = dataHeader;
+        this.dataChild = dataChild;
     }
 
     @Override
     public int getGroupCount() {
-        return this._listDataHeader.size();
+        return this.dataHeader.size();
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .size();
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
+        return this.dataHeader.get(groupPosition);
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).get(childPosition);
+        return this.dataChild.get(this.dataHeader.get(groupPosition)).get(childPosition);
     }
 
     @Override
@@ -88,7 +87,7 @@ public class NavDrawerListAdapter extends BaseExpandableListAdapter {
             iconListHeader.setImageResource(R.drawable.ic_settings);
         else if(headerTitle.equals(_context.getString(R.string.user_login)))
             iconListHeader.setImageResource(R.drawable.ic_lock);
-        else if(headerTitle.equals(_context.getString(R.string.get_help)) || headerTitle.equals(_context.getString(R.string.circle_title)))
+        else if(headerTitle.equals(_context.getString(R.string.get_help)) || headerTitle.equals(_context.getString(R.string.circle_title)) || headerTitle.startsWith(_context.getString(R.string.user_login)))
             iconListHeader.setVisibility(View.INVISIBLE);
         else
         {

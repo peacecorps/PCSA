@@ -3,6 +3,7 @@ package com.peacecorps.pcsa.policies_glossary;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -26,22 +29,22 @@ import java.util.Map;
 public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private List<String> dataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<String>> dataChild;
     private ExpandableListView listView;
 
     public GlossaryAdapter(Context context, List<String> listDataHeader,
                            HashMap<String, List<String>> listChildData, ExpandableListView expandableListView) {
         this._context = context;
-        this._listDataHeader = listDataHeader;
-        this._listDataChild = listChildData;
+        this.dataHeader = listDataHeader;
+        this.dataChild = listChildData;
         this.listView = expandableListView;
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .get(childPosition);
     }
 
@@ -71,18 +74,18 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .size();
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
+        return this.dataHeader.get(groupPosition);
     }
 
     @Override
     public int getGroupCount() {
-        return this._listDataHeader.size();
+        return this.dataHeader.size();
     }
 
     @Override
@@ -120,8 +123,8 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     public void filter(String textEntered)
     {
-        prepareListData(_context,_listDataHeader,_listDataChild);
-        Iterator listIt = _listDataHeader.iterator();
+        prepareListData(_context, dataHeader, dataChild);
+        Iterator listIt = dataHeader.iterator();
         while (listIt.hasNext())
         {
             String next = (String) listIt.next();
@@ -130,9 +133,9 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
             }
         }
 
-        for(Iterator<Map.Entry<String, List<String>>> it = _listDataChild.entrySet().iterator(); it.hasNext(); ) {
+        for(Iterator<Map.Entry<String, List<String>>> it = dataChild.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<String, List<String>> entry = it.next();
-            if(!_listDataHeader.contains(entry.getKey())) {
+            if(!dataHeader.contains(entry.getKey())) {
                 it.remove();
             }
         }
@@ -143,31 +146,9 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
     {
         listDataChild.clear();
         listDataHeader.clear();
-
-        listDataHeader.add(context.getString(R.string.aggravated_sexual_assault));
-        listDataHeader.add(context.getString(R.string.assailant));
-        listDataHeader.add(context.getString(R.string.burglary));
-        listDataHeader.add(context.getString(R.string.intervention));
-        listDataHeader.add(context.getString(R.string.phenomenon));
-        listDataHeader.add(context.getString(R.string.cyber));
-        listDataHeader.add(context.getString(R.string.danger));
-        listDataHeader.add(context.getString(R.string.mitigate));
-        listDataHeader.add(context.getString(R.string.pii));
-        listDataHeader.add(context.getString(R.string.rape));
-        listDataHeader.add(context.getString(R.string.risk));
-        listDataHeader.add(context.getString(R.string.rob));
-        listDataHeader.add(context.getString(R.string.safe));
-        listDataHeader.add(context.getString(R.string.security));
-        listDataHeader.add(context.getString(R.string.sexual_assault));
-        listDataHeader.add(context.getString(R.string.exploit));
-        listDataHeader.add(context.getString(R.string.harass));
-        listDataHeader.add(context.getString(R.string.misconduct));
-        listDataHeader.add(context.getString(R.string.predator));
-        listDataHeader.add(context.getString(R.string.threat));
-        listDataHeader.add(context.getString(R.string.stalk));
-        listDataHeader.add(context.getString(R.string.theft));
-        listDataHeader.add(context.getString(R.string.vulnerability));
-
+        for(int i =0; i<23;i++)
+            listDataHeader.add("");
+        Collections.copy(listDataHeader,Arrays.asList(context.getResources().getStringArray(R.array.dataheaders)));
         // Adding child data
         List<String> assault = new ArrayList<String>();
         assault.add(context.getString(R.string.asexual_assault));

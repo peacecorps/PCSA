@@ -40,13 +40,9 @@
             android:fadeScrollbars="false"
             android:scrollbarStyle="insideInset" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_10"
-            android:textColor="@color/photo_border"
-            android:background="@drawable/bg_btn_rounded_rectangle"
-            android:id="@+id/knowButton" />
+        <include
+            layout="@layout/button"
+            android:id="@+id/knowButton"/>
 
     </LinearLayout>
 
