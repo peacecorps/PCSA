@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.peacecorps.pcsa" >
+    package="com.peacecorps.pcsa">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/MyMaterialTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".SplashScreenActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,75 +23,68 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.reporting.HomeScreen"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
         <activity
-            android:name="com.peacecorps.pcsa.reporting.Types"
-            android:label="@string/title_activity_types" >
-        </activity>
+            android:name=".support_services.FAQFragment"
+            android:label="@string/title_activity_faq" />
         <activity
-            android:name="com.peacecorps.pcsa.reporting.Steps"
-            android:label="@string/title_activity_steps" >
-        </activity>
+            android:name=".reporting.Confidentiality"
+            android:label="@string/title_activity_confidentiality" />
         <activity
-            android:name="com.peacecorps.pcsa.reporting.FAQ"
-            android:label="@string/title_activity_faq" >
-        </activity>
+            android:name=".reporting.Resources"
+            android:label="@string/title_activity_resources" />
         <activity
-            android:name="com.peacecorps.pcsa.reporting.Confidentiality"
-            android:label="@string/title_activity_confidentiality" >
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.reporting.Resources"
-            android:label="@string/title_activity_resources" >
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.reporting.ContactPostStaff"
-            android:label="@string/title_activity_contact_post_staff" >
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.reporting.ContactOtherStaff"
-            android:label="@string/title_activity_contact_other_staff" >
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.reporting.OtherStaffContent"
-            android:label="@string/title_activity_other_staff_content" >
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust"
-            android:label="@string/title_activity_circle_of_trust"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.peacecorps.pcsa.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.peacecorps.pcsa.circle_of_trust.Trustees"
+            android:name=".circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
-            android:parentActivityName="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust" >
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.peacecorps.pcsa.circle_of_trust.CircleOfTrust" />
+                android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.circle_of_trust.CircleIntro"
+            android:name=".circle_of_trust.CircleIntro"
             android:label="@string/title_activity_circle_intro"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.safety_resources.SafetyResources"
+            android:name=".safety_resources.SafetyResources"
             android:label="@string/title_activity_saftey_resources"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
+        </activity>
+        <activity
+            android:name=".safety_tools.SafetyPlanActivity"
+            android:label="@string/title_activity_safety_plan"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.peacecorps.pcsa.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UserSettingsActivity"
+            android:label="@string/user_settings_activity"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.peacecorps.pcsa.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".SplashScreenActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.peacecorps.pcsa.SplashScreenActivity" />
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>

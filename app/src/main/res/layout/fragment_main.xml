@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/primary_text_default_material_dark"
-            android:textSize="@dimen/title_font"
+            android:textSize="@dimen/sub_title_font"
             android:textStyle="bold"
             android:text="@string/home_title"
             />
@@ -28,27 +28,32 @@
             android:id="@+id/getButton"
             style="@style/NavigateButton"
             android:text="@string/get_help"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop"/>
         <Button
             android:id="@+id/circleButton"
             style="@style/NavigateButton"
             android:text="@string/circle"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
-            android:id="@+id/reportButton"
+            android:id="@+id/safetyToolsButton"
             style="@style/NavigateButton"
-            android:text="@string/reporting"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/safety_tools"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
-            android:id="@+id/safetyResourceButton"
+            android:id="@+id/supportServicesButton"
             style="@style/NavigateButton"
-            android:text="@string/safety"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/support_services"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
-            android:id="@+id/getHelpButton"
+            android:id="@+id/assaultAwarenessButton"
             style="@style/NavigateButton"
-            android:text="@string/helping_others"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/sexual_assault_awareness"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+        <Button
+            android:id="@+id/policiesButton"
+            style="@style/NavigateButton"
+            android:text="@string/policies_glossary"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
 
     </LinearLayout>
 
