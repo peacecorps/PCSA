@@ -206,7 +206,7 @@ public class Trustees extends AppCompatActivity {
             String phoneNumber = "";
             Set<String> allNumbers = new HashSet<>();
             int phoneIdx;
-            String contactDisplayName;
+            String contactDisplayName = null;
             try {
                 Uri result = data.getData();
                 String id = result.getLastPathSegment();
@@ -234,6 +234,8 @@ public class Trustees extends AppCompatActivity {
 
                 if (allNumbers.size() > 1) {
                     final CharSequence[] items = allNumbers.toArray(new String[allNumbers.size()]);
+                    final String contactName = contactDisplayName;
+
                     new Handler().post(new Runnable() {
                         public void run() {
 
@@ -244,7 +246,11 @@ public class Trustees extends AppCompatActivity {
                                     String selectedNumber = items[position - 1].toString();
                                     selectedNumber = selectedNumber.replace("-", "");
                                     if (noDuplicateContactNumber(selectedNumber)) {
-                                        phoneInput.setText(selectedNumber);
+                                        if (contactName == null || contactName.equals("")) {
+                                            phoneInput.setText(selectedNumber);
+                                        } else {
+                                            phoneInput.setText(contactName);
+                                        }
                                         setFocusOnNextView();
                                     } else {
                                         Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
@@ -260,7 +266,11 @@ public class Trustees extends AppCompatActivity {
                     String selectedNumber = phoneNumber;
                     selectedNumber = selectedNumber.replace("-", "");
                     if(noDuplicateContactNumber(selectedNumber)) {
-                        phoneInput.setText(selectedNumber);
+                        if (contactDisplayName == null || contactDisplayName.equals("")) {
+                            phoneInput.setText(selectedNumber);
+                        } else {
+                            phoneInput.setText(contactDisplayName);
+                        }
                         setFocusOnNextView();
                     }
                     else {
