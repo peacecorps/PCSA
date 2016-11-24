@@ -1,9 +1,9 @@
 
-# PCSA
+# FirstAide
 
 ## Introduction
 
-PCSA Android is an Android app developed in Java
+FirstAide Android is an Android app developed in Java
 
 Peace Corps is committed to providing a compassionate and supportive response to all Volunteers who have been sexually assaulted. To that end, the Peace Corps makes the following commitment to our Volunteers who are victims of sexual assault.
 
@@ -28,16 +28,16 @@ Or download the ZIP file from above
 
 1. Launch android studio
 2. Click on File, then New and then Import Project Or from the welcome screen of android studio click on Import project. (If you wish to contribute, you can directly link to GitHub)
-3. Browse to the directory where you cloned (extracted the zip) PCSA-Android App and take OK
+3. Browse to the directory where you cloned (extracted the zip) FirstAide-Android App and take OK
 4. Let Android studio import the project, sync, run and build the Gradle.
 5. If Gradle finishes to build without error run the project by clicking on the play button on the tool bar.
 6. Wait for a few seconds and the app should start on your device(android phone or emulator)
 
 ## Documentation
-Latest documentation for PCSA can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
+Latest documentation for FirstAide can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
 
 ## Contributing
-If you want to contribute to PCSA-Android, subscribe to our [systers-dev](http://systers.org/mailman/listinfo/systers-dev) mailing list and shoot an introductory email. Pick an open issue from the [issue list](https://github.com/systers/PCSA-Android/issues) taged "free", claim it in the comments, fix the issue and send us a pull request. 
+If you want to contribute to FirstAide-Android, subscribe to our [systers-dev](http://systers.org/mailman/listinfo/systers-dev) mailing list and shoot an introductory email. Pick an open issue from the [issue list](https://github.com/systers/PCSA-Android/issues) taged "free", claim it in the comments, fix the issue and send us a pull request. 
 If you find an issue yourself you can report it, a community member will get back to you and approve the issue. Then you can fix it and submit a PR. Please go through our issue list first and make sure the issues you are reporting  do not replicate the issues already reported. If you have issues on multiple pages, report them separately. Do not combine them into a single issue.
 
 ### Avoid doing the following mistakes
