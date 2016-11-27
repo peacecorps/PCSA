@@ -75,27 +75,27 @@
         people that have experienced a sexual assault. SARLs help Volunteers with issues not handled by the PCMO or SSM. For example,
         a SARL might accompany a Volunteer when traveling to an appointment with a local lawyer.
     </string>
-    
+
     <!-- Details of Other Staff to be contacted in case of crime and the contact number-->
     <string name="reporting_desc_pcsaves">
         The PC SAVES Helpline provides anonymous confidential crisis intervention, support and information to Peace Corps Volunteers
         and trainees who have been affected by sexual assault via a variety of different platforms. All options are staffed by
         trained professionals not affiliated with Peace Corps, available 24/7.  No personally identifying information will be
         collected.\n\n
-        Learn More: pcsaveshelpline.org
+        Online Chat: pcsaveshelpline.org
     </string>
     <string name="reporting_contact_pcsaves">001 408 844 4357</string>
-    
+
     <string name="reporting_desc_ova">
-        Centralized resource to Volunteers who are victims of sexual assault and violent crime regarding the services they are
-        entitled to receive, and ensuring their voices are heard and considered in all decisions affecting their service and care.\n\n
+        CVictim Advocates are available for Volunteers who are victims of crimes. They can provide information regarding available response services,
+        address questions/concerns, and ensure their voices are heard and considered in all decisions affecting service and care.\n\n
         e-mail: victimadvocate@peacecorps.gov
     </string>
     <string name="reporting_contact_ova">202 409 2701</string>
 
     <string name="reporting_desc_oig">
-        Resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
-        Independent from Peace Corps with law enforcement officers  who have the unique authorities to help seek a fair resolution and,
+        OIG is a resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
+        They are independent from Peace Corps with law enforcement officers who have the unique authorities to help seek a fair resolution and,
         in appropriate cases, to seek prosecution in the United States or host country.\n\n
         e-mail: victimadvocate@peacecorps.gov\n\n
         Learn more: peacecorps.gov/OIG
@@ -107,14 +107,28 @@
         issues of discrimination and harassment, including sexual harassment, in the recruitment/service of Volunteers/Trainees.\n\n
         email: ocrd@peacecorps.gov
     </string>
-    <string name="reporting_contact_ocrd">202 692 2139</string>
+    <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
+·Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
+·A sexual assault forensic exam (SAFE) to preserve evidence \n\n
+·Counseling from a licensed mental health professional\n\n
+·Medical evacuation\n\n
+·Accompaniment during medical evacuation\n\n
+·Safety planning\n\n
+·Explanation of your legal options\n \n
+·Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
+·Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
+    </string>
+    <string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
+·Consultation with my Country Director\n\n
+·File a report with local law enforcement\n\n
+·Request a site change\n\n
+·Request a host family change\n\n
+·File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
+·Request the Peace Corps Office of Inspector General conduct an investigation\n\n
+·Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
+    </string>
 
-    <!-- Correct locations and corresponding details should be added here-->
-    <array name="locations">
-        <item>Uganda</item>
-        <item>Syria</item>
-        <item>Tunisia</item>
-    </array>
+    <string name="reporting_contact_ocrd">202 692 2139</string>
 
     <string name="loc1_name">Uganda</string>
     <string name="loc1_pcmo">1111</string>
@@ -130,4 +144,682 @@
     <string name="loc3_pcmo">7777</string>
     <string name="loc3_ssm">8888</string>
     <string name="loc3_sarl">9999</string>
+
+    <!-- Safety Tools-->
+
+    <!-- RADAR -->
+    <string name="radar_step1">
+        &lt;b>Recognize the danger&lt;/b>&lt;br/>&lt;br/>
+        Be aware of what is going on around you – be on the lookout for suspicious people and for situations that could pose a danger.&lt;br/>&lt;br/>
+        Be aware of how others perceive you – are your actions or dress inadvertently attracting unwanted attention?  Are you wearing jewelry, using a camera, working on a laptop, or flashing money that might grab the attention of a criminal?&lt;br/>&lt;br/>
+        Being able to recognize dangers lets us begin to figure out ways to reduce the risks. This is where it’s important to trust your instincts. If you have a bad feeling about something it’s a warning sign. Don’t dismiss it – listen to what that voice in the back of your head is saying or that uneasy feeling in your stomach is telling you.
+        For example, when you walk in to a crowded bus terminal, you recognize that there is a risk of being pickpocketed.
+    </string>
+    <string name="radar_step2">
+        &lt;b>Assess your options&lt;/b> &lt;br/>&lt;br/>
+        Now that you have recognized a potentially dangerous situation, what can you do in order to reduce the risk you face? In most situations, you will have choices to make. Identify as many options as you can.  For example, you can mitigate the risk
+        of going out at night by traveling in a group, by using a trusted taxi or even by choosing to return home at an earlier hour.
+    </string>
+    <string name="radar_step3">
+        &lt;b>Decide what’s best for you&lt;/b> &lt;br/>&lt;br/>
+        After figuring out what options you have, run the different scenarios in your head – say ‘What if’ – and decide which option is the best. You could try to defuse the situation by remaining calm and use good communication skills to keep the situation from escalating.  Maybe try an escape option
+        where you run towards safety, not just away from danger.  As a last resort, try a verbal, psychological, or physical defense tactic.&lt;br/>&lt;br/>
+        Sometimes your best option might be a bit unconventional. If it’s the best option to keep you safe, then it’s a good option.
+    </string>
+    <string name="radar_step4">
+        &lt;b>Act when the time is right&lt;/b> &lt;br/>&lt;br/>
+        After you decide on your best course of action, decide when to act. Sometimes you’ll need to act right away. Other times you can wait until the danger gets closer – but don’t wait until it gets too close! &lt;br/>&lt;br/>
+        Draw your own imaginary line – set your own personal tripwire. Once the danger crosses that line – whatever you decided for yourself – that’s when you act.
+    </string>
+    <string name="radar_step5">
+        &lt;b>Reassess as the situation changes&lt;/b> &lt;br/>&lt;br/>
+        And because no situation is static, you must constantly reassess your options as the conditions and circumstances change. If you encounter new risks or if you run out of options, start the cycle again.  &lt;br/>&lt;br/>
+    </string>
+
+    <!-- CopingFragment -->
+    <string name="coping_title1">Walk purposefully</string>
+    <string name="coping_title2">Look assertive</string>
+    <string name="coping_title3">Nod (to acknowledge) and keep on walking</string>
+    <string name="coping_title4">Dress appropriately</string>
+    <string name="coping_title5">Greetings</string>
+    <string name="coping_title6">Pretend that you heard something else</string>
+    <string name="coping_title7">Humor</string>
+    <string name="coping_title8">Be polite but firm</string>
+    <string name="coping_title9">Maintain your composure</string>
+    <string name="coping_title10">Never say “next time.”</string>
+
+    <string name="coping_subtitle1">Always walk with confidence and purpose.</string>
+    <string name="coping_subtitle2">Hold your head high, shoulders back and present yourself as a professional demanding respect.</string>
+    <string name="coping_subtitle3">Simply recognizing the person can help ward off unwanted attention. Many times an inappropriate comment is an effort to get attention.</string>
+    <string name="coping_subtitle4">Keep in mind what is culturally appropriate.</string>
+    <string name="coping_subtitle5">Sometimes a polite “Good Morning” can thwart a potential unwanted comment, but at other times it can escalate the situation.  If this strategy does not work, try a different one.</string>
+    <string name="coping_subtitle6">“I agree, it HAS been really great weather recently. Have a nice day, bye!”</string>
+    <string name="coping_subtitle7">Use humor to lighten the moment and solicit another response.  For example, if you are told that you would make a good lover, reply that your spouse is sure to agree!  Keep walking.  This may not work with a persistent individual, so please keep trying different strategies when needed.</string>
+    <string name="coping_subtitle8">It is quite normal to stand your ground. “I am offended by your comment; please do not address me in that manner.”</string>
+    <string name="coping_subtitle9">Try to remain calm even if you feel upset. The converse is also true; try not to show hostility as this may provoke a confrontation. It is best to remove yourself from a situation if you feel that you are losing control.</string>
+    <string name="coping_subtitle10">Make no promises for another time, because you can be sure that the next time they see you, they will remind you of that promise.</string>
+
+    <!-- TacticsFragment -->
+    <string name="tactics_1">
+        &lt;b>Characteristics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often plan sexual assaults&lt;/b>&lt;br/>
+            ·\t\t\tSexual assault is not an accident.  Sexual predators know what they want to do, even if they have not already identified a specific target.  Most of them have a plan in mind for how they will select and control someone, or they will seek out an area where a potential victim might be isolated and unable to get help. When we say planned to some extent it may not mean days or weeks in advance but also planned in the particular moment.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often watch for vulnerabilities and opportunities&lt;/b>&lt;br/>
+            ·\t\t\tSexual predators look for cues to indicate they can dominate and control a potential victim. They look for signs indicating that someone would be unlikely or unable to resist.  For instance, people who are unaware of their surroundings, alone or lost; someone who is intoxicated or in some way incapacitated.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often test the boundaries of potential victims&lt;/b>&lt;br/>
+            ·\t\t\tTesting boundaries may involve inappropriate comments, unwanted touching or invading personal space. It is a way of measuring the amount of resistance a potential victim might offer. A person who offers little or no resistance to these advances might be seen as a suitable target.&lt;br/>&lt;br/>
+    </string>
+
+    <string name="tactics_2">
+        &lt;b>Tactics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tAttempt to isolate their potential victim&lt;/b>&lt;br/>
+            \t\t\t They may target someone who is already alone. For example, walking alone, or they may try to get their target alone by offering a ride in their car.&lt;br/> &lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tPersuasion and confidence&lt;/b>&lt;br/>
+            \t\t\tThis is the “Smooth Talker” who puts you at ease.  They make you feel comfortable and relaxed so you are not aware of their true intent.  They may try to persuade you to do something you feel uncomfortable about.  They might promise that they won’t try anything with you or reassure you by saying “You can trust me.”&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tPressure and guilt&lt;/b>&lt;br/>
+            \t\t\tSexual predators may try to coerce you by pressuring you to go farther in a relationship than you are ready or willing to go.  They may try to make you feel guilty if you do not give in to their advances. They might say “You are offending me culturally” or something similar to make Volunteers feel guilty.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tThreats and intimidation&lt;/b>&lt;br/>
+            \t\t\tSometimes the sexual predator threatens to physically harm the Volunteer or someone they care about.  They might also threaten to blackmail the Volunteer unless they comply.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tForce and violence&lt;/b>&lt;br/>
+            \t\t\tForce and Violence involves a direct physical attack to overpower a Volunteer.  It is what we frequently see on TV and in movies…like when the assailant jumps out of the bushes with a knife and attacks an unsuspecting jogger.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&lt;b>\t\t\tDrugs, including alcohol&lt;/b>&lt;br/>
+    </string>
+
+    <!-- ByStanderFragment -->
+
+    <string name="bystander_verbal_victim">
+        &lt;b>•&lt;/b>\t\t\tDiffuse the situation by starting a new conversation&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tSay a friend is looking for the individual and leave together to find them&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTell the individual there is a previous engagement with others and they need to leave with you&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“I need your advice…” and pull them away from the immediate space&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you need help?” &lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“Let’s walk home together”&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you want me to call someone for you?” &lt;br/>
+        &lt;b>•&lt;/b>\t\t\t“What can I do to help you?”&lt;br/>
+        &lt;b>•&lt;/b>\t\t\t “Do you want me to talk to so-and-so for you?”
+    </string>
+
+    <string name="bystander_verbal_offender">
+    &lt;b>•&lt;/b>\t\t\tIntroduce yourself- let the predator know the individual isn’t alone &lt;br/>
+    &lt;b>•&lt;/b>\t\t\tEngage with the individual directly by starting a completely different conversation; example- sports, directions&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tUse humor to diffuse the situation&lt;br/>
+    &lt;b>•&lt;/b>\t\t\t“How would you feel if someone did that/said that to your sister/mother?”&lt;br/>
+    &lt;b>•&lt;/b>\t\t\t“I don’t like what you just said.”
+    </string>
+
+    <string name="bystander_non_verbal">
+    &lt;b>•&lt;/b>\t\t\tGet in line of vision and catch their eye&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tTake a group photo to document what the potential offender looks like&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tAsk/Assess situation with a thumbs up/down&lt;/b>&lt;br/>&lt;b>•&lt;/b>\t\t\tWave to your friend to indicate you are leaving to get them to come with you
+    &lt;b>•&lt;/b>\t\t\tText or call the Volunteer&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tUse a distraction to get the predator’s attention&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tStrike up a conversation with someone nearby to physically get closer&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tWalk towards the two, alone or with others, and engage in conversation&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tMake a show of picking up the phone to indicate you are alerting others&lt;br/>
+    &lt;b>•&lt;/b>\t\t\tPhysically pull the individual away
+    </string>
+
+    <!-- Safety Plan Basics -->
+
+    <string name="safety_plan_basics_1">
+        &lt;b>•&lt;/b>\t\t\tExploring on-going risks and concerns associated with the incident&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAssessing strategies on how to respond when a perceived threat is present&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tMaintaining your safety and well-being
+    </string>
+
+    <string name="safety_plan_basics_2">
+        &lt;b>•&lt;/b>\t\t\tTo assist you in identifying strategies for mitigating on-going risks&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo outline possible responses and resources in instances of potential future harm&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo strengthen the partnership between you and staff in promoting your on-going safety and security and well-being&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTo empower you to reclaim a sense of safety and security by addressing safety and security needs and concerns
+    </string>
+
+    <string name="safety_plan_basics_3">
+    &lt;b>•&lt;/b>\t\t\tGuarantee your future safety&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTake the place of working with a mental health specialist to identify ways to cope with emotions and stressful situations which may arise in the aftermath of an incident.  If you would like such assistance, counseling can be arranged through the PCMO&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_basics_4">
+    &lt;b>•&lt;/b>\t\t\tIf you choose to work with staff, be honest with sharing any concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify strategies that can be taken to reduce any on-going safety and security concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify strategies or actions post may take to support you in these efforts&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf you want post staff perspective and help, simply ask&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf you are feeling overwhelmed with fear or anxiety, have a conversation with the PCMO or a counselor to talk it out&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tSafety planning is an on-going process.  New concerns may arise that require adjusting it.  Modify your safety plan to accommodate any changes.
+   </string>
+
+    <!-- Safety Plan -->
+
+    <string name="safety_plan_1_concerns">
+        &lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tHave you anticipated where and in which ways you might come into contact with the perpetrator and perpetrator’s friends/family?&lt;br/>&lt;br/>
+        \t\t\tIf you were to come into contact with the perpetrator and perpetrator’s family/friends, what specific things could you do that might help you feel safe in that situation?&lt;br/>&lt;br/>
+        \t\t\tHave you thought about making a plan in case of emergencies of who you could call, where you could go, and how you could get there? How can Peace Corps assist you in developing this plan?
+    </string>
+
+    <string name="safety_plan_1_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf requested, establish contacts between PC and counterpart, neighbors, local police and community leaders so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave your important documents ready in case of an emergency
+    </string>
+
+    <string name="safety_plan_2_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you suspect the perpetrator or the perpetrator’s family/friends know where you live? If so, do you believe the perpetrator may have access to your housing?&lt;br/>&lt;br/>
+        \t\t\tDo you feel safe inside your home? What can Peace Corps do to help you feel safe inside your home (e.g., working locks on door/windows, etc.)?&lt;br/>&lt;br/>
+        \t\t\tIf you live with a host family or on a family compound, does anyone know about the incident? If not, would they be supportive if they were to learn of the incident?&lt;br/>&lt;br/>
+        \t\t\tIf the perpetrator or the perpetrator’s family/friends were to show up at your home are there people you can turn to for assistance?&lt;br/>&lt;br/>
+        \t\t\tIn the unlikely event of a non-medical emergency, are there local friends, community members, or other Volunteers nearby who you can stay with or contact for assistance? If not, can Peace Corps help you identify individuals and establish those contacts? &lt;br/>&lt;br/>
+        \t\t\tHow could you contact these individuals?&lt;br/>&lt;br/>
+        \t\t\tCan you think of other resources or things you can do to feel safer where you live? What can Peace Corps do to assist you with this?
+    </string>
+
+    <string name="safety_plan_2_action">
+        &lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAsk staff to conduct a safety inspection of your home, if necessary&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure needed security upgrades are completed&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure that you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTake steps to enhance privacy (use locks, keep curtains closed, etc)
+    </string>
+
+    <string name="safety_plan_4_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know your cell phone number? Your email address? Have you thought about what you would do if the perpetrator or perpetrator’s friends/family attempts to contact you or posts things about you online?  What can Peace Corps do to help you?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know any of your passwords? If so, have you considered changing your passwords?&lt;br/>&lt;br/>
+        \t\t\tDo you have any social media accounts (e.g., Facebook, Google, Twitter, Linked In, blogs)? Are you “friends” with the perpetrator or perpetrator’s friends/family? If so, do you know how to block the perpetrator or perpetrator’s family or friends?&lt;br/>&lt;br/>
+        \t\t\tAre you concerned that the perpetrator or perpetrator’s family/friends will contact you on the Internet?  If they do, have you thought about what you will do?
+    </string>
+
+    <string name="safety_plan_4_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tChange your SIM card or cellphone&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tChange user names and/or passwords for mail and other social media&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTry to avoid using location services or posting information that may divulge your location&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns or if the offender attempts to contact you.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tProgram your phone with important emergency numbers&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKeep phone charged and have enough minutes in case of an emergency.
+    </string>
+
+    <string name="safety_plan_3_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator or perpetrator’s family/friends know where you work?&lt;br/>&lt;br/>
+        \t\t\tDoes anyone else at work know about the incident?&lt;br/>&lt;br/>
+        \t\t\tIf your counterpart/supervisor learns about the incident, do you think it would make you more or less safe?&lt;br/>&lt;br/>
+        \t\t\tIf you work with the perpetrator, are there steps you can take to avoid interacting with the perpetrator?&lt;br/>&lt;br/>
+        \t\t\tIf the perpetrator shows up at your work are there people you can turn to for support?&lt;br/>&lt;br/>
+        \t\t\tIs there anything that the Peace Corps can do to help you feel safe at work?&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_3_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tMake sure PC has established contact with your counterpart so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIdentify an emergency point of contact in the workplace&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tImmediately notify PC if the offender comes to your work&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tIf working in isolated areas seek accompaniment by a coworker or community member if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAvoid staying late or alone in the office or workplace&lt;br/>&lt;br/>
+    </string>
+
+    <string name="safety_plan_5_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you anticipate that you will see the perpetrator when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        \t\t\tDo you see the perpetrator’s family/friends when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        \t\t\tIf needed, is there someone you trust who can accompany you to the places you need to go?&lt;br/>&lt;br/>
+        \t\t\tIf you were approached by the perpetrator or perpetrator’s friends/family in a public place, do you know where you could go to be safe?&lt;br/>&lt;br/>
+        \t\t\tDo you have any concerns about rumors related to the incident that are mentioned by community members or other Volunteers? How might you respond to these? How might these rumors impact you? How can Peace Corps assist you in dealing with rumors?&lt;br/>&lt;br/>
+        \t\t\tAre there specific things you or Peace Corps can do that might help you feel safer in your community?
+    </string>
+
+    <string name="safety_plan_5_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEstablish regular check-in plan with PCMO and other PC staff&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tFind out what support services are available to you, including Volunteer Support Network and PCVLs&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react (over-reacting is okay)&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tBe aware of unhealthy coping mechanisms such as self-medicating, isolating oneself, hurting oneself, etc. and seek help from PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAsk Peace Corps for help before stress becomes overwhelming.
+    </string>
+
+    <string name="safety_plan_6_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
+        \t\t\tDo you have any safety concerns with any modes of transportation related to the incident?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator know your transportation routes? If yes, can you change the routes you take to work, home, shopping?&lt;br/>&lt;br/>
+        \t\t\tDoes the perpetrator or the perpetrator’s friends/family use the same transportation you do? If so, are there other ways you could get where you need to go? Is their opportunity for carpooling with someone else?&lt;br/>&lt;br/>
+        \t\t\tAre there specific things you can think of doing or that Peace Corps might do that might help you feel safer in transport?
+    </string>
+
+    <string name="safety_plan_6_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tAssist with identifying a safe taxi/moto-taxi or bus services&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tEnsure that the Volunteer has readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react &lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tModify daily routines, change times and routes to frequent locations if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>\t\t\tKeep personal belongings secure at all times
+
+    </string>
+
+    <!-- Support Services -->
+    <string name="some_info">Please know that Peace Corps is committed to supporting Volunteers who have been victims of sexual assault. Staff can only provide that support when the incident is reported.
+        &lt;br/>&lt;br/>Peace Corps has strict controls regarding which staff learn of and provide assistance to Volunteers who report sexual assault.</string>
+
+    <!-- Benefits -->
+    <string name="benefits_info">•	So that appropriate and timely medical care can be provided.&lt;br/>\t\t\t
+•	HIV and hepatitis testing, including HIV PEP&lt;br/>\t\t\t
+•	STI screening&lt;br/>\t\t\t
+•	Pregnancy testing and prophylaxis, if applicable &lt;br/>&lt;br/>
+•	So the Volunteer gets emotional support and mental health care&lt;br/>&lt;br/>
+•	Access to long-term health care through worker’s compensation after COS, if needed.&lt;br/>&lt;br/>
+•	To be informed about legal options and assistance.&lt;br/>&lt;br/>
+•	Help ensure the safety of the Volunteer and fellow Volunteers.&lt;br/>&lt;br/>
+•	Help ensure the safety of future Volunteers.
+</string>
+
+    <!-- PCs commitment to victims -->
+    <string name="commitment_info">
+        •\t\t\t	Staff will treat you with dignity and respect. No one deserves to be the victim of a sexual assault.
+        Peace Corps will believe you if you report a rape or other sexual assault. No one at Peace Corps will blame you or think
+        the assault was your fault.&lt;br/>&lt;br/>
+•\t\t\t	Staff will take appropriate steps to provide for your ongoing safety. Every effort will be made to keep you at your site as long
+        as it is safe for you to continue service. BUT – your safety must always come first.&lt;br/>&lt;br/>
+•\t\t\t	Staff will provide you with the support you need to aid in your recovery. This means that Peace Corps will provide both
+        medical care and emotional support following the event. Each case is handled based on the needs of the Volunteer
+        and we do not automatically medevac or separate sexual assault victims from service. Although we may recommend medevac so
+        that you can get the medical and psychological help you need, the decision to medevac is jointly determined by the Volunteer,
+        the PCMO and the Counseling and Outreach Unit in Washington.&lt;br/>&lt;br/>
+•\t\t\t	Staff will help you to understand the relevant legal processes and your legal options. Peace Corps understands there may be
+        significant cultural, language and legal challenges and as a result will help you navigate the local system. If you are
+        interested in reporting to the police, we will stand beside you at every step of the process.The decision to report to the police is
+        yours and yours alone – we will respect whatever decision you make.&lt;br/>&lt;br/>
+•\t\t\t	Staff will keep you informed of the progress of your case, should you choose to pursue prosecution. Peace Corps will ensure that you
+        receive timely updates regarding your case whether or not you continue your service. A Victim Advocate will be available to answer
+        any questions or concerns you have regarding the status of your case.&lt;br/>&lt;br/>
+•\t\t\t	Staff will work closely with you to make decisions regarding your continued service. No decisions about your site and service will be
+        made without your input and collaboration.&lt;br/>&lt;br/>
+•\t\t\t	Staff will respect your privacy and will not, without your consent, disclose your identity or share the details of the incident with
+        anyone who does not have a legitimate need to know. Only those people who will be directly involved in your medical, emotional
+        and security support will know your identity. &lt;br/>&lt;br/>
+    \t\tThe Peace Corps Director has made it clear that all staff are expected to uphold these commitments, both in actions and words.
+        If you are sexually assaulted and you feel that Peace Corps staff members are not living up to the agency’s commitment, you can:&lt;br/>&lt;br/>
+        Contact the agency’s Office of Victim Advocacy, which is independent from staff at post.&lt;br/>
+        Contact the Office of the Inspector General, or OIG, which provides independent oversight of agency programs and operations
+        through regular audits, evaluations and investigations.  &lt;br/>&lt;br/>
+•\t\t\t	If you feel that a sexual assault was not handled according to the agency’s Commitment to Sexual Assault Victims you can
+        confidentially report to the OIG via an online web form located on Peace Corps’ website, or by phone, or email.</string>
+
+    <string name="ongoing_info">
+        •\t\t\t Legal Support&lt;br/>
+\t\t\to\t\t\t	If you are interested in reporting to the police, we will explain the process involved in filing a police report
+        and how the investigation and prosecution will be conducted. You will not be alone in this. We will be with you every step of the way.
+        Sometimes the investigative and judicial process may take a very long time and may be very different from the systems and procedures in the United States.
+        Even if you leave the country, Peace Corps will continue to work with the police and prosecutors and we will keep you informed.&lt;br/>&lt;br/>
+•\t\t\t Continuation of Service&lt;br/>
+\t\t\to\t\t\t	You will be part of the discussions about your continued service at site, in country, or in Peace Corps. Peace Corps’ goal is to do what we can to abide
+        by your choice to continue your service. Keep in mind, one of the biggest factors to be considered will be your personal safety.
+        Peace Corps will help you evaluate your options.&lt;br/>&lt;br/>
+•\t\t\t Medical and Psychological Support&lt;br/>
+\t\t\to\t\t\t	If you require medical or psychological support that is not available here you will be offered medical evacuation to Washington DC or your home of record.&lt;br/>&lt;br/>
+•\t\t\t Medevac and Early Termination Policies&lt;br/>
+\t\t\to\t\t\t	Volunteers who have been sexually assaulted have the right to a Medevac upon request.  A staff member will escort the Volunteer, unless declined by the Volunteer.&lt;br/>&lt;br/>
+•\t\t\t Interrupted Service and Respite Leave&lt;br/>
+\t\t\to\t\t\t	Peace Corps is currently updating policies that support Volunteers need for a time out from service.  Speak to your designated staff for the current status of these policies.
+    </string>
+
+    <string name="immediate_support_info">
+        •\t\t\t	Your safety and well-being is our primary concern. Once you notify Peace Corps, we will immediately mobilize resources to get support to you as quickly as possible.&lt;br/>&lt;br/>
+•\t\t\t	Once you contact the Duty Officer/PCMO, the Duty Officer or PCMO will coach you through the immediate first steps.&lt;br/>&lt;br/>
+•\t\t\t	The PCMO will speak with you to assess your immediate medical support needs and will work with you to determine next steps.&lt;br/>&lt;br/>
+•\t\t\t	The PCMO will also explain your options for reporting the assault.  They will also ask if you would like the support of a Sexual Assault Response Liaison.&lt;br/>&lt;br/>
+•\t\t\t	Peace Corps will ensure you are in a safe place, and help you consider the options and services available to you.  In many cases Peace Corps may bring you to the office, but recognize that this
+        may vary depending on your needs and circumstances.&lt;br/>&lt;br/>
+•\t\t\t	No matter what, Peace Corps will work with you to arrange transportation, lodging, medical appointments, legal, and any other appointments that may be necessary. If you want to report to the police, Peace Corps will help.&lt;br/>&lt;br/>
+    </string>
+
+    <!-- Confidentiality -->
+    <string name="confidentiality_center_text">
+        Confidentiality is preserving the privacy of another\’s information. The protection of a Volunteer\'s identity, personally identifying information   (PII),
+        and the details surrounding a crime, including sexual assaults, are all Peace Corps\’ utmost priority.  Staff, the Volunteer who has been assaulted and the Volunteer community all play a role in preserving privacy.
+    </string>
+
+    <string name="confidentiality_role_staff">
+        Peace Corps staff are held to high expectations with regards to confidentiality.   All Peace Corps staff and the independent Peace Corps Sexual Assault Hotline responders are trained to safeguard personal information.
+        If you believe your information is being mishandled, please call the Office of Inspector General (OIG  ).
+    </string>
+    
+    <string name="confidentiality_assault">
+        If you become the victim of a crime, choose who you trust with your sensitive information. Volunteer communications with other Volunteers may not be held to the same rules of privacy that apply to Peace Corps staff or Hotline responders.&lt;br/>
+        As one Volunteer shared:&lt;br/>&lt;br/>
+        &lt;b> “After the sexual assault, I needed the support of a fellow PCV and shared a little about what I was going through.  I had no idea that because I was seeking legal justice that the defense lawyer would contact that individual four months later
+        to fish for information to use against me in a court of law.  Had I known that anything that I said verbally or in an email would be fair game for court, I would have been more cautious and spoken to a counselor through secure communication earlier.”&lt;br/>
+    </string>
+
+    <string name="confidentiality_community">
+        When Volunteers learn of a fellow PCV\’s sexual assault their actions can make a difference - they can support the healing process or further hurt the Volunteer who was sexually assaulted. &lt;br/>
+        Some things to consider:&lt;br/>&lt;br/>
+    •\t\t\tWhat is your role in protecting information about a crime against a Volunteer?&lt;br/>
+    •\t\t\tIf you become aware of a crime committed against a fellow PCV, how might posting information on a social media platform, such as a blog or Facebook, impact or even endanger the Volunteer, their host community, or their friends and family?&lt;br/>
+    </string>
+
+    <!-- MythbustersFragment -->
+    <string name="mythbusters_title1">ASSUMPTION: Everyone and their neighbor’s goat will find out about what happened.</string>
+    <string name="mythbusters_title2">ASSUMPTION: The incident occurred at my site; therefore, I’ll get an automatic site change.</string>
+    <string name="mythbusters_title3">ASSUMPTION: The culture here is different, so Peace Corps staff will blame me for what happened.</string>
+    <string name="mythbusters_title4">ASSUMPTION: I was breaking a policy when the sexual assault occurred; therefore, staff will send me back to the U.S. ASAP.</string>
+    <string name="mythbusters_title5">ASSUMPTION: The process of reporting is difficult and time consuming.</string>
+    <string name="mythbusters_title6">ASSUMPTION: If I report, the assailant will become potentially dangerous to me.</string>
+    <string name="mythbusters_title7">Peace Corps didn’t respond the way I expected to last time I brought up an issue, so I doubt they would this time around.</string>
+    <string name="mythbusters_title8">ASSUMPTION: I was sexually assaulted by a PCV – I don’t want to press charges in my country of service and Peace Corps can’t do anything about what happened, so I might as well not report.</string>
+    <string name="mythbusters_title9">ASSUMPTION: If I choose to leave service after being assaulted, I automatically have to early terminate (E.T).</string>
+
+    <string name="mythbusters_subtitle1">FACT:  All Peace Corps staff have been trained to protect your information and any Peace Corps Staff who improperly disclose the identity of a Volunteer or other information
+        regarding a sexual assault may be subject to disciplinary action.</string>
+    <string name="mythbusters_subtitle2">FACT: You will be part of the discussions about your continued service at your site, in country, or in Peace Corps. No decision will be made without your input and your participation.
+        Keep in mind, one of the biggest factors to be considered will be your personal safety. Peace Corps will help you evaluate your options.</string>
+    <string name="mythbusters_subtitle3">: Peace Corps goes to great lengths to train staff in the field to understand sexual assault and respond to the needs of Volunteers who become the victims of violent crime. Designated Staff at post,
+        which include Safety and Security Managers, Peace Corps Medical Officers, and Sexual Assault Response Liaisons, are specially trained to respond to reports of sexual assault with compassion and professionalism. </string>
+    <string name="mythbusters_subtitle4">FACT: Peace Corps honors an Immunity Policy, which is a way for Peace Corps to promote reporting of sexual assault and ensure a compassionate and supportive response by the Agency.
+        Victims—and witnesses who didn’t help commit the sexual assault—need not fear any administrative consequences for reporting a sexual assault regardless of the circumstances or whether they were violating a Peace Corps policy when the incident occurred.
+        The Immunity Policy does not grant immunity for any criminal or civil liability for violations of law.</string>
+    <string name="mythbusters_subtitle5">FACT: You will not be alone in this. If you are interested in reporting to the police, we have specially trained staff that will explain the process involved in filing a police report and how the investigation and prosecution will
+        be conducted. Peace Corps can also hire an attorney to
+assist you with your legal options. Peace Corps will be with you every step of the way. Sometimes, the investigative and judicial process take a long time and will most likely be very different from the systems and procedures you may be familiar with in the United States.
+        But even if you leave the country, Peace Corps will continue to work with the police and prosecutors and will keep you informed about your case.
+</string>
+    <string name="mythbusters_subtitle6">FACT:  When you report any crime or incident, it is extremely important to assess your safety and security. Staff at post, particularly your Safety and Security Manager, can help you create a safety plan that addresses safety concerns
+        by creating solutions, contacts, and plans of action that will help keep you safe in the event of an emergency or encounter with an assailant.</string>
+    <string name="mythbusters_subtitle7">FACT: If you experience this problem, there is something you can do. Volunteers who feel their incident was neglected can report their concerns to the Office of the Inspector General.
+        Contact information for the OIG can be found at the end of this workbook. </string>
+    <string name="mythbusters_subtitle8">FACT: This is untrue. Volunteers can pursue an internal Peace Corps administrative process through the Volunteer/Trainee Sexual Misconduct Policy.
+        Initiating this process asks Peace Corps to address instances of sexual misconduct by other Volunteers separate from any criminal investigation or proceeding. The process allows Volunteers the opportunity to present a case for sexual misconduct before
+        a hearing panel of Peace Corps officials who will assess the case and determine whether disciplinary action is necessary to penalize the offender. </string>
+    <string name="mythbusters_subtitle9">FACT:  In many cases when a Volunteer is the victim of a crime, Interrupted Service is an option, which indicates that a Volunteer leaves service due to circumstances beyond their control. Additionally, if you are a victim of sexual assault,
+        you are also entitled to a medevac (45 days) which may be located in your home of record or Washington, DC.  Medevacs allow for Volunteers to return to service at the end of the 45 day period.</string>
+
+    <!-- Sexual Assault Awareness -->
+
+    <string name="was_content">
+       Even though the laws vary between countries, Peace Corps recognizes that sexual assault takes many forms. These include rape, attempted rape, and unwanted sexual contact, such as grabbing, fondling, or forced kissing.
+        the legal definition of sexual assault differs among Peace Corps countries.  However, Peace Corps asks these questions to help the agency classify crimes of a sexual nature &lt;br/>&lt;br/>
+        &lt;b>Sexual Assault:&lt;/b>&lt;br/>&lt;br/>
+        Was there unwanted kissing on the mouth or touching of the Volunteer\'s genitalia, anus, groin, breast, inner thigh or buttocks?  Were any of these acts attempted?&lt;br/>&lt;br/>
+        &lt;b>Aggravated Sexual Assault:&lt;/b>&lt;br/>&lt;br/>
+        Was there contact with the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks, or disrobing, or kissing AND any of the following: use of or threat of use of a weapon;
+        or the use or threat of use of force or intimidation; or the Volunteer was incapable of giving consent?  Were any of these acts attempted?&lt;br/>&lt;br/>
+        &lt;b>Rape:&lt;/b>&lt;br/>&lt;br/>
+        Was the vagina, anus or mouth penetrated against the will of the Volunteer?  Was the Volunteer forced to perform oral sex on another person or penetrate another person against his/her will? &lt;br/>&lt;br/>
+    </string>
+
+    <string name="sexual_assault_info">
+            If it is not consensual, then it is a crime.  Consensual means that both people are old enough to consent, have the capacity to consent, and agreed to the sexual contact.
+        There are two main considerations to help Volunteers judge whether or not a sexual act is consensual.&lt;br/>&lt;br/>
+
+        1.\t\t\tDid both people have the physical, mental, and legal capacity to consent?  Those with diminished capacity – for example, some people with disabilities,
+            some elderly people and people who have been drugged or are unconscious – may not have the ability to consent to have sex.&lt;br/>&lt;br/>
+        2.\t\t\tDid both participants agree to take part? Did someone use physical force to make you have sexual contact with him/her? Has someone threatened you or coerced you to make you
+            have intercourse with them?  If so, it is sexual assault.&lt;br/>&lt;br/>
+        If someone does not have the capacity to consent because they are too scared to say no, drunk or otherwise incapacitated, or one person does not want sexual contact, then it is sexual assault.
+        This applies to rape or sexual assault of a Volunteer or Trainee by another Volunteer or Trainee.If a Volunteer is drunk or otherwise incapacitated then it is not consensual sex.
+        If you are not sure if you were sexually assaulted, or even if something made you uncomfortable, don’t be afraid to discuss the incident with your PCMO or someone else you trust for support.
+        Even if weeks, months, or years have passed, it is never too late to report an incident of sexual assault so you can receive support to aid your healing and recovery.
+    </string>
+
+    <string name="common_qs_title1">I didn’t physically resist – does that mean it wasn’t rape?</string>
+    <string name="common_qs_title2">I used to date the person who assaulted me – does that mean it isn’t rape?</string>
+    <string name="common_qs_title3">I was drunk or the other person was drunk – does that mean it isn’t rape?</string>
+    <string name="common_qs_title4">I thought “no,” but didn’t say it – is it still rape?</string>
+    <string name="common_qs_title5">I became sexually aroused even though I did not consent – is it still rape?</string>
+    <string name="common_as1">People respond to an assault in many different ways. Just because you didn’t resist physically doesn’t mean it wasn’t rape – in fact, many victims experience the
+        survival instinct to “freeze” and do not physically resist due to fear that their attacker might become more violent.  Lack of consent can be expressed (saying “no”)
+        or can be implied through non-verbal cues and reactions by the non-consenting person.</string>
+    <string name="common_as2">Sexual assault can occur when the offender and the victim have a pre-existing relationship, even if the offender is the victim’s spouse.
+        It does not matter whether the other person is a former romantic partner or a complete stranger. It also doesn’t matter if you ever had sex in the past. If it is nonconsensual this time, it is rape.</string>
+    <string name="common_as3">Alcohol and drugs are not an excuse. The key question is still: did you consent or not?
+        Regardless of whether you were drunk or sober, if the sex is nonconsensual, it is rape. However, because each country has different definitions of “nonconsensual,”
+        please contact your PCMO or SSM if you have questions about your specific host country definitions and laws.
+        Peace Corps believes that if you were so intoxicated or drugged that you passed out and/or were unable to consent, it was rape. Both people must be conscious and willing participants.</string>
+    <string name="common_as4">It depends on the circumstances. If you didn’t say no because you were legitimately scared for your life or safety, then it may be a sexual assault.
+        In some cases it may be unsafe to resist, physically or verbally — for example, when someone has a knife or gun to your head, or threatens you, a fellow PCV, or community member if you say anything.</string>
+    <string name="common_as5">Sexual arousal and/or orgasm during rape is extremely common, yet rarely talked about. It is biological. Sexual arousal works from the same autonomic,
+        reflex-driven system associated with heart rate, digestion, and perspiration.  Sexual organs do not think, they are designed to respond to stimulation. Sexual arousal or orgasm during rape does not mean it felt good.
+        It does not mean you enjoyed it. It does not mean you asked for it. It does not mean you consented. Becoming sexually aroused does not equal consent.</string>
+
+    <string name="impact_sexual_assault">
+    &lt;b>Physical/Physiological:&lt;/b>&lt;br/>
+        •\t\t\tPhysical injury from the assault itself &lt;br/>
+        •\t\t\tPregnancy&lt;br/>
+        •\t\t\tSexually Transmitted Infections &lt;br/>
+        •\t\t\tSelf-medicating (i.e., alcohol/drug abuse) &lt;br/>
+        •\t\t\tSleep disorders&lt;br/>
+        •\t\t\tEating disorders &lt;br/>
+        •\t\t\tPhysical triggers (sights, smells, sounds, touching) that may produce a physical or psychological reaction &lt;br/>
+        •\t\t\tSelf-mutilation (self-inflicted cuts but not to commit suicide) &lt;br/>&lt;br/>
+
+    &lt;b>Psychological/ Emotional:&lt;/b>&lt;br/>
+        •\t\t\tDepression &lt;br/>
+        •\t\t\tAnger &lt;br/>
+        •\t\t\tFear &lt;br/>
+        •\t\t\tAnxiety &lt;br/>
+        •\t\t\tGuilt &lt;br/>
+        •\t\t\tShock&lt;br/>
+        •\t\t\tShame/ Embarrassment &lt;br/>&lt;br/>
+    It is important to recognize that all of the reactions are NORMAL. They are NORMAL reactions to an ABNORMAL situation.
+    They are symptoms of a traumatic experience that your body and mind are trying to deal with - like running a fever to fight off infection. While the symptoms are normal, it’s okay to seek help.
+
+    </string>
+
+    <string name="harassment_content">
+        The Peace Corps is committed to maintaining high standards of conduct in the workplace and providing all employees, Volunteers, and trainees a work environment that is free from harassment of any kind.
+        The Office of Civil Rights and Diversity, or OCRD, handles claims of harassment, including sexual harassment of a Volunteer or Trainee by a Peace Corps staff member or fellow Volunteer/ Trainee.
+    </string>
+
+    <string name="harassment_more">
+        Unwelcome sexual advances, requests for sexual favors, and other verbal or physical conduct of a sexual nature.
+        Sexual harassment is behavior that is unwelcome, offensive, can cause fear or anxiety and can impact job performance. The actions you may think are within tolerable ranges of acceptability
+        may be offensive to others. People have different thresholds of tolerance for many of these behaviors.
+        The bottom line is that ‘unwelcomed’ is determined by the recipient, not the person displaying the offensive conduct.&lt;br/>&lt;br/>
+
+        If you feel you are being sexually harassed, sharing this with either a Volunteer or staff  will better ensure that you get the help and support you deserve.&lt;br/>&lt;br/>
+        Cases of sexual harassment committed by a PCV or Peace Corps Staff member against a PCV can be reported to the Office of Civil Rights and Diversity (OCRD)
+    </string>
+
+    <string name="helping1">
+    &lt;b>Believe.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\t	If a survivor chooses to share their story with you, do not to question
+    their story, judge it, or ask for details about it.&lt;br/>
+	•\t\t\t	Show them and tell them that you believe them, and that they are believed. &lt;br/>
+ </string>
+
+ <string name="helping2">
+    &lt;b>Respect.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\t	Listen patiently and allow them to share their story on their own terms.
+    You may be the first and only person your friend tells.&lt;br/>
+    •\t\t\t	Encourage them to take their time, or reassure them that you are there to listen when they are ready. &lt;br/>
+    •\t\t\t	You can also respect their privacy by not sharing with others. &lt;br/></string>
+
+ <string name="helping3">
+    &lt;b>No pressure.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tIt is important to not ask/tell a survivor to report their assault to family, loved ones, the police,
+     or the authorities or seek certain help. &lt;br/>
+    •\t\t\tAllow a survivor to seek help and heal at their own pace.  Instead, offer to support them, accompany them
+    , or help them seek information at a pace that they want and are comfortable with. &lt;br/> </string>
+
+<string name="helping4">
+    &lt;b>Connect and share.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tA survivor may want additional support and information. You can provide an enormous amount
+     of support by expressing concern and offering to look into resources for them. This could be
+     medical treatment at a hospital, a sexual assault hotline, local advocacy services, counseling, or a local support group. &lt;br/>
+    •\t\t\tIt could also be as simple as providing a phone number or going with them to an appointment&lt;br/> </string>
+
+<string name="helping5">
+    &lt;b>Repeat.&lt;/b>&lt;br/>&lt;br/>
+    •\t\t\tOffer to be there for your friend whenever they need you. Encourage them to come
+    back to you for further support when appropriate. Remind them that you will be there to listen when they do. &lt;br/>
+    •\t\t\tThis will help your friend know that you are a safe source of support and that they
+    can rely on when they need it.  &lt;br/>
+    •\t\t\tCreating this culture of openness with a friend can be comforting to a
+    survivor who may need space to begin healing on their own terms.&lt;br/> </string>
+
+    <string name="policies_all">&lt;b>MS 243 Responding to Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+    Provides overall policy and procedures on Peace Corps response to a sexual assault, including a
+    system of Restricted and Standard Reporting of sexual assault as required by the Kate Puzey Act.
+    &lt;br/>&lt;br/>
+    &lt;b>IPS 1-12 Volunteer/Trainee Sexual Misconduct&lt;/b>&lt;br/>&lt;br/>
+    Defines and prohibits sexual misconduct by Volunteers and creates an administrative process for
+    resolving complaints of Volunteer on Volunteer sexual misconduct.&lt;br/>&lt;br/>
+    &lt;b>MS 284 Early Termination of Service, Section 5.1(i)&lt;/b>&lt;br/>&lt;br/>
+    Gives CDs authority to grant interrupted service for a Volunteer who is the victim of sexual
+    assault, stalking, or other serious crime.&lt;br/>&lt;br/>
+    &lt;b>IPS 1-13 Stalking&lt;/b>&lt;br/>&lt;br/>
+    &lt;b>IPS 1-11 Immunity from Peace Corps Disciplinary Action for Victims of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+    Provides definition of stalking and clear responsibility of the Peace Corps to mitigate risks.&lt;br/>&lt;br/>
+    &lt;b>MS 774 Retention of Counsel&lt;/b>&lt;br/>&lt;br/>
+    Requires CD to maintain list of local counsel who handle sexual assault cases; allows for
+    retention of counsel to provide information about the legal process; requires retention of
+    counsel for Volunteer victims, et al.&lt;br/>&lt;br/></string>
+
+    <!-- Glossary -->
+    <string name="asexual_assault">
+        Another person, without the consent of the Volunteer, intentionally or knowingly: &lt;br/>&lt;br/>
+•\t\t\t	touches or contacts, either directly or through clothing, the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks; OR &lt;br/>&lt;br/>
+•\t\t\t	kisses the Volunteer; OR &lt;br/>&lt;br/>
+•\t\t\t	disrobes the Volunteer; OR &lt;br/>&lt;br/>
+•\t\t\t	causes the Volunteer to touch or contact, either directly or through clothing, another person’s genitalia, anus, groin, breast, inner thigh, or buttocks, OR &lt;br/>&lt;br/>
+•\t\t\t	attempts to carry out any of those acts,   &lt;br/>&lt;br/>
+•\t\t\t	AND:&lt;br/>&lt;br/>
+•\t\t\t	The offender uses, or threatens to use, a weapon, OR&lt;br/>&lt;br/>
+•\t\t\t	The offender uses, or threatens to use, force or other intimidating actions, OR &lt;br/>&lt;br/>
+•\t\t\t	The Volunteer is incapacitated or otherwise incapable of giving consent.
+    </string>
+
+    <string name="assailant_info">
+        A person who attacks another or a person who commits a crime
+    </string>
+
+    <string name="burglary_info">
+        Unlawful or forcible entry of a residence. This incident type usually, but not always, involves theft. The illegal entry may be forcible,
+        such as breaking a window or slashing a screen, or may be without force by entering through an unlocked door or an open window. As long as the person entering has no legal right to be present in the residence, a burglary has occurred. Also includes illegal entry of a hotel room.
+        &lt;b>&lt;br/>&lt;br/>0What is a burglary?&lt;/b> &lt;br/>
+A burglary occurs anytime there is unlawful or unauthorized entry or attempted into your house, room or hotel room. Unlawful entry does not have to involve force or someone breaking in; unlawful entry occurs anytime someone who does not have permission enters your house or hotel room. Unlawful entry can occur through a window or door that is not locked or through a window or door that has been left open.
+
+    </string>
+
+    <string name="intervention_info">
+        The process of safely interrupting a situation in which others may be at risk for becoming the victim of sexual or physical violence
+    </string>
+
+    <string name="phenomenon_info">
+       A social-psychological phenomenon in which individuals do not offer help to someone in danger when other people are present
+    </string>
+
+    <string name="cyber_info">
+       The repeated use of electronic communications to harass or frighten someone, for example by sending threatening e-mails
+    </string>
+
+      <string name="danger_info">
+       A condition with the potential to cause illness, injury, death, property damage or loss
+    </string>
+
+    <string name="mitigation_info">
+      Steps taken to reduce risk by reducing the likelihood that a dangerous event will occur or the impact if it does occur
+    </string>
+
+     <string name="pii_info">
+      “Personally Identifying Information” or “PII” means individually identifying
+         information for or about a Volunteer who is a victim of sexual assault, including first and last name,
+         home or physical address (including site location), contact information (such as postal address, email, IP address,
+         telephone or fax number), social security number, date of birth, ethnicity, race, religious affiliation, the location of the incident, the victim’s sector,
+         entry on service date, close of service date or time since swearing-in and any other information that, either individually or in combination with other information,
+         would serve to identify the Volunteer or is likely to disclose the location of the Volunteer.
+    </string>
+
+    <string name="rape_info">
+      The penetration, no matter how slight, of the vagina or anus with any body part or object, or oral penetration by a sex organ of
+        another person, without the consent of the Volunteer
+    </string>
+
+    <string name="risk_info">
+      The probability that a dangerous event will actually occur and the impact if it does
+    </string>
+
+    <string name="robbery_info">
+      The taking or attempting to take anything of value under confrontational circumstances from the control,
+        custody or care of the victim by force or threat of force or violence and/or by putting the victim in fear of immediate harm.
+        Also includes when a robber displays/uses a weapon or transports the victim to obtain his/her money or possessions &lt;br/>&lt;br/>
+         &lt;b>What is a robbery?  &lt;/b> &lt;br/>&lt;br/>
+        A robbery always involves taking or attempting to take property through the use of force or the threat of force.
+        A robbery can involve the use of a weapon or just the use of the suspect’s hands or feet. If a suspect threatens to harm you unless you surrenders your property,
+        that is also robbery. If you are injured while someone is taking your property by force, the incident is reported as a robbery
+    </string>
+
+    <string name="safety_info">
+      Steps taken to protect against accidents and natural dangers (as opposed to man-made dangers)
+    </string>
+
+    <string name="security_info">
+        Protection against man-made dangers
+    </string>
+
+    <string name="sexual_assault_info1">
+         Another person, without the consent of the Volunteer, intentionally or knowingly:&lt;br/>&lt;br/>
+    •\t\t\t	touches or contacts, either directly or through clothing, the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks; OR &lt;br/>&lt;br/>
+    •\t\t\t	kisses the Volunteer on the mouth;&lt;br/>&lt;br/>
+    •\t\t\t	OR attempts to carry out any of those acts
+    </string>
+
+    <string name="exploitation_info">
+        Sexual exploitation means taking sexual advantage of another person without consent, including, but not limited to, &lt;br/>&lt;br/>
+        (i)\t\t\t causing someone to become incapacitated to gain sexual advantage, &lt;br/>&lt;br/>
+        (ii)\t\t\t causing the prostitution of another person,&lt;br/>&lt;br/>
+        (iii)\t\t\t recording, photographing or transmitting images of sexual activity or the intimate parts of another person,&lt;br/>&lt;br/>
+        (iv)\t\t\t allowing third parties to observe private sexual acts,&lt;br/>&lt;br/>
+        (v)\t\t\t engaging in voyeurism, or &lt;br/>&lt;br/>
+        (vi)\t\t\t knowingly or recklessly exposing another person to a significant risk of sexually transmitted infection, including HIV
+    </string>
+
+    <string name="misconduct_info">
+        Non-consensual sexual activity, non-consensual sexual contact, sexual exploitation, sexual harassment or stalking of
+        a Volunteer/ Trainee against another Volunteer/ Trainee.
+        Sexual Misconduct in the context of this session relates to the handling of complaints of sexual misconduct of a Volunteer/ Trainee against another Volunteer/ Trainee under
+        Peace Corps’ Sexual Misconduct Policy which allows for handling of such cases through an internal administrative process.
+    </string>
+
+    <string name="harassment_info">
+       Offensive conduct of a sexual nature that relates to sex, sexual orientation,
+        gender identity or gender expression of a Volunteer/ Trainee by a Peace Corps staff member or another Volunteer/ Trainee
+    </string>
+
+    <string name="predator_info">
+    A person who commits a sexually violent offense and especially one who is likely to commit more sexual offenses.
+    </string>
+
+    <string name="threat_info">
+        A dangerous event, person or thing
+    </string>
+
+    <string name="stalking_info">
+        Repeated threatening behavior from a single person that causes a Volunteer to fear for his or her safety or suffer substantial emotional distress
+    </string>
+
+    <string name="theft_info">
+        The taking away of or attempt to take away property or cash without involving force or illegal entry. Includes pick pocketing, stolen purses,
+    and theft from a residence that does not involve an illegal entry.
+        &lt;b>&lt;br/>&lt;br/>What is a theft? &lt;/b> &lt;br/>
+    A theft occurs when property is stolen without a direct confrontation with the suspect and when there has not been illegal entry
+    into the residence (including hotel room). For example, if you give someone permission to enter your house and that person steals your property, it is a theft.
+    It is also a theft if your purse, cell phone, backpack or similar property is “snatched” away by a suspect or are not assaulted in any other way
+    </string>
+
+    <string name="vulnerability_info">
+        The susceptibility of a person, object or place to a danger or dangers.
+    </string>
+
+    <string name="resources_all">
+        •\t\t\tMen can stop Rape (http://www.mencanstoprape.org/)\n\n
+        •\t\t\tSafe HelpLine (https://safehelpline.org/): Mobile app and website that allows sexual assault survivors to create customized self-care plans.
+        Intended for active duty military personnel but the self-care portion is applicable to all\n\n
+        •\t\t\tSexual Violence in Lesbian, Gay, Bisexual, Transgender, Intersex, or Queer (LGBTIQ) Communities (http://www.vawnet.org/special-collections/SVLGBTIQ.php#100)\n\n
+
+        Additional Resources for Unwanted Attention and Harassment: \n\n
+        •\t\t\tStop Street Harassment(http://www.stopstreetharassment.org/) “Assertive Responses” ideas and Tool Kits\n\n
+        •\t\t\tHollaback(http://www.ihollaback.org/about/) An anti-street harassment movement.\n\n
+        •\t\t\tHuffington Post article: “International Anti- Street Harassment week: Ten Things You can do to Stop Street harassment”
+        (http://www.huffingtonpost.com/soraya-chemaly/international-street-harassment-week_b_1228198.html)\n\n
+        •\t\t\tTED talk by Jackson Katz, “Violence Against Women- It’s a Men’s Issue” (http://www.ted.com/talks/jackson_katz_violence_against_women_it_s_a_men_s_issue)
+    </string>
 </resources>
