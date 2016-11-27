@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 /**
  * This activity handles storing and modifying users preferences
@@ -37,6 +38,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 
     public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         private SharedPreferences sharedPreferences;
+        private static String currentName;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,7 @@ public class UserSettingsActivity extends AppCompatActivity {
             if (p instanceof EditTextPreference) {
                 EditTextPreference editTextPref = (EditTextPreference) p;
                 p.setSummary(editTextPref.getText());
+                currentName = editTextPref.getText();
             }
             if (p instanceof ListPreference) {
                 ListPreference listPreference = (ListPreference) p;
@@ -73,10 +76,18 @@ public class UserSettingsActivity extends AppCompatActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if(key.equals(getString(R.string.key_name)) || key.equals(getString(R.string.key_country)))
+            if("".equals(sharedPreferences.getString(key,"").trim())){
+                Toast.makeText(getActivity(),R.string.valid_name, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            else if(!sharedPreferences.getString(key,"").matches("^[a-zA-Z ]*$")){
+                Toast.makeText(getActivity(),R.string.prompt_please_valid, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            else
             {
                 Preference preference = findPreference(key);
-                preference.setSummary(sharedPreferences.getString(key,""));
+                preference.setSummary(sharedPreferences.getString(key,"").trim().replaceAll("[ ]+", " "));
                 MainActivity.refreshList = true;
             }
 
@@ -92,6 +103,11 @@ public class UserSettingsActivity extends AppCompatActivity {
         @Override
         public void onPause() {
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            if(sharedPreferences.getString("NAME","").trim().equals("")  || !sharedPreferences.getString("NAME","").matches("^[a-zA-Z ]*$")){
+                sharedPreferences.edit().putString("NAME",currentName).apply();
+            }
+            String new_name = sharedPreferences.getString("NAME","").replaceAll("[ ]+", " ").trim();
+            sharedPreferences.edit().putString("NAME",new_name).apply();
             sharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
             super.onPause();
         }
